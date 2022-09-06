@@ -1,4 +1,5 @@
-body{
+.body{
     font-family: "Roboto";
-    background-color:#EAC926;
+    color:red;
+    background-color: blue;
 }
