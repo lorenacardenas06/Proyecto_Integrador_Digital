@@ -6,6 +6,11 @@ const app = express(); //Utilizo express
 
 app.use(express.static(path.join(__dirname, './public'))); // Se hace la carpeta public publica
 
+app.get('/home', (req,res) =>{
+    res.sendFile(path.join(__dirname, './views/home.html'));  // Permite enviar un archivo HTML
+});
+
+
 app.get('/shoppingCar', (req,res) =>{
     res.sendFile(path.join(__dirname, './views/shoppingCar.html'));  // Permite enviar un archivo HTML
 });
