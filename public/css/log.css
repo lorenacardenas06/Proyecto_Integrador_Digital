@@ -1,0 +1,75 @@
+*@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+{
+  @media (min-width: auto)
+    .column {
+      width: auto;
+}
+}
+/* Get rid of all default margins/paddings. Set typeface */
+body {
+  box-sizing: 40%;
+  font-family: "lato", sans-serif;
+  color: rosybrown;
+}
+form {
+  display: block;
+    /* Centrar el formulario en la página */
+    margin: 0%;
+    width: 400px;
+    /* Esquema del formulario */
+    padding: 10%;
+    border: 1px solid black;
+    border-radius: 1em;
+    background-color: white;
+ }
+ img{
+    margin-left: 30%;
+    margin-top: -80%;
+    margin-left: 47%;
+ }
+ .input[type= submit ]{
+  color: black;
+   border-color: #be8371;
+   border-style: solid;
+   border-style: blow;
+   border: 10px solid salmon;
+ }
+ div{
+  background-color: white;
+  display: block;
+ color: black;
+
+ }
+ h0{
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-left: 3cm;
+  margin-top: -5%;
+
+ }
+ .boton{
+  margin-left: 10%;
+    text-decoration:none;
+    font-weight: 600;
+    font-size: 20px;
+    color:#333333;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:100px;
+    padding-right:100px;
+    background-color:#fcc9a5;
+    border-color:blackblack;
+    border-width: 3px;
+    border-style: solid;
+    border-radius:35px;
+    }
+
+ a{
+  text-decoration:none;
+  text-decoration-color: black;
+  outline: none;
+ text-decoration: none;
+ padding: 2px 1px 0;
+ color: black;
+ }
