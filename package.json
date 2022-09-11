@@ -20,5 +20,13 @@
     "moment": "^2.29.4",
     "nodemon": "^2.0.19",
     "npm": "^8.19.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lorenacardenas06/Proyecto_Integrador_Digital.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lorenacardenas06/Proyecto_Integrador_Digital/issues"
+  },
+  "homepage": "https://github.com/lorenacardenas06/Proyecto_Integrador_Digital#readme"
 }
