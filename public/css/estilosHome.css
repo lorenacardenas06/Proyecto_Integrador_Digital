@@ -52,6 +52,7 @@ img{
     width: 50vw;
     height: 60vh;
     grid-area: img;
+    margin-bottom: 0px;
 }
 
 button#button1{
@@ -79,8 +80,8 @@ button#button2{
     justify-self: start;
     align-self: center;
     font-family:'Big Shoulders Display';
-    margin-bottom: 150px;
-    margin-left: 50px;
+    margin-bottom: 25px;
+    margin-left:50px;
 
 }
 
