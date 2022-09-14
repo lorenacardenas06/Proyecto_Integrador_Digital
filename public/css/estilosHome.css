@@ -14,6 +14,11 @@ body{
 
 }
 
+
+#navbarNav{
+    background-color: black;
+}
+
 ul.navbar-nav{
     background-color: black;
 }
@@ -28,33 +33,54 @@ a.nav-link {
 
 
 #primeralinea{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    background-color: #fcc9a5;
+    grid-template-areas: 
+      "button1 img"
+      "h1 img"
+      "button2 img"
+      "button2 img";
+    height: 100vh;
+    margin:0;
+    justify-items: end;
 
 }
-#button {
+
+img{
+    width: 50vw;
+    height: 60vh;
+    grid-area: img;
+}
+
+button#button1{
     background-color: white;
     border: none;
     color: #fcc9a5;
-    font-size: 25px;
-    width: 15vw;
-    margin-top: 15px;
+    font-size: 45px;
+    width: 30vw;
     position:absolute;
-    display: flex;
-    justify-content: center;
-}
+    grid-area: button1;
+    justify-self: start;
+    font-family:'Big Shoulders Display';
+    margin-left: 50px;
+    margin-top: 50px;
 
-#button1{
+}
+button#button2{
     background-color: white;
     border: none;
     color: #fcc9a5;
-    font-size: 25px;
-    width: 15vw;
+    font-size: 45px;
+    width: 25vw;
     position:absolute;
-    display: flex;
-    justify-content: center;
-    align-self: flex-start;
+    grid-area: button2;
+    justify-self: start;
+    align-self: center;
+    font-family:'Big Shoulders Display';
+    margin-bottom: 150px;
+    margin-left: 50px;
 
 }
 
@@ -67,28 +93,18 @@ img#logo{
     position: relative;
 }
 
-img{
-    width: 50vw;
-    height: 50vh;
-    display:flex;
-    justify-content: flex-end;
-    position: relative;
-}
 
 
 h1{
     margin-top: 200px;
-    font-size: 100px;
+    font-size: 250px;
     font-family: 'Playfair Display', serif;
     z-index: 100;
+    grid-area: h1;
+    text-align: center;
 }
 
 
-#segunda_linea{
-    display: flex;
-    flex-direction: row;
-    background-color: #fcc9a5;
-}
 
 
 
@@ -134,3 +150,7 @@ section{
     margin-top: 10px;
     flex-direction: row;
 }
+
+
+
+
