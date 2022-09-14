@@ -1,5 +1,7 @@
 body{
-    color:#fcc9a5;
+
+    box-sizing: border-box;
+    padding-bottom: 0em;
 }
 
 .selector-for-some-widget {
@@ -105,52 +107,66 @@ h1{
     text-align: center;
 }
 
+.seccion{
+    display:grid;
+    justify-self: center;
+    grid-template-columns: 0.375fr 0.375fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-template-areas: 
+    "h2 svg"
+    "parrafo parrafo";
+    grid-column-gap:30px;
+}
+
+h2{
+
+    font-family: 'Josefin Sans', sans-serif;
+    color:black;
+    display: grid;
+    grid-area: h2;
+}
+
+
+p{
+    font-family: 'Josefin Sans';
+    color:black;
+
+}
 
 
 
 
 footer{
-    background: black;
+    background: white;
     width: 100%;
     height:20vh;
-    display: flex;
-    align-self: flex-end;
-    bottom: 0%;
-    justify-content: space-around;
-    position: absolute;
+    display: grid;
+    align-content: flex-start;
+    grid-template-columns: 0.75fr 0.75fr 0.75fr 0.75fr;
+    grid-template-rows: 1fr;
 }
 
 
 p{
     font-size: 20px;
+    display: grid;
+    grid-area: parrafo;
 }
 
-p.estilo-x{
-    color:white;
-}
 
 svg{
-    width: 1em;
-    margin-bottom: 10px;
-    margin-left: 10px;
-}
-
-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 2em;
+    display: grid;
+    grid-area: svg;
+    margin-top: 20px;
 }
 
 
 
 
-.logo_footer{
-    display:flex;
-    color:#fcc9a5;
-    margin-top: 10px;
-    flex-direction: row;
-}
+
+
+
 
 
 
