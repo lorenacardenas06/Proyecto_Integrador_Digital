@@ -16,6 +16,7 @@ body{
    margin-top: 0%;
    margin:0;
    padding:0;
+   background-color: #fcc9a5;
 }
 
 .selector-for-some-widget {
@@ -55,7 +56,7 @@ body{
    grid-template-rows: 2fr;
    background-color: #fcc9a5;
    grid-template-areas: 
-   "section img seccion";
+   "uno img seccion";
 }
 
 
@@ -76,7 +77,17 @@ p{
 }
 
 
-section{
+
+img{
+   display: grid;
+   grid-area: img;
+}
+
+#uno{
+
+   
+   margin-left: 0%;
+   margin-bottom: 0%;
    background-color: white;
    display: grid;
    padding: 3%;
@@ -87,19 +98,7 @@ section{
    border-width: 3px;
    border-style: solid;
    border-radius:35px;
-   grid-area: section;
-  
-}
-
-img{
-   display: grid;
-   grid-area: img;
-}
-
-#uno{
-   display: block;
-   
-   margin-left: 0%;
+   grid-area: uno;
 
 }
 
@@ -111,20 +110,5 @@ section#texbox2{
    grid-area: seccion;
 }
 
-.boton{
-   text-decoration:none;
-   font-weight: 600;
-   font-size: 20px;
-   color:#333333;
-   padding-top:5px;
-   padding-bottom:5px;
-   padding-left:10px;
-   padding-right:10px;
-   background-color:orange;
-   border-color:blackblack;
-   border-width: 3px;
-   border-style: solid;
-   border-radius:35px;
-}
 
 
