@@ -21,6 +21,7 @@ body{
 
 #navbarNav{
     background-color: black;
+    width: 100%;
 }
 
 ul.navbar-nav{
@@ -40,16 +41,16 @@ a.nav-link {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 2fr 1fr 1fr;
-    background-color: #fcc9a5;
+
     grid-template-areas: 
       "button1 img"
       "h1 img"
       "button2 img"
       "button2 img";
-    height: 100vh;
+    background-color: #fcc9a5;
     margin:0;
     justify-items: end;
-    padding: 0px;
+
 
 }
 
@@ -130,11 +131,6 @@ h2{
 }
 
 
-p{
-    font-family: 'Josefin Sans';
-    color:black;
-
-}
 
 
 
@@ -146,8 +142,7 @@ footer{
     align-content: start;
     grid-template-columns: 0.75fr 0.75fr 0.75fr 0.75fr;
     grid-template-rows: 1fr;
-    width: 100%;
-    height: 20vh;
+    height: 25vh;
     bottom: 0;
     left: 0;
     padding-bottom: 0px;
@@ -159,6 +154,8 @@ p{
     font-size: 20px;
     display: grid;
     grid-area: parrafo;
+    font-family: 'Josefin Sans';
+    color:black;
 }
 
 
