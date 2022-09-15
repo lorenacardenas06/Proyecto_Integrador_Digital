@@ -6,89 +6,21 @@ body{
     padding:0; 
 }
 
-.selector-for-some-widget {
+* {
     box-sizing: border-box;
   }
 
 
 
 .container-fluid{
-    color: #fcc9a5 !important;
-    background-color: black !important;
+    color: black !important;
+    background-color: #fcc9a5 !important;
 
 }
 
 
-#navbarNav{
-    background-color: black;
-    width: 100%;
-}
-
-ul.navbar-nav{
-    background-color: black;
-}
-li.nav-item{
-    background-color: black;
-}
-a.nav-link {
- color: #fcc9a5; 
- font-family:'Big Shoulders Display';
- font-size: 40px;
-}  
-
-
-#primeralinea{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 2fr 1fr 1fr;
-
-    grid-template-areas: 
-      "button1 img"
-      "h1 img"
-      "button2 img"
-      "button2 img";
+main{
     background-color: #fcc9a5;
-    margin:0;
-    justify-items: end;
-
-
-}
-
-img{
-    width: 50vw;
-    height: 60vh;
-    grid-area: img;
-    margin-bottom: 0px;
-}
-
-button#button1{
-    background-color: white;
-    border: none;
-    color: #fcc9a5;
-    font-size: 45px;
-    width: 30vw;
-    position:absolute;
-    grid-area: button1;
-    justify-self: start;
-    font-family:'Big Shoulders Display';
-    margin-left: 50px;
-    margin-top: 50px;
-
-}
-button#button2{
-    background-color: white;
-    border: none;
-    color: #fcc9a5;
-    font-size: 45px;
-    width: 25vw;
-    grid-area: button2;
-    justify-self: start;
-    align-self: center;
-    font-family:'Big Shoulders Display';
-    margin-bottom: 25px;
-    margin-left:50px;
-    position:absolute;
-
 }
 
 
@@ -102,51 +34,49 @@ img#logo{
 
 
 
-h1{
-    margin-top: 200px;
-    font-size: 250px;
-    font-family: 'Playfair Display', serif;
-    z-index: 100;
-    grid-area: h1;
-    text-align: center;
+
+img{
+    width: 50vw;
+    height: 60vh;
+    right: 0px;
+    justify-content: flex-end;
 }
 
-.seccion{
-    display:grid;
-    justify-self: center;
-    grid-template-columns: 0.375fr 0.375fr;
-    grid-template-rows: 0.5fr 0.5fr;
-    grid-template-areas: 
-    "h2 svg"
-    "parrafo parrafo";
-    grid-column-gap:30px;
+.main{
+    background-color: #fcc9a5;
 }
+
+
+
+
+
+
+
+h1{
+    margin-top: 300px;
+    font-family: 'Playfair Display', serif;
+    font-size: 100px;
+}
+
+
 
 h2{
-
+    
     font-family: 'Josefin Sans', sans-serif;
     color:black;
-    display: grid;
-    grid-area: h2;
 }
 
 
 
+.button{
+    background-color: white;
+}
 
 
-
-footer{
+footer#pie{
     background: white;
-    width: 100%;
-    display: grid;
-    align-content: start;
-    grid-template-columns: 0.75fr 0.75fr 0.75fr 0.75fr;
-    grid-template-rows: 1fr;
-    height: 25vh;
     bottom: 0;
     left: 0;
-    padding-bottom: 0px;
-    position: absolute;
 }
 
 
@@ -160,11 +90,12 @@ p{
 
 
 svg{
-    width: 2em;
+    width: 1em;
     display: grid;
     grid-area: svg;
     margin-top: 20px;
 }
+
 
 
 
