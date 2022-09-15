@@ -3,3 +3,19 @@
     color:white;
     background-color: dark;
 }
+
+.main{
+    background-color: #FCC9A5;
+}
+#nombresCarrito{
+    border-top: 1px;
+    border-top-style:solid;
+    border-top-color:black;
+    border-bottom: 1px;
+    border-bottom-style:solid;
+    border-bottom-color:#ebebeb;
+    border-color:black
+}
+.box{
+
+}
