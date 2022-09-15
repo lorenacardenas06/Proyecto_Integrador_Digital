@@ -1,95 +1,114 @@
 
   
  
-nav{ padding: -5%;
-    font-family:'Big Shoulders Display';
-    font-size: 24px;
-    font-weight: bolder;
-    text-align:justify;
-    text-decoration-color: white;
-    background-color: black;
-    display: block;
-     }
+
     
 
-.Nproduc{
-margin-left: 57%;
+.container-fluid{
+   color: #fcc9a5 !important;
+   background-color: black !important;
+  
+  }
+  
+body{
+
+   box-sizing: border-box;
+   margin-top: 0%;
+   margin:0;
+   padding:0;
+   background-color: #fcc9a5;
+}
+
+.selector-for-some-widget {
+   box-sizing: border-box;
+ }
+
+  
+  #navbarNav{
+   background-color: black;
+  }
+  
+  ul.navbar-nav{
+   background-color: black;
+
+  }
+  li.nav-item{
+   background-color: black;
+  }
+  a.nav-link {
+   color: #fcc9a5; 
+   font-family:'Big Shoulders Display';
+   font-size: 40px;
+  }  
+
+  img#logo{
+   width: 150px;
+   height: 150px;
+   display:flex;
+   justify-content: flex-start;
+   position: relative;
+}
+
+
+#grila{
+   display:grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 2fr;
+   background-color: #fcc9a5;
+   grid-template-areas: 
+   "uno img seccion";
+}
+
+
+
+
+ 
+
+h1{
+margin-left: 0%;
+}
+
+h2{
+   text-align: left;
 }
 p{
    
-   margin-left: 57%;
+   margin-left: 0%;
 }
 
 
-body{
-   background-color: #fcc9a5;
+
+img{
+   display: grid;
+   grid-area: img;
 }
-section{
+
+#uno{
+
+   
+   margin-left: 0%;
+   margin-bottom: 0%;
    background-color: white;
-   display: block;
+   display: grid;
    padding: 3%;
    margin-right: 70%;
    border-radius: 10%;
    margin-top: -8%;
    border-color: black;
-      border-width: 3px;
-      border-style: solid;
-      border-radius:35px;
-  
-}
+   border-width: 3px;
+   border-style: solid;
+   border-radius:35px;
+   grid-area: uno;
 
-a{
-   text-decoration: none;
-   color:white;
-   padding:-5%;
-   margin-left: 2%;
-        font-family:BigShouldersDispaly;
-        font-size: 24px;
-        font-weight: bolder;
-        text-align:justify;
-        text-decoration-color: white;
-        background-color: black;
-        flex-direction: row;
-        flex-direction: center;
-
-}
-.imagen{
-   display: block;
-   margin-left: 30%;
-   margin-top: -30%;}
-
-#uno{
-   display: block;
-   
-   margin-left: 57%;
 }
 
 section#texbox2{
-   display: block;
+   display: grid;
    
    margin-left: 40%;
    margin-top: -30%;
+   grid-area: seccion;
 }
-section3{
-   display: block;
-   
-   margin-left: 40%;
-   margin-top: 10%;
-}
-.boton{
-      text-decoration:none;
-      font-weight: 600;
-      font-size: 20px;
-      color:#333333;
-      padding-top:5px;
-      padding-bottom:5px;
-      padding-left:10px;
-      padding-right:10px;
-      background-color:orange;
-      border-color:blackblack;
-      border-width: 3px;
-      border-style: solid;
-      border-radius:35px;
-      }
+
 
 
