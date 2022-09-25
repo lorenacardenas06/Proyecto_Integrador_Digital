@@ -29,8 +29,10 @@ app.get('*', (req,res) =>{
 
 app.listen(3000, () => {
    console.log("Servidor corriendo");
+   
 });
-
+/*
 app.listen(process.env.PORT||3000, function(){
     console.log('servidor corriendo en puerto 3000')
   })
+*/
