@@ -1,6 +1,6 @@
 const controladorUsuarios = {
   registrar: (req, res) => {
-    res.sendFile(__dirname, "../views/login.html");
+    res.render("login");
   }, //registar usuarios
 };
 
