@@ -1,12 +1,19 @@
 const express = require("express"); //Traigo la libreria express
-
-const path = require("path"); //Traigo la ruta
+const path = require("path");
+const createError = require("http-errors");
+const cookieParser = require("cookie-parser");
+const logger = require("morgan");
 
 const app = express(); //Utilizo express
-
+app.set("views", path.join(__dirname, "./views")); // Define la ubicación de la carpeta de las Vistas
+// app.use(express.static(path.join(__dirname, "../public"))); // Necesario para los archivos estáticos en el folder /public
+// app.use(express.urlencoded({ extended: false }));
+// app.use(logger("dev"));
+// app.use(express.json());
+// app.use(cookieParser());
+app.set("view engine", "ejs");
 const productsRouter = require("./src/routes/productosRouters");
-const usersRouters = require("./src/routes/usersRouters");
-app.use(express.static(path.join(__dirname, "./public"))); // Se hace la carpeta public publica
+const usersRouters = require("./src/routes/usersRouters"); // Se hace la carpeta public publica
 app.use("/", productsRouter); //home
 app.use("/login", usersRouters); //login
 
@@ -29,7 +36,6 @@ app.use("/login", usersRouters); //login
 //app.get("*", (req, res) => {
 //res.send("Ruta restringida, hemos localizado la direccion de su computador"); // Permite enviar texto o codigo HTML
 //});
-app.set("views", path.join(__dirname, "./views")); // Define la ubicación de la carpeta de las Vistas
 
 //app.listen(3000, () => {
 //  console.log("Servidor corriendo");
