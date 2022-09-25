@@ -10,9 +10,9 @@ app.use(express.static(path.join(__dirname, "./public"))); // Se hace la carpeta
 app.use("/", productsRouter); //home
 app.use("/login", usersRouters); //login
 
-// app.get('/home', (req,res) =>{
-//     res.sendFile(path.join(__dirname, './views/home.html'));  // Permite enviar un archivo HTML
-// });
+app.get('/home', (req,res) =>{
+    res.sendFile(path.join(__dirname, './views/home.html'));  // Permite enviar un archivo HTML
+});
 
 // app.get('/login', (req,res) =>{
 //     res.sendFile(path.join(__dirname, './views/login.html'));  // Permite enviar un archivo HTML
@@ -22,18 +22,18 @@ app.use("/login", usersRouters); //login
 //     res.sendFile(path.join(__dirname, './views/productDetail.html'));  // Permite enviar un archivo HTML
 // });
 
-// app.get('/shoppingCar', (req,res) =>{
-//     res.sendFile(path.join(__dirname, './views/shoppingCar.html'));  // Permite enviar un archivo HTML
-// });
+app.get('/shoppingCar', (req,res) =>{
+    res.sendFile(path.join(__dirname, './views/shoppingCar.html'));  // Permite enviar un archivo HTML
+});
 
 //app.get("*", (req, res) => {
 //res.send("Ruta restringida, hemos localizado la direccion de su computador"); // Permite enviar texto o codigo HTML
 //});
 app.set("views", path.join(__dirname, "./views")); // Define la ubicación de la carpeta de las Vistas
 
-//app.listen(3000, () => {
-//  console.log("Servidor corriendo");
-//});
+app.listen(3000, () => {
+console.log("Servidor corriendo");
+});
 
 
 /*

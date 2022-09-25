@@ -15,7 +15,6 @@
 </head>
 
 <body class="body">
-
     <header class="header">
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
@@ -50,7 +49,7 @@
                         <a class="nav-link" href="#">SOBRE NOSOTROS </a>
                       </li>
                     </ul>
-                    <form class="d-flex" role="search">
+                    <form class="d-flex" align="right" role="search">
                       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                       <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
@@ -59,44 +58,84 @@
               </nav>
     </header>
     <main class="main">
-        <div class="shoppingCar">
+        <div class="productos">
           <div class="container-fluid">
-            <h2>Resumen del carrito</h2>
-              <div class="row">
-                  <div class="col-sm-3">
-                    <h4>Producto</h4>
-                    <img src="img/labial.jpg" class="img-fluid" alt="producto" width="100px" height="100px"/>
-                    <a>Labial Matte Intransferible UPA</a>
+            <div class="row" id="tituloresumen">
+              <h2>Resumen del carrito</h2>
+            </div>
+            <div class="row">
+                <div class="col-3" id="resumenCarrito">
+                  <h5>Producto</h5>
+                  <img src="img/labial.jpg" class="img-fluid" alt="labial" width="50px" height="50px"/>
+                  <a>Labial Matte Intransferible UPA</a>
+                  
+                </div>
+                <div class="col-3" id="resumenCarrito">
+                  <h5>Precio</h5>
+                  <p>$1000</p>
+                </div>
+                <div class="col-3" id="resumenCarrito">
+                  <h5>Cantidad</h5>
+                  <div class="box">
+                    <input type="number" min="0" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                   </div>
-                  <div class="col-sm-3">
-                    <h4>Precio</h4>
-                    <p>$2000</p>
-                  </div>
-                  <div class="col-sm-3">
-                    <h4>Cantidad</h4>
-                    <div class="box">
-                      <input type="number" min="0" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="col-3" id="resumenCarrito">
+                  <h5>Total</h5>
+                  <p>$2000</p>
+                </div>
+            </div>
+            <div class="row" id="cupon">
+              <div class="col-5">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Código de cupón" aria-label="Código de cupón" aria-describedby="Código de cupón">
+                  <span class="input-group-text" id="aplicarCupon">Aplicar Cupón</span>
+                </div>
+              </div>
+                <div class="col-7" align="right">
+                  <a type="button" class="btn btn-secondary" disabled>Actualizar Carrito</a>
+                </div>
+            </div>
+            <div class="row justify-content-end">
+              <div class="col-6" id="totalCarrito">
+                <h2>Total del carrito</h2>
+                  <div class="row">
+                    <div class="col-4">
+                      <h5>Subtotal</h5>
+                    </div>                      
+                    <div class="col-8">
+                      <p>$1000</p>
+                    </div>
+                    <div class="col-4">
+                      <h5>Envio o recogida</h5>
+                    </div>
+                    <div class="col-8">
+                      <p>Recoger en punto de entrega (Poblado - Medellín) Enviar a Antioquia.</p>
+                    </div>
+                    <div class="col-4">
+                      <h5>Total</h5>
+                    </div>
+                    <div class="col-8">
+                      <p>$1000</p>
                     </div>
                   </div>
-                  <div class="col-sm-3">
-                    <h4>Total</h4>
-                    <p>$2000</p>
-                  </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                  <a href="#" type="button" align="center" class="btn btn-secondary btn-lg" disabled>Finalizar compra</a>
+                </div> 
               </div>
-              <div class="row" id="nombresCarrito">
-        
-
-                
-
-              </div>
+            </div>
           </div>
         </div>
-
+  </main>
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="row">
+        <p class="copyright" align="center">Copyright © 2022 AC Productos de Belleza</p>
       </div>
+    </div>
 
-    </main>
-
-
+    
+  </footer>
 </body>
   
 
