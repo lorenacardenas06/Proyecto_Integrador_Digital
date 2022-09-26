@@ -37,13 +37,22 @@ img#logo{
 
 img{
     width: 50vw;
-    height: 60vh;
-    right: 0px;
+    height: 50vh;
     justify-content: flex-end;
 }
 
 .main{
     background-color: #fcc9a5;
+}
+
+
+
+.grilla{
+    display: grid;
+    grid-template-columns: 0.1fr 0.9fr;
+    grid-template-rows: 0.25fr;
+    grid-template-areas: 
+    "svg h2";
 }
 
 
@@ -55,7 +64,7 @@ img{
 h1{
     margin-top: 300px;
     font-family: 'Playfair Display', serif;
-    font-size: 100px;
+    font-size: 200px;
 }
 
 
@@ -64,11 +73,13 @@ h2{
     
     font-family: 'Josefin Sans', sans-serif;
     color:black;
+    display: grid;
+    grid-area: h2;
 }
 
 
 
-.button{
+button{
     background-color: white;
 }
 
