@@ -37,9 +37,6 @@ app.get('/shoppingCar', (req,res) =>{
 //res.send("Ruta restringida, hemos localizado la direccion de su computador"); // Permite enviar texto o codigo HTML
 //});
 
-app.listen(3002, () => {
-console.log("Servidor corriendo");
-});
 
 app.listen(process.env.PORT || 3000, function () {
   console.log("servidor corriendo");
