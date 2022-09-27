@@ -1,8 +1,5 @@
 const express = require("express"); //Traigo la libreria express
 const path = require("path");
-const createError = require("http-errors");
-const cookieParser = require("cookie-parser");
-const logger = require("morgan");
 
 const app = express(); //Utilizo express
 app.use(express.static(path.resolve(__dirname, './public')));//vuelve publica la carpeta public
