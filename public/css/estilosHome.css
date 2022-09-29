@@ -19,18 +19,14 @@ body{
 }
 
 
-main{
-    background-color: #fcc9a5;
+.header{
+    font-family:'Big Shoulders Display';
+    color:white;
+    background-color: dark;
+    margin-bottom: 10px;
 }
 
 
-img#logo{
-    width: 150px;
-    height: 150px;
-    display:flex;
-    justify-content: flex-start;
-    position: relative;
-}
 
 
 
@@ -41,9 +37,6 @@ img{
     justify-content: flex-end;
 }
 
-.main{
-    background-color: #fcc9a5;
-}
 
 
 

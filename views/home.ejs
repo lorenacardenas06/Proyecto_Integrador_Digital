@@ -16,45 +16,8 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
-    <header class="header">
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-            <div class="container" class="col align-self-start">
-                  <img id="logo" src="img/logo.png" class="rounded float-start" class="img-fluid" alt="logo" width="80px" height="80px"/>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">OJOS</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">LABIOS</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">ROSTRO</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link disabled">SKINCARE</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link disabled">BODYCARE</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link disabled">COLECCIONES</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link disabled">SOBRE NOSOTROS </a>
-                      </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
-                  </div>
-                </div>
-              </nav>
-    </header>
+    <%- include("./partials/header")%>
+ 
 
     <main class="main">
         <div class="home">
