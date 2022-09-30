@@ -110,5 +110,12 @@ section#texbox2{
    grid-area: seccion;
 }
 
+.header{
+   font-family:'Big Shoulders Display';
+   color:white;
+   background-color: dark;
+   margin-bottom: 10px;
+}
+
 
 

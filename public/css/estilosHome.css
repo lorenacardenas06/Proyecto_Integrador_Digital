@@ -1,49 +1,21 @@
 body{
 
     box-sizing: border-box;
-    margin-top: 0%;
-    margin:0;
-    padding:0; 
-}
-
-* {
-    box-sizing: border-box;
-  }
-
-
-
-.container-fluid{
-    color: black !important;
-    background-color: #fcc9a5 !important;
-
-}
-
-
-main{
-    background-color: #fcc9a5;
-}
-
-
-img#logo{
-    width: 150px;
-    height: 150px;
-    display:flex;
-    justify-content: flex-start;
-    position: relative;
+    background-color: #FCC9A5; 
+    
+    
 }
 
 
 
 
-img{
-    width: 50vw;
-    height: 50vh;
-    justify-content: flex-end;
+.header{
+    font-family:'Big Shoulders Display';
+    color:white;
+    background-color: dark;
+    margin-bottom: 10px;
 }
 
-.main{
-    background-color: #fcc9a5;
-}
 
 
 
@@ -86,8 +58,6 @@ button{
 
 footer#pie{
     background: white;
-    bottom: 0;
-    left: 0;
 }
 
 
