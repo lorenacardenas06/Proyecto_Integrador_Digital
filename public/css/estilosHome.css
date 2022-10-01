@@ -39,8 +39,8 @@ p{
 
 
 img{
-    display: grid;
-    justify-self: center;
+    display: flex;
+    justify-content: left;
 }
 
 main{
