@@ -1,1 +1,10 @@
+[{"id":"1",
+"nombreProducto":"labial",
+"precio":"5000",
+"marca":"loreal",
+"descuento":"20%",
+"descripción":"lapiz labial",
+"imagen":"labial.jpg",
+"categoría":"labios"
+}]
 
