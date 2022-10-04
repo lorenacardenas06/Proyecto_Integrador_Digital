@@ -1,3 +1,4 @@
+const productos=require("../database/base.json")
 const controladorProductos = {
   index: (req, res) => {
     res.render("home");

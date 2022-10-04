@@ -10,6 +10,7 @@ const productsRouter = require("./src/routes/productosRouters");
 const usersRouters = require("./src/routes/usersRouters"); // Se hace la carpeta public publica
 app.use("/", productsRouter); //home
 app.use("/login", usersRouters); //login
+app.use(logger("dev"))
 
 
 app.listen(process.env.PORT || 3000, function () {
