@@ -1,32 +1,72 @@
-[{"id":"1",
-"nombreProducto":"labial",
-"precio":"5000",
-"marca":"loreal",
-"descuento":"20%",
-"descripción":"lapiz labial",
-"imagen":"labial.jpg",
-"categoría":"labios"
-},
-{
-    "id":"4",
-    "nombreProducto":"Sérum Rellenador L'Oreal París Revitalift Ácido Hialurónico x 30 ml",
-    "precio":"2800",
-    "marca":"loreal",
-    "descuento":"30%",
-    "descripción":"Con un 1,5% de ácido hialurónico, la más alta concentración de este activo en un producto cosmético, el Sérum Revitalift de Ácido Hialurónico de L'Oreal Paris rellena arrugas y líneas de expresión, al lograr disminuir un 40% de las mismas en solo cuatro semanas.    ",
-    "imagen":"https://dqm4sv5xk0oaj.cloudfront.net/products/22078/large/open-uri20200630-1637-f2nwtr.?1593523880",
-    "categoría":"SKINCARE" 
-},
-{
-    "id":"10",
-"nombreProducto":"Combo Garnier Agua Micelar de Rosas Skin Active x 2 un x 400 ml c/u",
-"precio":"2020",
-"marca":"Garnier",
-"descuento":"",
-"descripción":"Si tenés la piel opaca, cansada, apagada, la nueva Agua Micelar de Rosas es para vos. Apta para todo tipo de piel incluso las sensibles, formulada con AGUA DE ROSAS, ingrediente conocido por iluminar, calmar, hidratar y devolverle vida a tu rostro sin dejar sensación de tirantez. Para limpiar tu piel todos los días, por la mañana y por la noche, gracias al poder de las micelas que atrapan suciedad e impurezas como un imán (¡además de maquillaje!)",
-"imagen":"https://http2.mlstatic.com/D_NQ_NP_924635-MLA43880068084_102020-O.jpg",
-"categoría":"SKINCARE"
-}
-
+[
+    {
+        "id": "1",
+        "nombreProducto": "labial",
+        "precio": "5000",
+        "marca": "loreal",
+        "descuento": "20%",
+        "descripción": "lapiz labial",
+        "imagen": "labial.jpg",
+        "categoría": "labios"
+    },
+    {
+        "id": "9",
+        "nombreProducto": "Sérum Rellenador L'Oreal París Revitalift Ácido Hialurónico x 30 ml",
+        "precio": "2800",
+        "marca": "loreal",
+        "descuento": "30%",
+        "descripción": "Con un 1,5% de ácido hialurónico, la más alta concentración de este activo en un producto cosmético, el Sérum Revitalift de Ácido Hialurónico de L'Oreal Paris rellena arrugas y líneas de expresión, al lograr disminuir un 40% de las mismas en solo cuatro semanas.    ",
+        "imagen": "https://dqm4sv5xk0oaj.cloudfront.net/products/22078/large/open-uri20200630-1637-f2nwtr.?1593523880",
+        "categoría": "SKINCARE"
+    },
+    {
+        "id": "10",
+        "nombreProducto": "Combo Garnier Agua Micelar de Rosas Skin Active x 2 un x 400 ml c/u",
+        "precio": "2020",
+        "marca": "Garnier",
+        "descuento": "",
+        "descripción": "Si tenés la piel opaca, cansada, apagada, la nueva Agua Micelar de Rosas es para vos. Apta para todo tipo de piel incluso las sensibles, formulada con AGUA DE ROSAS, ingrediente conocido por iluminar, calmar, hidratar y devolverle vida a tu rostro sin dejar sensación de tirantez. Para limpiar tu piel todos los días, por la mañana y por la noche, gracias al poder de las micelas que atrapan suciedad e impurezas como un imán (¡además de maquillaje!)",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_924635-MLA43880068084_102020-O.jpg",
+        "categoría": "SKINCARE"
+    },
+    {
+        "id": "8",
+        "nombreProducto": "Neutrogena, Reparación rápida de arrugas, Aceite de retinol, 30 ml (1 oz. Líq.)",
+        "precio": "2020",
+        "marca": "Neutrogena",
+        "descuento": "50%",
+        "descripción": "Si tenés la piel opaca, cansada, apagada, la nueva Agua MicelarReduzca eficazmente la apariencia de líneas finas rebeldes y arrugas profundas con este aceite liviano de rápida absorción. El aceite de Retinol SA superconcentrado y de nutrición intensa proporciona resultados visibles en solo 1 semana. Este potente tratamiento nocturno actúa durante toda la noche para nutrir y reponer intensamente la piel seca para lograr una piel radiante y de aspecto más joven.",
+        "imagen": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/ngn/ngn12121/v/10.jpg",
+        "categoría": "SKINCARE"
+    },
+    {
+        "id": "11",
+        "nombreProducto": "Adipofactor Lidherma Reductora Ampelopsina Redumodel 500gr Tipo De Envase Pote Fragancia Neutro",
+        "precio": "3700",
+        "marca": " Lidherma",
+        "descuento": "",
+        "descripción": "Lidherma ofrece una variedad de productos para el cuidado corporal. Si buscás proteger tu piel y mantenerla en forma, este puede ser una buena opción.        ",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_956164-MLA44685663344_012021-O.webp",
+        "categoría": "BODYCARE"
+    },
+    {
+        "id": "12",
+        "nombreProducto": "Crema para cuerpo Nivea Cuidado Corporal Milk Nutritiva en pomo 400mL        ",
+        "precio": "500",
+        "marca": " Nivea",
+        "descuento": "10%",
+        "descripción": "Nivea ofrece una variedad de productos para el cuidado corporal. Si buscás proteger tu piel y mantenerla en forma, este puede ser una buena opción. Libre de crueldad. Este producto es elaborado sin lastimar a ningún animal.",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_624520-MLA50247705107_062022-F.webp",
+        "categoría": "BODYCARE"
+    },
+    {
+        "id": "13",
+        "nombreProducto": "Emulsión para cuerpo Dermaglós Hidratación Profunda Emulsión Corporal en dosificador 300mL        ",
+        "precio": "1400",
+        "marca": " Dermaglós",
+        "descuento": "20%",
+        "descripción": "Dermaglós ofrece una variedad de productos para el cuidado corporal. Si buscás proteger tu piel y mantenerla en forma, este puede ser una buena opción.        ",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_672003-MLA50234710841_062022-F.webp",
+        "categoría": "BODYCARE"
+    }
 ]
-
