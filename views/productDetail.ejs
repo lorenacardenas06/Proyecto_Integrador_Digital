@@ -36,7 +36,16 @@
                   </div>
                   <div class="col">
                     <!--<img src="../img/Labial.jpg" align="center" width=400px; heigth=1000px>-->
-                    <p><%= p[0].nombreProducto %></p>
+                    <div>
+                      <h1>Nuestros productos</h1>
+                      <% for(let i=0; i<p.length ; i++){ %>
+                        <p><%= p[i].nombreProducto %></p>
+
+                      <%}%>
+                      
+
+                    </div>
+                    
 
                     <h3 class="box-title mt-5">información importante</h3>
                     <ul class="list-unstyled">
