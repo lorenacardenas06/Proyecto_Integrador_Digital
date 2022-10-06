@@ -5,19 +5,26 @@
 "descuento":"20%",
 "descripción":"lapiz labial",
 "imagen":"labial.jpg",
-"categoría":"labios"
+"categoría":"Maquillaje"
 },
 {"id":"2",
-"nombreProducto":"labial",
-"precio":"5000",
-"marca":"loreal",
-"descuento":"20%",
-"descripción":"lapiz labial",
-"imagen":"labial.jpg",
-"categoría":"labios"
+"nombreProducto":"Corrector REVLON Colorstay Concealer Light medium ",
+"precio":"43350",
+"marca":"Revlon",
+"descuento":"10%",
+"descripción":"Corrector líquido de larga duración",
+"imagen":"corrector.jpg",
+"categoría":"Maquillaje"
 
 },
 {"id":"3",
+"nombreProducto":"Labial Vogue Liquido Resistencia Poderosa Uni x 3Ml",
+"precio":"19550",
+"marca":"vogue",
+"descuento":"15%",
+"descripción":"Labial Resist 16 hrs de duración",
+"imagen":"labial_liquido.png",
+"categoría":"Maquillaje"
 
 }]
 
