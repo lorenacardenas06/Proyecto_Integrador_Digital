@@ -10,7 +10,7 @@
         "categoría": "labios"
     },
     {
-        "id": "9",
+        "id": "2",
         "nombreProducto": "Sérum Rellenador L'Oreal París Revitalift Ácido Hialurónico x 30 ml",
         "precio": "2800",
         "marca": "loreal",
@@ -20,7 +20,7 @@
         "categoría": "SKINCARE"
     },
     {
-        "id": "10",
+        "id": "3",
         "nombreProducto": "Combo Garnier Agua Micelar de Rosas Skin Active x 2 un x 400 ml c/u",
         "precio": "2020",
         "marca": "Garnier",
@@ -30,7 +30,7 @@
         "categoría": "SKINCARE"
     },
     {
-        "id": "8",
+        "id": "4",
         "nombreProducto": "Neutrogena, Reparación rápida de arrugas, Aceite de retinol, 30 ml (1 oz. Líq.)",
         "precio": "2020",
         "marca": "Neutrogena",
@@ -40,7 +40,7 @@
         "categoría": "SKINCARE"
     },
     {
-        "id": "11",
+        "id": "5",
         "nombreProducto": "Adipofactor Lidherma Reductora Ampelopsina Redumodel 500gr Tipo De Envase Pote Fragancia Neutro",
         "precio": "3700",
         "marca": " Lidherma",
@@ -50,7 +50,7 @@
         "categoría": "BODYCARE"
     },
     {
-        "id": "12",
+        "id": "6",
         "nombreProducto": "Crema para cuerpo Nivea Cuidado Corporal Milk Nutritiva en pomo 400mL        ",
         "precio": "500",
         "marca": " Nivea",
@@ -60,7 +60,7 @@
         "categoría": "BODYCARE"
     },
     {
-        "id": "13",
+        "id": "7",
         "nombreProducto": "Emulsión para cuerpo Dermaglós Hidratación Profunda Emulsión Corporal en dosificador 300mL        ",
         "precio": "1400",
         "marca": " Dermaglós",
