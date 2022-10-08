@@ -21,11 +21,10 @@ Mujeres de todas las edades.
 
 3. Juliana Trujillo:
 4. Aileen: 
-5.
-- Link del tablero de trabajo en donde se encuentran trabajando
--
-- https://trello.com/b/N9qQkXNC/digital-house-project
 
+- Link del tablero de trabajo en donde se encuentran trabajando:  https://trello.com/b/N9qQkXNC/digital-house-project
+
+OPCIONALES
 1. Logo: AC Productos de Belleza
 3. Colores: 
 4. Tipografías: Robot
