@@ -9,7 +9,7 @@ const controladorProductos = {
     res.render("productDetail",{p:productos});
   }, //mostrar detalle de un producto
   create: (req, res) => {
-    res.render("shoppingCar");
+    res.render("views/products/shoppingCar");
   }, //enviar datos para agregar un producto
 };
 
