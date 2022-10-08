@@ -11,8 +11,6 @@ const usersRouters = require("./src/routes/usersRouters"); // Se hace la carpeta
 app.use("/", productsRouter); //home
 app.use("/login", usersRouters); //login
 
-
-
 app.listen(process.env.PORT || 3000, function () {
   console.log("servidor corriendo en puerto 3000");
 });
