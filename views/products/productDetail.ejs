@@ -1,99 +1,82 @@
 <!DOCTYPE html>
 <html lang="es"> 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Labial Matte Intransferible UPA</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="/css/css.css">
-      
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-          crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/0ffcf80e36.js" crossorigin="anonymous"></script>
-      </head>
-        <body>
-          <%-include("./partials/header")%>
-            <main>
-              <div class="container">
-                <div class="row">
-                  <div class="col">
-                    <div id="uno">
-          
-                      <h2>Une el efecto intransferible, a labios hidratados todo el día</h2>
-                      <p>Labial super mate que no transfiere, no mancha, no se corre y aún hidrata los labios. Con alta cobertura
-                        que dura hasta 12 horas y textura mousse que hidrata a lo largo del día.
-                        La exclusiva tecnología de partículas Una garantiza larga duración, ultra pigmentación y alta fijación.
-                      </p>
-                      <h3>Beneficios</h3>
-                      <li>Alta fijación de larga duración;</li>
-                      <li>Hidratación inmediata;</li>
-                      <li>Ayuda en la prevención de las señales de envejecimiento de los labios, con ceramidas de maracuyá,
-                        activo de la biodiversidad brasileña, el Labial Matte Intransferible restaura los labios y
-                        proporciona hidratación inmediata y por 24 horas.</li>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <!--<img src="../img/Labial.jpg" align="center" width=400px; heigth=1000px>-->
-                    <div>
-                      <h1>Nuestros productos</h1>
-                      <% for(let i=0; i<p.length ; i++){ %>
-                        <p><%= p[i].nombreProducto %></p>
-                        <p><%= p[i].nombreProducto %></p>
 
-                      <%}%>
-                      
-
-                    </div>
-                    
-
-                    <h3 class="box-title mt-5">información importante</h3>
-                    <ul class="list-unstyled">
-                      <li><i class="fa fa-check text-success"></i>Duración</li>
-                      <li><i class="fa fa-check text-success"></i>Efecto matte</li>
-                      <li><i class="fa fa-check text-success"></i>Contenido activo de la biodiversidad brasileña</li>
-                      <li><i class="fa-light fa-leaf"></i></i>Producto Vegano</li>
-                    </ul>
-                  </div>
-                  <div class="col">
-                    <div class="col">
-                      <h4 class="pro-d-title">
-                        <a class="">
-                          Labial matte intransferible UPA
-                        </a>
-                      </h4>
-                      <p>
-                        Cod:107325ar-Labial matte intransferible-8ml
-                      </p>
-                      <div class="m-bot15"> <strong>Precio : </strong><span class="pro-price">$1524.00</span></div>
-                      <div class="form-group">
-                        <label>Cantidad</label>
-                        <input type="quantiy" placeholder="1" class="form-control quantity">
-                      </div>
-                      <div class="form-group col-md-4">
-                        <label for="inputState">Color</label>
-                        <select id="inputState" class="form-control">
-                          <option>Rojo</option>
-                          <option>Azul</option>
-                          <option>Violeta</option>
-                          <option>Rosa</option>
-                          <option>Naranja</option>
-          
-                        </select>
-                      </div>
-                      <p>
-                        <button class="btn btn-round btn-danger" type="button"><i class="fa fa-shopping-cart"></i> Add to
-                          Cart</button>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </main>
-            <%-include("./partials/footer")%>
-          
-          </body>
-          
-          
-          </html>
+<head>
+  <title>Detalles de producto</title>
+  <link rel="stylesheet" type="text/css" href="/css/css.css">
+  <%-include("./partials/head")%>
+</head>
+<body>
+  <%-include("./partials/header")%>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div id="uno">
+            <h2>Une el efecto intransferible, a labios hidratados todo el día</h2>
+            <p>Labial super mate que no transfiere, no mancha, no se corre y aún hidrata los labios. Con alta cobertura
+              que dura hasta 12 horas y textura mousse que hidrata a lo largo del día.
+              La exclusiva tecnología de partículas Una garantiza larga duración, ultra pigmentación y alta fijación.
+            </p>
+            <h3>Beneficios</h3>
+            <li>Alta fijación de larga duración;</li>
+            <li>Hidratación inmediata;</li>
+            <li>Ayuda en la prevención de las señales de envejecimiento de los labios, con ceramidas de maracuyá,
+              activo de la biodiversidad brasileña, el Labial Matte Intransferible restaura los labios y
+              proporciona hidratación inmediata y por 24 horas.</li>
+          </div>
+        </div>
+        <div class="col">
+          <!--<img src="../img/Labial.jpg" align="center" width=400px; heigth=1000px>-->
+          <div>
+            <h1>Nuestros productos</h1>
+            <% for(let i=0; i<p.length ; i++){ %>
+              <p><%= p[i].nombreProducto %></p>
+              <p><%= p[i].nombreProducto %></p>
+            <%}%>
+          </div>
+          <h3 class="box-title mt-5">información importante</h3>
+          <ul class="list-unstyled">
+            <li><i class="fa fa-check text-success"></i>Duración</li>
+            <li><i class="fa fa-check text-success"></i>Efecto matte</li>
+            <li><i class="fa fa-check text-success"></i>Contenido activo de la biodiversidad brasileña</li>
+            <li><i class="fa-light fa-leaf"></i></i>Producto Vegano</li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="col">
+            <h4 class="pro-d-title">
+              <a class="">
+                Labial matte intransferible UPA
+              </a>
+            </h4>
+            <p>
+              Cod:107325ar-Labial matte intransferible-8ml
+            </p>
+            <div class="m-bot15"> <strong>Precio : </strong><span class="pro-price">$1524.00</span></div>
+            <div class="form-group">
+              <label>Cantidad</label>
+              <input type="quantiy" placeholder="1" class="form-control quantity">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputState">Color</label>
+              <select id="inputState" class="form-control">
+                <option>Rojo</option>
+                <option>Azul</option>
+                <option>Violeta</option>
+                <option>Rosa</option>
+                <option>Naranja</option>
+              </select>
+            </div>
+            <p>
+              <button class="btn btn-round btn-danger" type="button"><i class="fa fa-shopping-cart"></i> Add to
+                Cart</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <%-include("./partials/footer")%>
+</body>
+</html>
