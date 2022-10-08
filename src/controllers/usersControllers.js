@@ -2,8 +2,8 @@ const controladorUsuarios = {
   registrar: (req, res) => {
     res.render("login");
   }, //registar usuarios
- singIN:(req, res)=> {
-    res.render("singIn");
+ ingreso:(req, res)=> {
+    res.render("ingreso");
   }//inicio de sesion
 };
 

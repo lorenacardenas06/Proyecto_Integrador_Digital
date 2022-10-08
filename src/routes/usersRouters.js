@@ -5,6 +5,6 @@ let validateRegister=[]
 const express = require("express");
 const router = express.Router();
 router.get("/", controladorUsuarios.registrar);
-router.get("/", controladorUsuarios.singIN);
+router.get("/", controladorUsuarios.ingreso);
 
 module.exports = router;
