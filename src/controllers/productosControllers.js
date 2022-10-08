@@ -1,4 +1,4 @@
-const productos=require("../database/base.json")
+const productos=require("../database/productos.json")
 const controladorProductos = {
   index: (req, res) => {
 
@@ -6,10 +6,10 @@ const controladorProductos = {
   }, //mostrar listado de productos
   show: (req, res) => {
 //   console.log(productos)
-    res.render("productDetail",{p:productos});
+    res.render("products/productDetail",{p:productos});
   }, //mostrar detalle de un producto
   create: (req, res) => {
-    res.render("shoppingCar");
+    res.render("products/shoppingCar");
   }, //enviar datos para agregar un producto
 };
 
