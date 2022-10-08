@@ -5,10 +5,10 @@ const controladorProductos = {
   }, //mostrar listado de productos
   show: (req, res) => {
 //   console.log(productos)
-    res.render("products/productDetail",{p:productos});
+    res.render("products/detalleProducto",{p:productos});
   }, //mostrar detalle de un producto
-  create: (req, res) => {
-    res.render("products/shoppingCar");
+  show: (req, res) => {
+    res.render("products/carritoProducto");
   }, //enviar datos para agregar un producto
 };
 

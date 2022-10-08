@@ -7,7 +7,7 @@ const usersRouters = require("./src/routes/usersRouters"); //se trae el enrutado
 const app = express(); //Utilizo express
 
 app.use(express.static(path.resolve(__dirname, './public')));//vuelve publica la carpeta public
-app.use(express.urlencoded({extended:false}))
+app.use(express.urlencoded({extended:false})) //utilizar el metodo POST
 app.use(methodOverride("_method"))
 app.set("views", path.join(__dirname, "./views")); // Define la ubicación de la carpeta de las Vistas
 
