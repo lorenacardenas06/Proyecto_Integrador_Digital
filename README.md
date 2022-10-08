@@ -20,7 +20,7 @@ Mujeres de todas las edades.
 1. Lorena Cardenas Chizabas: Bioingeniero con amplia experiencia en gestión y desarrollo de proyectos de investigación. Como ingeniero biomédico tengo la capacidad de brindar soporte técnico a equipos y dispositivos médicos, capacitar a los profesionales de la salud en base al uso adecuado de los equipos médicos. También tengo conocimientos en gestión de tecnología biomédica en instituciones de salud de tercer nivel, gestión de recursos hospitalarios, normativa del sector salud, metrología, tecnovigilancia y producción de gases medicinales. Por otro lado, soy apasionada de las tecnologías. Tengo conocimientos en desarrollo Back-end y Front-end como NodeJs, JavaScript, HTML, CSS, frameworks como React y Git.
 
 3. Juliana Trujillo:
-4. Aileen: 
+4. Aileen: Estudiante de ingeniaria en sistemas, me gusta leer manga, libros y cocinar.
 
 - Link del tablero de trabajo en donde se encuentran trabajando:  https://trello.com/b/N9qQkXNC/digital-house-project
 
