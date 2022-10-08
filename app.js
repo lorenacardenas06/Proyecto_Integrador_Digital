@@ -17,7 +17,6 @@ app.use("/", productsRouter); //home
 app.use("/login", usersRouters); //login
 
 
-
 app.listen(process.env.PORT || 3000, function () {
   console.log("servidor corriendo en puerto 3000");
 });
