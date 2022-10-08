@@ -10,13 +10,17 @@ const productsRouter = require("./src/routes/productosRouters"); //se trae el en
 const usersRouters = require("./src/routes/usersRouters"); //se trae el enrutador
 app.use("/", productsRouter); //home
 app.use("/login", usersRouters); //login
+<<<<<<< HEAD
 app.use("/ingreso", usersRouters); //singIN
 app.use("/productDetail", productsRouter); 
 app.use("/shoppingCar", productsRouter); 
+=======
+>>>>>>> refs/remotes/origin/main
 
 
 app.listen(process.env.PORT || 3000, function () {
   console.log("servidor corriendo en puerto 3000");
+<<<<<<< HEAD
 });
 
 /*
@@ -44,3 +48,6 @@ app.get('/shoppingCar', (req,res) =>{
 */
 
 
+=======
+});
+>>>>>>> refs/remotes/origin/main
