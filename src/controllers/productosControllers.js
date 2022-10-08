@@ -1,9 +1,12 @@
+const productos=require("../database/base.json")
 const controladorProductos = {
   index: (req, res) => {
+
     res.render("home");
   }, //mostrar listado de productos
   show: (req, res) => {
-    res.render("productDetail");
+//   console.log(productos)
+    res.render("productDetail",{p:productos});
   }, //mostrar detalle de un producto
   create: (req, res) => {
     res.render("shoppingCar");

@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/0ffcf80e36.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <%- include("./partials/header")%>
+    <%-include("./partials/header")%>
       
       <section class="vh-100">
         <div class="container-fluid h-custom">
@@ -30,13 +30,13 @@
             <!--name input-->
             <div class="form-outline mb-3">
                 <input type="name" id="nombre" class="form-control form-control-lg"
-                  placeholder="NOMBRE" />
+                  name="NOMBRE" />
                 <label class="form-label" for="nombre">NOMBRE</label>
               </div>
               <!--apellido input-->
               <div class="form-outline mb-3">
                 <input type="apellido" id="apellido" class="form-control form-control-lg"
-                  placeholder="APELLIDO" />
+                  name="APELLIDO" />
                 <label class="form-label" for="apellido">APELLIDO</label>
               </div>
             <!-- Email input -->
@@ -81,6 +81,7 @@
         <div
       class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
     </section>
+    <%-include("./partials/footer")%>
       
   </body>
 </html>

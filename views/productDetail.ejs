@@ -14,7 +14,7 @@
         <script src="https://kit.fontawesome.com/0ffcf80e36.js" crossorigin="anonymous"></script>
       </head>
         <body>
-          <%- include("./partials/header")%>
+          <%-include("./partials/header")%>
             <main>
               <div class="container">
                 <div class="row">
@@ -35,7 +35,19 @@
                     </div>
                   </div>
                   <div class="col">
-                    <img src="../img/Labial.jpg" aling="center" width=400px; heigth=1000px>
+                    <!--<img src="../img/Labial.jpg" align="center" width=400px; heigth=1000px>-->
+                    <div>
+                      <h1>Nuestros productos</h1>
+                      <% for(let i=0; i<p.length ; i++){ %>
+                        <p><%= p[i].nombreProducto %></p>
+                        <p><%= p[i].nombreProducto %></p>
+
+                      <%}%>
+                      
+
+                    </div>
+                    
+
                     <h3 class="box-title mt-5">información importante</h3>
                     <ul class="list-unstyled">
                       <li><i class="fa fa-check text-success"></i>Duración</li>
@@ -79,10 +91,7 @@
                 </div>
               </div>
             </main>
-            <div id="grilla">
-              </section>
-          
-            </div>
+            <%-include("./partials/footer")%>
           
           </body>
           

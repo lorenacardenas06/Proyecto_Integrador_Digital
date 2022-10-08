@@ -1,38 +1,10 @@
-body{
 
-    box-sizing: border-box;
-    background-color: #FCC9A5; 
-    
-    
-}
-
-
-
-
-.header{
-    font-family:'Big Shoulders Display';
-    color:white;
-    background-color: dark;
-    margin-bottom: 10px;
-}
-
-
-
-
-.grilla{
+svg{
+    width: 1em;
     display: grid;
-    grid-template-columns: 0.1fr 0.9fr;
-    grid-template-rows: 0.25fr;
-    grid-template-areas: 
-    "svg h2";
+    grid-area: svg;
+    margin-top: 20px;
 }
-
-
-
-
-
-
-
 h1{
     margin-top: 300px;
     font-family: 'Playfair Display', serif;
@@ -48,19 +20,6 @@ h2{
     display: grid;
     grid-area: h2;
 }
-
-
-
-button{
-    background-color: white;
-}
-
-
-footer#pie{
-    background: white;
-}
-
-
 p{
     font-size: 20px;
     display: grid;
@@ -70,12 +29,40 @@ p{
 }
 
 
-svg{
-    width: 1em;
+.grilla{
     display: grid;
-    grid-area: svg;
-    margin-top: 20px;
+    grid-template-columns: 0.1fr 0.9fr;
+    grid-template-rows: 0.25fr;
+    grid-template-areas: 
+    "svg h2";
 }
+
+
+img{
+    display: flex;
+    justify-content: left;
+}
+
+main{
+    background-color: #FCC9A5; 
+    height: 600px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

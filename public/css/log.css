@@ -1,93 +1,13 @@
 
-/* Get rid of all default margins/paddings. Set typeface */
-body {
-  box-sizing: 40%;
-  font-family: "lato", sans-serif;
-  color: rosybrown;
-  background-color: #fcc9a5;
-}
-
-#grilla{
-  background-color: #fcc9a5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: 
-  "formulario imagen";
-  grid-column-gap: 0px;
-
-}
-
-form {
-  display: grid;
-  /* Centrar el formulario en la página */
-  margin: 0%;
-  width: 400px;
-    
-  /* Esquema del formulario */
-  padding: 10%;
-  border: 1px solid black;
-  border-radius: 1em;
-  background-color: white;
-  grid-area: formulario;
-  width: 37vw;
-  margin-bottom: 0%;
- }
-
-
- img{
-  display: grid;
-  grid-area:imagen;
-  height: 100vh;
-  width: 50vw;
-  padding-bottom: 0%;
- }
- .input[type= submit ]{
-  color: black;
-  border-color: #be8371;
-  border-style: solid;
-  border-style: blow;
-  border: 10px solid salmon;
- }
-
- h1{
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  margin-left: 3cm;
-  margin-top: -5%;
-
- }
- .boton{
-  margin-left: 10%;
-  text-decoration:none;
-  font-weight: 600;
-  font-size: 20px;
-  color:#333333;
-  padding-top:5px;
-  padding-bottom:5px;
-  padding-left:100px;
-  padding-right:100px;
-  background-color:#fcc9a5;
-  border-color:blackblack;
-  border-width: 3px;
-  border-style: solid;
-  border-radius:35px;
-}
-
-
-a{
-  text-decoration:none;
-  text-decoration-color: black;
-  outline: none;
-  text-decoration: none;
-  padding: 2px 1px 0;
-  color: black;
- }
 
  .header{
   font-family:'Big Shoulders Display';
   color:white;
   background-color: dark;
   margin-bottom: 10px;
+}
+
+body{
+  background-color: #FCC9A5; 
+
 }
