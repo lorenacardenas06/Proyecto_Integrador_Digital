@@ -6,7 +6,7 @@
     <%-include("./partials/head")%>
   </head>
   <body>
-    <%-include("./partials/header")%>
+    <%-include("../partials/header")%>
       
       <section class="vh-100">
         <div class="container-fluid h-custom">
@@ -16,7 +16,7 @@
             class="img-fluid" alt="Sample image">
         </div>
         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-          <form>
+          <form action="/login/registro" method="POST">
             <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
               <p class="lead fw-normal mb-0 me-3">REGISTRATE </p>
             </div>
@@ -35,7 +35,7 @@
             <!-- Email input -->
             <div class="form-outline mb-4">
               <input type="email" id="email" class="form-control form-control-lg"
-                placeholder="entra una direccion de mail valida" />
+                placeholder="entra una direccion de mail valida" name="EMAIL"/>
               <label class="form-label" for="email">Email</label>
             </div>
   
@@ -43,7 +43,7 @@
             <div class="form-outline mb-3">
               <input type="password" id="contraseña" class="form-control form-control-lg"
                 placeholder="crea una contraseña" />
-              <label class="form-label" for="contraseña">Contraseña</label>
+              <label class="form-label" for="contraseña" name="CONTRASEÑA">Contraseña</label>
             </div>
             <div class="form-check d-flex justify-content-center mb-5">
                   <input class="form-check-input me-2" type="checkbox" value="" id="terminos" />
@@ -61,7 +61,7 @@
 
   
             <div class="text-center text-lg-start mt-4 pt-2">
-              <button type="button" class="btn btn-primary btn-lg"
+              <button type="submit" class="btn btn-primary btn-lg"
                 style="padding-left: 2.5rem; padding-right: 2.5rem;">CREAR</button>
               <p> <a href="#!"
                   class="link-danger"> Volver al inicio</a></p>
@@ -74,7 +74,7 @@
         <div
       class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
     </section>
-    <%-include("./partials/footer")%>
+    <%-include("../partials/footer")%>
       
   </body>
 </html>
