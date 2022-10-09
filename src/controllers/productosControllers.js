@@ -1,6 +1,6 @@
 //-----------------REQUERIMIENTOS-------------------------
-const fs = requiere('fs');
-const path = requiere('path')
+const fs = require('fs');
+const path = require('path')
 //----------------DATOS DEL JSON----------------------------------------
 const productosFilePath = path.join(__dirname,'../database/productos.json');
 const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
