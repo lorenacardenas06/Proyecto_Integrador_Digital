@@ -1,4 +1,3 @@
-let productos = 
 [
     {
         "id": "1",
@@ -71,5 +70,3 @@ let productos =
         "categoría": "BODYCARE"
     }
 ]
-
-
