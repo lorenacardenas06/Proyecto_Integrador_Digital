@@ -1,16 +1,18 @@
 const productos=require("../database/productos.json")
 const controladorProductos = {
   index: (req, res) => {
-
     res.render("home");
   }, //mostrar listado de productos
   show: (req, res) => {
 //   console.log(productos)
-    res.render("products/productDetail",{p:productos});
+    res.render("products/detalleProducto",{p:productos});
   }, //mostrar detalle de un producto
-  create: (req, res) => {
-    res.render("products/shoppingCar");
+  show: (req, res) => {
+    res.render("products/carritoProducto");
   }, //enviar datos para agregar un producto
+  nuevo: (req, res) => {
+    res.render("products/ingresarProduc");
+  }, //enviar datos para crear un producto
 };
 
 module.exports = controladorProductos;

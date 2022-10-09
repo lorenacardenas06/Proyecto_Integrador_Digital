@@ -2,9 +2,13 @@ const productosController = require("../controllers/productosControllers");
 
 const express = require("express");
 const router = express.Router();
+const multer  = require('multer'); //multer
+const upload = multer({ dest: './public' })
 router.get("/", productosController.index);
-router.get("/productDetail", productosController.show);
-router.get("/shoppingCar", productosController.create);
+router.get("/detalleProducto", productosController.show);
+router.get("/carritoProducto", productosController.show);
+router.get("/ingresarProducto", productosController.nuevo);
+
 
 router.get("/productos/:id?", function(req,res) {
     req.params.id
