@@ -3,11 +3,12 @@ const controladorProductos = {
   index: (req, res) => {
     res.render("home");
   }, //mostrar listado de productos
-  show: (req, res) => {
+  
+  detalle: (req, res) => {
 //   console.log(productos)
     res.render("products/detalleProducto",{p:productos});
   }, //mostrar detalle de un producto
-  show: (req, res) => {
+  carro: (req, res) => {
     res.render("products/carritoProducto");
   }, //enviar datos para agregar un producto
 };
