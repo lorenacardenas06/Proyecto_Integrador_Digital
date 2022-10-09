@@ -18,15 +18,13 @@ h2 {
   color: black;
 }
 
-
-
 /* STRUCTURE */
 
 .wrapper {
   display: block;
-background-color: #fcc9a5;
- padding: 3%;
- border-radius: 10%;
+  background-color: #fcc9a5;
+  padding: 3%;
+  border-radius: 10%;
 }
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
