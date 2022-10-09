@@ -1,18 +1,22 @@
-const productos=require("../database/productos.json")
+//-----------------REQUERIMIENTOS-------------------------
+const fs = requiere('fs');
+const path = requiere('path')
+//----------------DATOS DEL JSON----------------------------------------
+const productosFilePath = path.join(__dirname,'../database/productos.json');
+const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
+//------------OBJETO DEL CONTROLADOR------------------
 const controladorProductos = {
   index: (req, res) => {
-    res.render("home");
-  }, //mostrar listado de productos
-  show: (req, res) => {
+    res.render("home"); //mostrar pagina de inicio
+  }, 
+  
+  detalle: (req, res) => {
 //   console.log(productos)
     res.render("products/detalleProducto",{p:productos});
   }, //mostrar detalle de un producto
-  show: (req, res) => {
+  carro: (req, res) => {
     res.render("products/carritoProducto");
-  }, //enviar datos para agregar un producto
-  nuevo: (req, res) => {
-    res.render("products/ingresarProduc");
-  }, //enviar datos para crear un producto
+  }, //mostrar carrito
 };
 
 module.exports = controladorProductos;
