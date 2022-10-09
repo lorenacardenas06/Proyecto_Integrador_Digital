@@ -17,6 +17,9 @@ const controladorProductos = {
   carro: (req, res) => {
     res.render("products/carritoProducto");
   }, //mostrar carrito
+  nuevos: (req, res) => {
+    res.render("products/ingresarProduc");
+  }, //mostrar nuevos
 };
 
 module.exports = controladorProductos;

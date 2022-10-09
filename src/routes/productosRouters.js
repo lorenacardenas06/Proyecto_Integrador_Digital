@@ -5,14 +5,16 @@ const multer  = require('multer'); //multer
 const upload = multer({ dest: './public' })
 //--------------CONTROLADOR----------------------------------
 const productosController = require("../controllers/productosControllers");
+
 //----------------RUTAS------------------------------------
 router.get("/", productosController.index);
 router.get("/detalleProducto", productosController.detalle);
 router.get("/carritoProducto", productosController.carro);
-
 router.get("/productos/:id?", function(req,res) {
     req.params.id
 });
+router.get("/ingresarProduc", productosController.nuevos)
+
 
 //-----------EXPORTAR MODULO---------------------------
 module.exports = router;
