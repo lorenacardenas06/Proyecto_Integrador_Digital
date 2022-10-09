@@ -15,8 +15,6 @@ router.get("/crearProducto", productosController.crearProducto);
 router.get("/productos/:id?", function(req,res) {
     req.params.id
 });
-router.get("/ingresarProduc", productosController.nuevos)
-
 
 //-----------EXPORTAR MODULO---------------------------
 module.exports = router;
