@@ -12,11 +12,15 @@ const controladorProductos = {
   
   detalle: (req, res) => {
 //   console.log(productos)
-    res.render("products/detalleProducto",{p:productos});
-  }, //mostrar detalle de un producto
+    res.render("products/detalleProducto",{p:productos}); //mostrar detalle de un producto
+  }, 
   carro: (req, res) => {
-    res.render("products/carritoProducto");
-  }, //mostrar carrito
+    res.render("products/carritoProducto"); //mostrar carrito
+  }, 
+  crearProducto: (req, res) => {
+    res.render("products/ingresarProducto"); //mostrar creacion producto
+    
+  }, 
 };
 
 module.exports = controladorProductos;
