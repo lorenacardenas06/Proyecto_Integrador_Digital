@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>CREAR PRODUCTOS</title>
+  <%-include("../partials/head")%>
+  <link rel="stylesheet" type="text/css" href="/css/IngresaProducto.css">
+  
+</head>
+<body>
+  <%-include("../partials/header")%>
+    
+  <main>
+    <h2>CREA UN PRODUCTO</h2>
+<div class="wrapper fadeInDown">
+  <div class="col">
+    <form action="/products/create" method="POST">
+      <div class="row product-detail">
+        <div class="col">
+          <label for="name" class="form-label">Nombre:</label><br>
+          <input type="text" id="name" name="name" class="form-input">
+  
+        </div>
+        <div class="col">
+          <label for="marca" class="form-label">Marca:</label><br>
+          <input type="text" id="marca" name="marca" placeholder="" class="form-input">
+  
+        </div>
+      <div class="row">  
+        <div class="col">
+          <label for="price" class="form-label">Precio:</label><br>
+          <input type="text" id="price" name="price" class="form-input">
+        </div>
+        <div class="col">
+          <label for="discount" class="form-label">Descuento:</label><br>
+          <input type="text" id="discount" name="discount" class="form-input">
+        </div>
+      </div>
+        <div class="row">
+          <div class="col">
+            <label for="category" class="form-label">Categoría:</label><br>
+            <select name="category" id="category" class="form-input">
+              <option value="">maquillaje</option>
+              <option value="in-sale"> Cuidados personales</option>
+              <option value="visited">Fragancias</option>
+              <option value="visited">Electricos</option>
+
+            </select>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="imageProduct" class="form-label">Seleccionar Imagen:</label>
+          <input type="file" name="imageProduct" />
+        </div>
+         
+        <div class="row">
+          <label for="description" class="form-label">Descipción:</label>
+          <textarea name="description" id="description" class="form-input"></textarea>
+        </div><br>
+        <div class="col-12">
+          <button2 type="submit" class="buy-now-button">Crear producto</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</main>
+<%-include("../partials/footer")%>
+</body>
+</html>
