@@ -15,20 +15,12 @@ const controladorProductos = {
     res.render("products/detalleProducto",{p:productosFilePath}); //mostrar detalle de un producto
   }, 
   carro: (req, res) => {
-<<<<<<< HEAD
-    res.render("products/carritoProducto");
-  }, //mostrar carrito
-  nuevos: (req, res) => {
-    res.render("products/ingresarProduc");
-  }, //mostrar nuevos
-=======
     res.render("products/carritoProducto"); //mostrar carrito
   }, 
   crearProducto: (req, res) => {
     res.render("products/ingresarProducto"); //mostrar creacion producto
     
   }, 
->>>>>>> 6c2c0c67f752c14260dae377a3ccb8a7041d8b82
 };
 
 module.exports = controladorProductos;
