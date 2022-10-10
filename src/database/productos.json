@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "nombreProducto": "labial",
+        "nombre": "labial",
         "precio": "5000",
         "marca": "loreal",
         "descuento": "20%",
@@ -70,5 +70,3 @@
         "categoría": "BODYCARE"
     }
 ]
-
-

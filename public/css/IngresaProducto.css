@@ -1,0 +1,117 @@
+
+/* BASIC */
+
+col{
+  text-align:center;
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;  
+  color: grey;
+}
+h2 {
+  text-align:center;
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;  
+  color: black;
+}
+
+/* STRUCTURE */
+
+.wrapper {
+  display: block;
+  background-color: #fcc9a5;
+  padding: 3%;
+  border-radius: 10%;
+}
+#formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius:50%;
+  background: #fcc9a5;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+  -moz-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+input[type=text] {
+  background-color: white;
+  border:2cm;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration:solid;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+
+button2 {
+  text-align:center;
+  text-decoration: none;
+  margin-left: 40%;
+  margin-top: 3%;
+  border: solid black;
+  font-size: 25px;
+  font-family: inherit;
+  color: #fff;
+  width: 9em;
+  height: 3em;
+  line-height: 2em;
+  background:pink;
+  background-size: 300%;
+  border-radius: 30px;
+ 
+ }
+ 
+ button2:hover {
+  animation: ani 8s linear infinite;
+  border: none;
+ }
+ 
+ 
+ button2:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: #fcc9a5;
+  background-size: 400%;
+  border-radius: 35px;
+  transition: 1s;
+ }
+ 
+ button2:hover::before {
+  filter: blur(20px);
+ }
+ 
+ button2:active {
+  background:#fcc9a5;
+ }
