@@ -7,7 +7,7 @@ const controladorProductos = {
 //   console.log(productos)
     res.render("products/detalleProducto",{p:productos});
   }, //mostrar detalle de un producto
-  show: (req, res) => {
+  sold: (req, res) => {
     res.render("products/carritoProducto");
   }, //enviar datos para agregar un producto
 };
