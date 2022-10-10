@@ -7,8 +7,170 @@
 </head>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <%-include("partials/header")%>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <%-include("partials/header")%>
+  <main>
+    <div class="productos">
+        <div class="container-fluid">
+            <p>Productos más vendidos</p>
+            <div class="row">
+                <div class="col-sm-3">
+                  <% for(let p of productos){ %>
+                    <p><%= p[i].nombreProducto %></p>
+                    <p><%= p[i].nombreProducto %></p>
+                  <%}%>
+                    <img src="img/img-macbook-pro-2019.jpg" class="img-fluid" alt="imagen de producto"/>
+                    <div class="detalleProducto">
+                        <div class="iconProducto" align="right">
+                            <i class="fa-sharp fa-solid fa-truck "></i>
+                        </div>
+                        <div class="descripcion">
+                                <p class="precio">$5.230.000</p>
+                                <p class="descuento">20% off</p>
+                                <p class="cuerpo">Macbook Pro</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <img src="img/img-samsung-galaxy-s10.jpg" class="img-fluid" alt="imagen de producto"/>
+                    <div class="detalleProducto">
+                        <div class="iconProducto" align="right">
+                            <i class="fa-sharp fa-solid fa-truck "></i>
+                        </div>
+                        <div class="descripcion">
+                                <p class="precio">$1.530.000</p>
+                                <p class="descuento">10% off</p>
+                                <p class="cuerpo">Samsung S10</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <img src="img/img-cafetera-moulinex.jpg" class="img-fluid" alt="imagen de producto" />
+                    <div class="detalleProducto">
+                        <div class="iconProducto" align="right">
+                            <i class="fa-sharp fa-solid fa-truck "></i>
+                        </div>
+                        <div class="descripcion">
+                                <p class="precio">$530.000</p>
+                                <p class="descuento">25% off</p>
+                                <p class="cuerpo">Cafetera</p>
+                        </div>
+                    </div>
+                </div>
+                     
+                <div class="col-sm-3">
+                    <img src="img/img-tv-samsung-smart.jpg" class="img-fluid" alt="imagen de producto"/>
+                    <div class="detalleProducto">
+                        <div class="iconProducto" align="right">
+                            <i class="fa-sharp fa-solid fa-truck "></i>
+                        </div>
+                        <div class="descripcion">
+                                <p class="precio">$2.530.000</p>
+                                <p class="descuento">20% off</p>
+                                <p class="cuerpo">Televisor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="img/img-audifonos-sony.jpg" class="img-fluid" alt="imagen de producto"/>
+                    <div class="detalleProducto">
+                        <div class="iconProducto" align="right">
+                            <i class="fa-sharp fa-solid fa-truck "></i>
+                        </div>
+                        <div class="descripcion">
+                                <p class="precio">$130.000</p>
+                                <p class="descuento">15% off</p>
+                                <p class="cuerpo">Audifonos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <img src="img/img-bicicleta.jpg"  class="img-fluid" alt="imagen de producto"/>
+                    <div class="detalleProducto">
+                        <div class="iconProducto" align="right">
+                            <i class="fa-sharp fa-solid fa-truck "></i>
+                        </div>
+                        <div class="descripcion">
+                                <p class="precio">$1.750.000</p>
+                                <p class="descuento">35% off</p>
+                                <p class="cuerpo">Bicicleta</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <img src="img/img-casco.jpg" class="img-fluid" alt="imagen de producto"/>
+                    <div class="detalleProducto">
+                        <div class="iconProducto" align="right">
+                            <i class="fa-sharp fa-solid fa-truck "></i>
+                        </div>
+                        <div class="descripcion">
+                                <p class="precio">$75.000</p>
+                                <p class="descuento">55% off</p>
+                                <p class="cuerpo">Casco</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <img src="img/img-smartwatch.jpg" class="img-fluid" alt="imagen de producto"/>
+                    <div class="detalleProducto">
+                        <div class="iconProducto" align="right">
+                            <i class="fa-sharp fa-solid fa-truck "></i>
+                        </div>
+                        <div class="descripcion">
+                                <p class="precio">$220.000</p>
+                                <p class="descuento">5% off</p>
+                                <p class="cuerpo">Smartwatch</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="img/img-mouse.jpg" class="img-fluid" alt="imagen de producto"/>
+                    <div class="detalleProducto">
+                        <div class="iconProducto" align="right">
+                            <i class="fa-sharp fa-solid fa-truck "></i>
+                        </div>
+                        <div class="descripcion">
+                                <p class="precio">$50.000</p>
+                                <p class="descuento">35% off</p>
+                                <p class="cuerpo">Mouse</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <img src="img/img-iphone.jpg"  class="img-fluid" alt="imagen de producto"/>
+                    <div class="detalleProducto">
+                        <div class="iconProducto" align="right">
+                            <i class="fa-sharp fa-solid fa-truck "></i>
+                        </div>
+                        <div class="descripcion">
+                                <p class="precio">$4.580.000</p>
+                                <p class="descuento">15% off</p>
+                                <p class="cuerpo">iPhone</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <img src="img/img-airpods.jpg" class="img-fluid" alt="imagen de producto"/>
+                    <div class="detalleProducto">
+                        <div class="iconProducto" align="right">
+                            <i class="fa-sharp fa-solid fa-truck "></i>
+                        </div>
+                        <div class="descripcion">
+                                <p class="precio">$58.000</p>
+                                <p class="descuento">75% off</p>
+                                <p class="cuerpo">Airpods</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
  <!-- 
     <main class="main">
       <div class="home">
