@@ -8,7 +8,7 @@ const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
 const controladorProductos = {
   index: (req, res) => {
     res.render("home",{productos:products}); //mostrar pagina de inicio
-  }, 
+  }
   
   detalle: (req, res) => {
 //   console.log(productos)
@@ -20,7 +20,16 @@ const controladorProductos = {
   crearProducto: (req, res) => {
     res.render("products/ingresarProducto"); //mostrar creacion producto
     
-  }, 
-};
+  ingresar: (req, res) => {
+    console.log(req.file)
+    //res.render("products/detalleProducto",{p:productosFilePath}); //mostrar detalle de un producto
+  },
+  detalle: (req, res) => {
+    res.render("products/detalleProducto",{p:productosFilePath}); //mostrar detalle de un producto
+  },
+
+}
+
+
 
 module.exports = controladorProductos;
