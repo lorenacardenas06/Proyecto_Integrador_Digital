@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-  <title>CREAR PRODUCTOS</title>
-  <%-include("../partials/head")%>
-  <link rel="stylesheet" type="text/css" href="/css/IngresaProducto.css">
-  
-</head>
-<body>
-
-  <%-include("../partials/header")%>
-  
-  <main>
+<main>
     <h2>CREA UN PRODUCTO</h2>
     <div class="wrapper fadeInDown">
       <div class="col">
-        <form action="/products/create" method="POST" enctype="multipart/form-data" >
+        <form action="products/detalleProducto" method="POST" enctype="multipart/form-data" >
           <div class="row product-detail">
             <div class="col">
               <label for="name" class="form-label">Nombre:</label><br>
@@ -46,15 +33,15 @@
               </div>
             </div>
             <div class="col-12 col-md-6">
-              <label for="imageProduct" class="form-label">Seleccionar Imagen:</label>
-              <input type="file" name="imageProduct" />
+              <label for="cImage" class="form-label">Cargar imagen</label>
+              <input type="file" name="cImage" id="cImage" multiple/></input>
             </div>  
             <div class="row">
               <label for="description" class="form-label">Descipción:</label>
               <textarea name="description" id="description" class="form-input"></textarea>
             </div><br>
             <div class="col-12">
-              <button2 type="submit" class="buy-now-button">Crear producto</button>
+              <button2 type="submit" class="buy-now-button">Guardar producto</button>
             </div>
           </div>
         </form>
@@ -62,8 +49,3 @@
     </div>
 </main>
 
-<%-include("../partials/footer")%>
-
-</body>
-
-</html>

@@ -24,11 +24,12 @@ const uploadFile = multer({storage: multerDiskStorage});
 
 //----------------RUTAS------------------------------------
 router.get("/", productosController.index);
-router.get("/carritoProducto", productosController.sold);
+router.get("/carritoProducto", productosController.carro);
 
 router.get("/ingresarProducto", productosController.ingresar);
 router.get("/ingresarProducto", uploadFile.single("imageProduct") ,productosController.ingresar);
 router.get("/detalleProducto", productosController.detalle);
+router.post("/detalleProducto", productosController.detalle);
 
 router.get("/productos/:id?", function(req,res) {
     req.params.id
