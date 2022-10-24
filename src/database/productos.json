@@ -6,7 +6,7 @@
         "marca": "loreal",
         "descuento": "20%",
         "descripción": "lapiz labial",
-        "imagen": "./img/labial.jpg",
+        "imagen": "/img/products/labial.jpg",
         "categoría": "labios"
     },
     {
@@ -16,7 +16,7 @@
         "marca": "loreal",
         "descuento": "30%",
         "descripción": "Con un 1,5% de ácido hialurónico, la más alta concentración de este activo en un producto cosmético, el Sérum Revitalift de Ácido Hialurónico de L'Oreal Paris rellena arrugas y líneas de expresión, al lograr disminuir un 40% de las mismas en solo cuatro semanas.    ",
-        "imagen": "https://dqm4sv5xk0oaj.cloudfront.net/products/22078/large/open-uri20200630-1637-f2nwtr.?1593523880",
+        "imagen": "/img/products/Sérum Rellenador L'Oreal París Revitalift Ácido Hialurónico x 30 ml.jpeg",
         "categoría": "SKINCARE"
     },
     {
@@ -26,7 +26,7 @@
         "marca": "Garnier",
         "descuento": "",
         "descripción": "Si tenés la piel opaca, cansada, apagada, la nueva Agua Micelar de Rosas es para vos. Apta para todo tipo de piel incluso las sensibles, formulada con AGUA DE ROSAS, ingrediente conocido por iluminar, calmar, hidratar y devolverle vida a tu rostro sin dejar sensación de tirantez. Para limpiar tu piel todos los días, por la mañana y por la noche, gracias al poder de las micelas que atrapan suciedad e impurezas como un imán (¡además de maquillaje!)",
-        "imagen": "https://http2.mlstatic.com/D_NQ_NP_924635-MLA43880068084_102020-O.jpg",
+        "imagen": "/img/products/Garnier.png",
         "categoría": "SKINCARE"
     },
     {
@@ -36,7 +36,7 @@
         "marca": "Neutrogena",
         "descuento": "50%",
         "descripción": "Si tenés la piel opaca, cansada, apagada, la nueva Agua MicelarReduzca eficazmente la apariencia de líneas finas rebeldes y arrugas profundas con este aceite liviano de rápida absorción. El aceite de Retinol SA superconcentrado y de nutrición intensa proporciona resultados visibles en solo 1 semana. Este potente tratamiento nocturno actúa durante toda la noche para nutrir y reponer intensamente la piel seca para lograr una piel radiante y de aspecto más joven.",
-        "imagen": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/ngn/ngn12121/v/10.jpg",
+        "imagen": "public/img/products/Neutrogena.jpg",
         "categoría": "SKINCARE"
     },
     {

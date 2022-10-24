@@ -10,20 +10,16 @@ const controladorProductos = {
     res.render("home",{productos:products}); //mostrar pagina de inicio
   },
   
-  detalle: (req, res) => {
+  crearProducto: (req, res) => {
 //   console.log(productos)
     res.render("products/detalleProducto",{p:productosFilePath}); //mostrar detalle de un producto
   }, 
   carro: (req, res) => {
     res.render("products/carritoProducto"); //mostrar carrito
   }, 
-  crearProducto: (req, res) => {
-    res.render("products/ingresarProducto"); //mostrar creacion producto
-  },
-    
-  ingresar: (req, res) => {
-    //console.log(req.file)
-    res.render("products/detalleProducto",{p:productosFilePath}); //mostrar detalle de un producto
+  almacenar: (req, res) => {
+    console.log(req.file);
+    //res.render("products/detalleProducto",{p:productosFilePath}); //mostrar detalle de un producto
   },
 
 }
