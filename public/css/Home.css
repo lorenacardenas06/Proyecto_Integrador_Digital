@@ -3,68 +3,25 @@
     background-color: dark;
     margin-bottom: 5px;
 }
-
-svg{
-    width: 1em;
-    display: grid;
-    grid-area: svg;
-    margin-top: 20px;
-}
-
-h1{
-    margin-top: 300px;
-    font-size: 200px;
-}
-
-h2{  
-    color:black;
-    display: grid;
-    grid-area: h2;
-}
-
-p{
-    font-size: 20px;
-    display: grid;
-    grid-area: parrafo;
-    font-family: 'Josefin Sans';
-    color:black;
-}
-.grilla{
-    display: grid;
-    grid-template-columns: 0.1fr 0.9fr;
-    grid-template-rows: 0.25fr;
-    grid-template-areas: 
-    "svg h2";
-}
-
-img{
-    display: flex;
-    justify-content: left;
-}
-
-main{
+.body{
     background-color: #FCC9A5; 
-    height: 600px;
+}
+.product-box{
+    background-color:white;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.product-box_data{
+    background-color:white;
+    font-size:16px;
+    color: #666;
+    border-top: 5px;
+    border-top-style:solid;
+    border-top-color:#ebebeb;
+    border-bottom: 15px;
+    border-bottom-style:solid;
+    border-bottom-color: #FCC9A5;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}

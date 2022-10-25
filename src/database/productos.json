@@ -24,7 +24,7 @@
     {
         "id": "3",
         "categoria": "cuidado personal",
-        "nombre": "Exfoliante Café Cool Nature Coco 200ml",
+        "nombre": "Exfoliante Café Coco",
         "marca": "Cool Nature",
         "precio": "$41.175",
         "descripción": "Mezcla diseñada con ingredientes no tóxicos, altamente nutritivos para la piel. La formulación contiene café, panela y aceites emolientes, cómo el aceite de aguacate, almendras, jojoba, karité, entre otros que, al ser aplicados sobre la piel, ejercen un efecto exfoliante y emoliente, brindándole un aspecto suave y humectado.",
@@ -34,7 +34,7 @@
     {
         "id": "4",
         "categoria": "cuidado personal",
-        "nombre": "Crema Aclarante Corporal True You 120ml",
+        "nombre": "Crema Aclarante Corporal",
         "marca": "True You",
         "precio": "$29.925",
         "descripción": "Esta fantástica crema aclarante libre de sulfatos y parabenos aclara progresivamente tu piel hasta recuperar su tono natural mientras la hidrata, su efecto antioxidante reduce la concentración y la producción de melanina unificando el tono de la piel. Además, esta crema hidratante le devuelve la luminosidad y elasticidad a la piel, combate los signos de la edad y previene el envejecimiento prematuro.",
@@ -54,7 +54,7 @@
     {
         "id": "6",
         "categoria": "maquillaje",
-        "nombre": "Combo Garnier Agua Micelar de Rosas Skin Active x 2 un x 400 ml c/u",
+        "nombre": "Agua Micelar de Rosas",
         "marca": "Garnier",
         "precio": "$25.950",
         "descripción": "Si tenés la piel opaca, cansada, apagada, la nueva Agua Micelar de Rosas es para vos. Apta para todo tipo de piel incluso las sensibles, formulada con AGUA DE ROSAS, ingrediente conocido por iluminar, calmar, hidratar y devolverle vida a tu rostro sin dejar sensación de tirantez. Para limpiar tu piel todos los días, por la mañana y por la noche, gracias al poder de las micelas que atrapan suciedad e impurezas como un imán (¡además de maquillaje!)",
@@ -65,7 +65,7 @@
     {
         "id": "7",
         "categoria": "maquillaje",
-        "nombre": "Neutrogena, Reparación rápida de arrugas, Aceite de retinol, 30 ml (1 oz. Líq.)",
+        "nombre": "Crema Neutrogena",
         "marca": "Neutrogena",
         "precio": "$45.800",
         "descripción": "Si tenés la piel opaca, cansada, apagada, la nueva Agua MicelarReduzca eficazmente la apariencia de líneas finas rebeldes y arrugas profundas con este aceite liviano de rápida absorción. El aceite de Retinol SA superconcentrado y de nutrición intensa proporciona resultados visibles en solo 1 semana. Este potente tratamiento nocturno actúa durante toda la noche para nutrir y reponer intensamente la piel seca para lograr una piel radiante y de aspecto más joven.",
@@ -85,7 +85,7 @@
     {
         "id": "9",
         "categoria": "fragancias",
-        "nombre": "Nautica Voyage Heritage Body Spray",
+        "nombre": "Voyage Heritage",
         "marca": "Nautica",
         "precio": "$49.900",
         "descripción": "Para aquellos que abrazan el espíritu del explorador moderno, el spray corporal Voyage Heritage celebra el legado del estilo y diseño audaz de Nautica. El perfil de esta fragancia es cálido, ligeramente dulce y amaderado.",
@@ -96,29 +96,29 @@
     {
         "id": "10",
         "categoria": "fragancias",
-        "nombre": "Perfume Benetton Colors Rose Woman Intenso EDP 80ml",
+        "nombre": "Colors Rose Woman",
         "marca": "Benetton",
         "precio": "$137.900",
         "descripción": "Colors Woman Rose Intenso, un estallido natural de cítricos y refrescantes notas verdes hasta un corazón especiado formado por un bouquet de flores blancas. El fondo completa el perfume en su intensidad con un toque oriental que se funde con las maderas y la dulce nata montada. notas de salida FLORAL GOURMAND Cítrica, Flores Blancas; De corazón Especiado Chispeante; De fondo oriental amaderada",
-        "imagen": "/img/products/fragancia_colors",
+        "imagen": "/img/products/fragancia_colors.jpg",
         "descuento": "20%"
 
     },
     {
         "id": "11",
         "categoria": "fragancias",
-        "nombre": "Paris Hilton Women's Body Mist 236ml",
+        "nombre": "Paris Hilton Women's",
         "marca": "Paris Hilton",
         "precio": "$39.900",
         "descripción": "Inspirada en una mujer que quiere ser el centro de atención donde sea que vaya. Es una mujer que quiere apoderarse de su sensualidad y su impresionante belleza.",
-        "imagen": "/img/products/",
+        "imagen": "/img/products/fragancia_parishilton.jpg",
         "descuento": "10%"
 
     },
     {
         "id": "12",
         "categoria": "fragancias",
-        "nombre": "Hollister Wave 2 For Her Edp 30 Ml",
+        "nombre": "Hollister Wave 2",
         "marca": "Hollister",
         "precio": "$20.930",
         "descripción": "Ungaro Love de Emanuel Ungaro es una fragancia de la familia olfativa Oriental Especiada para Mujeres. Ungaro Love se lanzó en 2016 y fue creada por Veronique Nyberg y Alex Lee. La fragrancia contiene vainilla y pimienta rosa.",
@@ -129,7 +129,7 @@
     {
         "id": "13",
         "categoria": "electricos",
-        "nombre": "Cepillo One Step Hot Tools Blowout 24K Gold",
+        "nombre": "Cepillo One Step",
         "marca": "Hot Tools",
         "precio": "$255.920",
         "descripción": "Crea estilos de salón sin esfuerzo, desde la comodidad de tu casa con el cepillo alisador Hot Tools! One Step Blowout 24K Gold Hot Tools seca, alisa y peina a la vez dejando un look sofisticado y versátil. El cepillo One Step tiene un diseño ovalado versátil con lados curvados, creados para alisar el cabello, mientras que los bordes redondeados ayudan a crear volumen desde la raíz hasta las puntas. El cepillo secador HOT TOOLS distribuye uniforme el calor de manera uniforme, para un estilo duradero dejando tu cabello suave y brillante. Este cepillo secador cuenta con cerdas flexibles y resistentes que desenredar tu cabello y moldean tu cabello son maltratarlo, infundidas con carbón para reducir el tiempo del peinado y logra resultados rápidos y profesionales. Este cepillo eléctrico para cabello cuenta con tecnología Direct ION, la cual ayuda a mantener una carga neutra en el cabello, para eliminar el frizz y revivir la vitalidad de la fibra capilar.",
@@ -140,18 +140,18 @@
     {
         "id": "14",
         "categoria": "electricos",
-        "nombre": "Rizador Hot Tools En Onda De 3 Barras 24K Gold",
+        "nombre": "Rizador En Onda",
         "marca": "Hot Tools",
         "precio": "$311.920",
         "descripción": "¡Luce esos rizos de sirena que siempre soñaste! El Rizador Hot Tools En Onda De 3 Barras 24K Gold cuenta con Pulse Technology® , para mantener la temperatura constante durante el proceso de peinado. Esta rizadora cuenta con configuraciones de temperatura hasta de 235ºC, que se adaptan a cualquier tipo de cabello ya sea muy delgado o muy grueso, también tiene apagado automático de 2 horas,por si olvidas desconectarla. Esta rizadora te brinda ondas ligeras. Además, su doble voltaje es perfecto para casi cualquier lugar del mundo, ideal para viajes.",
         "imagen": "/img/products/rizador.jpg",
         "descuento": "20%"
 
-    }
+    },
     {
         "id": "15",
         "categoria": "electricos",
-        "nombre": "Plancha Hot Tools Pro Doble Placa Profesional",
+        "nombre": "Plancha Pro",
         "marca": "Hot Tools",
         "precio": "$279.920",
         "descripción": "¿No te alcanza el tiempo? La Plancha Hot Tools Pro Doble Placa Profesional con doble placa te permite peinar tu cabello rápidamente sin esfuerzo. La plancha Hot Tools deja el cabello suave y brillante gracias a sus placas de cerámica de carbón.",
@@ -162,7 +162,7 @@
     {
         "id": "16",
         "categoria": "electricos",
-        "nombre": "Secador Hot Tools Turbo Ionica Dryer Signature Series",
+        "nombre": "Secador Turbo Ionica",
         "marca": "Hot Tools",
         "precio": "$167.920",
         "descripción": "¡Look profesional con Hot Tools! El Secador Hot Tools Turbo Ionica Secador Serie Signature cuenta con conducción iónica, para un cabello más suave, brillante y con movimiento. Este secador de cabello, diseñado con el máximo flujo de aire para un secado hasta un 40% más rápido, tiene 2 velocidades y 6 combinaciones de calor que proporcionan versatilidad de estilo y gran rendimiento en diferentes tipos de cabello y texturas. Esta secadora de cabello profesional incluye botón Cool Shot para fijar el peinado, reducir la estática y sellar la cutícula, su diseño ligero con agarre cómodo facilita el trabajo.",

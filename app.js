@@ -10,13 +10,13 @@ app.use(express.json()); // utilizar el mtodo post
 app.use(methodOverride('_method')); //utilizar el metodo put y delete 
 //-------------TEMPLATE ENGINE--------------------------------------------------------------------
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "./views")); // Define la ubicación de la carpeta de las Vistas
+app.set("views", path.join(__dirname, "./src/views")); // Define la ubicación de la carpeta de las Vistas
 //-------------------------RUTAS------------------------------------------------------
 const productsRouter = require("./src/routes/productosRouters"); //se trae el enrutador
 const usersRouters = require("./src/routes/usersRouters"); //se trae el enrutador
 
 app.use("/", productsRouter); // ruta global de productos
-app.use("/login", usersRouters); //ruta global para usuarios
+app.use("/users", usersRouters); //ruta global para usuarios
 //-------------------SE CARGA EL PUERTO-------------------------------------------------
 app.listen(process.env.PORT || 3000, function () {
   console.log("servidor corriendo en puerto 3000");
