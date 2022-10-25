@@ -16,15 +16,24 @@ const controladorProductos = {
   },
   maquillaje: (req, res) => {
     let productosMaquillaje = products.filter(productos=>productos.categoria=="maquillaje")
-    res.render("./products/maquillajeProducto",{productos:productosMaquillaje}); //mostrar pagina de inicio
+    res.render("./products/maquillajeProducto",{productos:productosMaquillaje}); //mostrar pagina maquillaje
   },
   fragancia: (req, res) => {
     let productosFragancia = products.filter(productos=>productos.categoria=="fragancias")
-    res.render("./products/fraganciaProducto",{productos:productosFragancia}); //mostrar pagina de inicio
+    res.render("./products/fraganciaProducto",{productos:productosFragancia}); //mostrar pagina de fragancias
   },
   electrico: (req, res) => {
     let productosElectrico = products.filter(productos=>productos.categoria=="electricos")
-    res.render("./products/electricoProducto",{productos:productosElectrico}); //mostrar pagina de inicio
+    res.render("./products/electricoProducto",{productos:productosElectrico}); //mostrar pagina de electricos
+  },
+  crearProducto: (req, res) => {
+    res.render("./products/crearProducto"); //mostrar pagina de crear producto
+  },
+
+  store:(req, res) => {
+    console.log("Entrando aqui");
+    let datos = req.body;
+    console.log(datos);
   }
 }
   /*

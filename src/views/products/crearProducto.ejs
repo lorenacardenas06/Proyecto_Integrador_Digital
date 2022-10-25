@@ -1,51 +1,67 @@
-<main>
-    <h2>CREA UN PRODUCTO</h2>
-    <div class="wrapper fadeInDown">
-      <div class="col">
-        <form action="products/detalleProducto" method="POST" enctype="multipart/form-data" >
-          <div class="row product-detail">
-            <div class="col">
-              <label for="name" class="form-label">Nombre:</label><br>
-              <input type="text" id="name" name="name" class="form-input">
-            </div>
-            <div class="col">
-              <label for="marca" class="form-label">Marca:</label><br>
-              <input type="text" id="marca" name="marca" placeholder="" class="form-input">
-            </div>
-          <div class="row">  
-            <div class="col">
-              <label for="price" class="form-label">Precio:</label><br>
-              <input type="text" id="price" name="price" class="form-input">
-            </div>
-            <div class="col">
-              <label for="discount" class="form-label">Descuento:</label><br>
-              <input type="text" id="discount" name="discount" class="form-input">
-            </div>
-          </div>
-            <div class="row">
-              <div class="col">
-                <label for="category" class="form-label">Categoría:</label><br>
-                <select name="category" id="category" class="form-input">
-                  <option value="">maquillaje</option>
-                  <option value="in-sale"> Skincare</option>
-                  <option value="visited">bodycare</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-12 col-md-6">
-              <label for="cImage" class="form-label">Cargar imagen</label>
-              <input type="file" name="cImage" id="cImage" multiple/></input>
-            </div>  
-            <div class="row">
-              <label for="description" class="form-label">Descipción:</label>
-              <textarea name="description" id="description" class="form-input"></textarea>
-            </div><br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Crear un Producto</title>
+  <link rel="stylesheet" href="/css/crearProducto.css"></link>
+  <%-include("../partials/head")%>
+</head>
+
+<body class="body">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <%-include("../partials/header")%>
+  <main>
+    <!--última visita-->
+    <div class="container products-wrapper">
+        <div class="row">
             <div class="col-12">
-              <button2 type="submit" class="buy-now-button">Guardar producto</button>
+                <h3 class="products-title">Formulario de creación de productos</h3>
             </div>
-          </div>
-        </form>
-      </div>
+            <div class="col-12">
+              <form action="/crearProducto" method="POST">
+                <div class="row product-detail">
+                  <div class="col-12 col-md-6" id="entradas">
+                    <label for="categoria" class="form-label">Categoria del producto:</label><br>
+                    <select name="categoria" id="categoria" class="form-input">
+                      <option value="cuidado personal">Cuidado Personal</option>
+                      <option value="maquillaje">Maquillaje</option>
+                      <option value="fragancia">Fragancias</option>
+                      <option value="electrico">Electricos</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-md-6" id="entradas">
+                    <label for="nombre" class="form-label">Nombre del producto:</label><br>
+                    <input type="text" id="nombre" name="nombre" placeholder= "Shampoo Capilar" class="form-input">
+                  </div>
+                  <div class="col-12 col-md-6" id="entradas">
+                    <label for="marca" class="form-label">Marca del producto:</label><br>
+                    <input type="text" id="marca" name="marca" placeholder="Natura" class="form-input">
+                  </div>
+                  <div class="col-12 col-md-6" id="entradas">
+                    <label for="precio" class="form-label">Precio del producto:</label><br>
+                    <input type="text" id="precio" name="precio" placeholder= "$30.000" class="form-input">
+                  </div> 
+                  <div class="col-12 col-md-6" id="entradas">
+                    <label for="descripcion" class="form-label">Descripcion del producto:</label><br>
+                    <textarea type="text" id="descripcion" name="descripcion" placeholder= "Producto extrahidratante para el cabello" class="form-input"></textarea>
+                  </div> 
+                  <div class="col-12 col-md-6" aria-inval id="entradas">
+                    <label for="imagen" class="form-label">Cargar imagen del producto:</label><br>
+                    <input type="file" name="imagen" id="imagen" multiple/></input>
+                  </div> 
+                  <div class="col-12 col-md-6" id="entradas">
+                    <label for="descuento" class="form-label">Descuento del producto:</label><br>
+                    <input type="text" id="descuento" name="descuento" placeholder= "20%" class="form-input">
+                  </div> 
+                  <div class="col-12">
+                    <button type="submit" class="button">Guardar producto</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+        </div>
     </div>
-</main>
+  </main>
+  <%-include("../partials/footer")%>
+</body>
+</html>
 

@@ -27,6 +27,11 @@ router.get("/cuidadoPersonal", productosController.cuidadopersonal);
 router.get("/maquillaje", productosController.maquillaje);
 router.get("/fragancias", productosController.fragancia);
 router.get("/electricos", productosController.electrico);
+/***CREATE ALL PRODUCTS***/
+router.get("/crearProducto", productosController.crearProducto);
+router.post("/crearProducto", productosController.store);
+
+
 /***GET ONE PRODUCT ***/
 //router.get("/carritoProducto/", productosController.carro);
 
