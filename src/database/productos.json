@@ -1,72 +1,173 @@
 [
     {
         "id": "1",
-        "nombre": "labial",
-        "precio": "5000",
-        "marca": "loreal",
-        "descuento": "20%",
-        "descripción": "lapiz labial",
-        "imagen": "/img/products/labial.jpg",
-        "categoría": "labios"
+        "categoria": "cuidado personal",
+        "nombre": "Kit Virgin Coconut Shampoo + Conditioner",
+        "marca": "Be Natural",
+        "precio": "$63.920",
+        "descripción": "El kit Virgin Coconut, contiene una exclusiva fórmula que hidrata la fibra capilar profundamente, dejando tu cabello suave y brillante. El shampoo Be Natural Virgin Coconut limpia suavemente mientras el acondicionador sella la cutícula y facilita el peinado permitiendo desenredar fácilmente tu cabello. También contiene un serum capilar que puedes aplicar con el cabello húmedo o seco, para devolverle la vitalidad y elasticidad a la fibra capilar, además de refrescar tu peinado.",
+        "imagen": "/img/products/Shampoo.png",
+        "descuento": ""
+
     },
     {
         "id": "2",
-        "nombreProducto": "Sérum Rellenador L'Oreal París Revitalift Ácido Hialurónico x 30 ml",
-        "precio": "2800",
-        "marca": "loreal",
-        "descuento": "30%",
-        "descripción": "Con un 1,5% de ácido hialurónico, la más alta concentración de este activo en un producto cosmético, el Sérum Revitalift de Ácido Hialurónico de L'Oreal Paris rellena arrugas y líneas de expresión, al lograr disminuir un 40% de las mismas en solo cuatro semanas.    ",
-        "imagen": "/img/products/Sérum Rellenador L'Oreal París Revitalift Ácido Hialurónico x 30 ml.jpeg",
-        "categoría": "SKINCARE"
+        "categoria": "cuidado personal",
+        "nombre": "Shampoo Seco Blush",
+        "marca": "Batiste",
+        "precio": "$46.100",
+        "descripción": "Fragancia Floral y Coqueta. La esencia de la feminidad, Batiste Blush es la forma floral y coqueta de robar miradas. Aplícalo e instantáneamente verás tu pelo limpio, fresco, con gran textura y delicioso aroma.",
+        "imagen": "/img/products/ShampooSeco.jpg",
+        "descuento": "in-sale"
+
     },
     {
         "id": "3",
-        "nombreProducto": "Combo Garnier Agua Micelar de Rosas Skin Active x 2 un x 400 ml c/u",
-        "precio": "2020",
-        "marca": "Garnier",
-        "descuento": "",
-        "descripción": "Si tenés la piel opaca, cansada, apagada, la nueva Agua Micelar de Rosas es para vos. Apta para todo tipo de piel incluso las sensibles, formulada con AGUA DE ROSAS, ingrediente conocido por iluminar, calmar, hidratar y devolverle vida a tu rostro sin dejar sensación de tirantez. Para limpiar tu piel todos los días, por la mañana y por la noche, gracias al poder de las micelas que atrapan suciedad e impurezas como un imán (¡además de maquillaje!)",
-        "imagen": "/img/products/Garnier.png",
-        "categoría": "SKINCARE"
+        "categoria": "cuidado personal",
+        "nombre": "Exfoliante Café Cool Nature Coco 200ml",
+        "marca": "Cool Nature",
+        "precio": "$41.175",
+        "descripción": "Mezcla diseñada con ingredientes no tóxicos, altamente nutritivos para la piel. La formulación contiene café, panela y aceites emolientes, cómo el aceite de aguacate, almendras, jojoba, karité, entre otros que, al ser aplicados sobre la piel, ejercen un efecto exfoliante y emoliente, brindándole un aspecto suave y humectado.",
+        "imagen": "/img/products/Exfoliante.jpg",
+        "descuento": "in-sale"
     },
     {
         "id": "4",
-        "nombreProducto": "Neutrogena, Reparación rápida de arrugas, Aceite de retinol, 30 ml (1 oz. Líq.)",
-        "precio": "2020",
-        "marca": "Neutrogena",
-        "descuento": "50%",
-        "descripción": "Si tenés la piel opaca, cansada, apagada, la nueva Agua MicelarReduzca eficazmente la apariencia de líneas finas rebeldes y arrugas profundas con este aceite liviano de rápida absorción. El aceite de Retinol SA superconcentrado y de nutrición intensa proporciona resultados visibles en solo 1 semana. Este potente tratamiento nocturno actúa durante toda la noche para nutrir y reponer intensamente la piel seca para lograr una piel radiante y de aspecto más joven.",
-        "imagen": "public/img/products/Neutrogena.jpg",
-        "categoría": "SKINCARE"
+        "categoria": "cuidado personal",
+        "nombre": "Crema Aclarante Corporal True You 120ml",
+        "marca": "True You",
+        "precio": "$29.925",
+        "descripción": "Esta fantástica crema aclarante libre de sulfatos y parabenos aclara progresivamente tu piel hasta recuperar su tono natural mientras la hidrata, su efecto antioxidante reduce la concentración y la producción de melanina unificando el tono de la piel. Además, esta crema hidratante le devuelve la luminosidad y elasticidad a la piel, combate los signos de la edad y previene el envejecimiento prematuro.",
+        "imagen": "/img/products/CremaAclarante.jpg",
+        "descuento": "in-sale"
     },
     {
         "id": "5",
-        "nombreProducto": "Adipofactor Lidherma Reductora Ampelopsina Redumodel 500gr Tipo De Envase Pote Fragancia Neutro",
-        "precio": "3700",
-        "marca": " Lidherma",
-        "descuento": "",
-        "descripción": "Lidherma ofrece una variedad de productos para el cuidado corporal. Si buscás proteger tu piel y mantenerla en forma, este puede ser una buena opción.        ",
-        "imagen": "https://http2.mlstatic.com/D_NQ_NP_956164-MLA44685663344_012021-O.webp",
-        "categoría": "BODYCARE"
+        "categoria": "maquillaje",
+        "nombre": "Labial Organic Wear",
+        "marca": "Physicians Formula",
+        "precio": "$35.920",
+        "descripción": "¡Porque te lo mereces! El Labial Physicians Formula Organic Wear cuenta con una fórmula ultra hidratante, aterciopelada y suave que repara los labios mientras proporciona un toque de color y brillo. Este labial en barra esta infundido con manteca de karité y una mezcla de aceites nutritivos ORGÁNICOS y antioxidantes para proteger y dejar los labios suaves y tersos. Además, este hidratante para labios también contiene vitamina E, potente antioxidante que previene el envejecimiento prematuro de tu boca.",
+        "imagen": "/img/products/labial.jpg",
+        "descuento": "in-sale"
     },
     {
         "id": "6",
-        "nombreProducto": "Crema para cuerpo Nivea Cuidado Corporal Milk Nutritiva en pomo 400mL        ",
-        "precio": "500",
-        "marca": " Nivea",
-        "descuento": "10%",
-        "descripción": "Nivea ofrece una variedad de productos para el cuidado corporal. Si buscás proteger tu piel y mantenerla en forma, este puede ser una buena opción. Libre de crueldad. Este producto es elaborado sin lastimar a ningún animal.",
-        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_624520-MLA50247705107_062022-F.webp",
-        "categoría": "BODYCARE"
+        "categoria": "maquillaje",
+        "nombre": "Combo Garnier Agua Micelar de Rosas Skin Active x 2 un x 400 ml c/u",
+        "marca": "Garnier",
+        "precio": "$25.950",
+        "descripción": "Si tenés la piel opaca, cansada, apagada, la nueva Agua Micelar de Rosas es para vos. Apta para todo tipo de piel incluso las sensibles, formulada con AGUA DE ROSAS, ingrediente conocido por iluminar, calmar, hidratar y devolverle vida a tu rostro sin dejar sensación de tirantez. Para limpiar tu piel todos los días, por la mañana y por la noche, gracias al poder de las micelas que atrapan suciedad e impurezas como un imán (¡además de maquillaje!)",
+        "imagen": "/img/products/ganier.jpg",
+        "descuento": "in-sale"
+
     },
     {
         "id": "7",
-        "nombreProducto": "Emulsión para cuerpo Dermaglós Hidratación Profunda Emulsión Corporal en dosificador 300mL        ",
-        "precio": "1400",
-        "marca": " Dermaglós",
-        "descuento": "20%",
-        "descripción": "Dermaglós ofrece una variedad de productos para el cuidado corporal. Si buscás proteger tu piel y mantenerla en forma, este puede ser una buena opción.        ",
-        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_672003-MLA50234710841_062022-F.webp",
-        "categoría": "BODYCARE"
+        "categoria": "maquillaje",
+        "nombre": "Neutrogena, Reparación rápida de arrugas, Aceite de retinol, 30 ml (1 oz. Líq.)",
+        "marca": "Neutrogena",
+        "precio": "$45.800",
+        "descripción": "Si tenés la piel opaca, cansada, apagada, la nueva Agua MicelarReduzca eficazmente la apariencia de líneas finas rebeldes y arrugas profundas con este aceite liviano de rápida absorción. El aceite de Retinol SA superconcentrado y de nutrición intensa proporciona resultados visibles en solo 1 semana. Este potente tratamiento nocturno actúa durante toda la noche para nutrir y reponer intensamente la piel seca para lograr una piel radiante y de aspecto más joven.",
+        "imagen": "/img/products/Neutrogena.jpg",
+        "descuento": "in-sale"
+    },
+    {
+        "id": "8",
+        "categoria": "maquillaje",
+        "nombre": "Liquid Camouflage",
+        "marca": "Catrice",
+        "precio": "$21.500",
+        "descripción": "¡Luce fabulosa todo el día! El Corrector Catrice, camufla y cubre las ojeras, los signos de cansancio y las imperfecciones. ¡El Correcto Dúo y Antiojeras es 2 en 1! De un lado, está la barra antiojeras BYS, que corrige, hidrata y cubre, del otro lado, encontraras el corrector líquido que ilumina tu piel. Juntos logran total cobertura de apariencia natural. Además, el corrector en barra cuenta con un tratamiento en su centro, que ayuda a disminuir las bolsas y las ojeras.",
+        "imagen": "/img/products/corrector.jpg",
+        "descuento": "in-sale"
+    },
+    {
+        "id": "9",
+        "categoria": "fragancias",
+        "nombre": "Nautica Voyage Heritage Body Spray",
+        "marca": "Nautica",
+        "precio": "$49.900",
+        "descripción": "Para aquellos que abrazan el espíritu del explorador moderno, el spray corporal Voyage Heritage celebra el legado del estilo y diseño audaz de Nautica. El perfil de esta fragancia es cálido, ligeramente dulce y amaderado.",
+        "imagen": "/img/products/fragancia_nautica",
+        "descuento": "in-sale"
+
+    },
+    {
+        "id": "10",
+        "categoria": "fragancias",
+        "nombre": "Perfume Benetton Colors Rose Woman Intenso EDP 80ml",
+        "marca": "Benetton",
+        "precio": "$137.900",
+        "descripción": "Colors Woman Rose Intenso, un estallido natural de cítricos y refrescantes notas verdes hasta un corazón especiado formado por un bouquet de flores blancas. El fondo completa el perfume en su intensidad con un toque oriental que se funde con las maderas y la dulce nata montada. notas de salida FLORAL GOURMAND Cítrica, Flores Blancas; De corazón Especiado Chispeante; De fondo oriental amaderada",
+        "imagen": "/img/products/fragancia_colors",
+        "descuento": "in-sale"
+
+    },
+    {
+        "id": "11",
+        "categoria": "fragancias",
+        "nombre": "Paris Hilton Women's Body Mist 236ml",
+        "marca": "Paris Hilton",
+        "precio": "$39.900",
+        "descripción": "Inspirada en una mujer que quiere ser el centro de atención donde sea que vaya. Es una mujer que quiere apoderarse de su sensualidad y su impresionante belleza.",
+        "imagen": "/img/products/",
+        "descuento": "in-sale"
+
+    },
+    {
+        "id": "12",
+        "categoria": "fragancias",
+        "nombre": "Hollister Wave 2 For Her Edp 30 Ml",
+        "marca": "Hollister",
+        "precio": "$20.930",
+        "descripción": "Ungaro Love de Emanuel Ungaro es una fragancia de la familia olfativa Oriental Especiada para Mujeres. Ungaro Love se lanzó en 2016 y fue creada por Veronique Nyberg y Alex Lee. La fragrancia contiene vainilla y pimienta rosa.",
+        "imagen": "/img/products/hollister.jpg",
+        "descuento": "in-sale"
+
+    },
+    {
+        "id": "13",
+        "categoria": "electricos",
+        "nombre": "Cepillo One Step Hot Tools Blowout 24K Gold",
+        "marca": "Hot Tools",
+        "precio": "$255.920",
+        "descripción": "Crea estilos de salón sin esfuerzo, desde la comodidad de tu casa con el cepillo alisador Hot Tools! One Step Blowout 24K Gold Hot Tools seca, alisa y peina a la vez dejando un look sofisticado y versátil. El cepillo One Step tiene un diseño ovalado versátil con lados curvados, creados para alisar el cabello, mientras que los bordes redondeados ayudan a crear volumen desde la raíz hasta las puntas. El cepillo secador HOT TOOLS distribuye uniforme el calor de manera uniforme, para un estilo duradero dejando tu cabello suave y brillante. Este cepillo secador cuenta con cerdas flexibles y resistentes que desenredar tu cabello y moldean tu cabello son maltratarlo, infundidas con carbón para reducir el tiempo del peinado y logra resultados rápidos y profesionales. Este cepillo eléctrico para cabello cuenta con tecnología Direct ION, la cual ayuda a mantener una carga neutra en el cabello, para eliminar el frizz y revivir la vitalidad de la fibra capilar.",
+        "imagen": "/img/products/cepillorizador.jpg",
+        "descuento": "in-sale"
+
+    },
+    {
+        "id": "14",
+        "categoria": "electricos",
+        "nombre": "Rizador Hot Tools En Onda De 3 Barras 24K Gold",
+        "marca": "Hot Tools",
+        "precio": "$311.920",
+        "descripción": "¡Luce esos rizos de sirena que siempre soñaste! El Rizador Hot Tools En Onda De 3 Barras 24K Gold cuenta con Pulse Technology® , para mantener la temperatura constante durante el proceso de peinado. Esta rizadora cuenta con configuraciones de temperatura hasta de 235ºC, que se adaptan a cualquier tipo de cabello ya sea muy delgado o muy grueso, también tiene apagado automático de 2 horas,por si olvidas desconectarla. Esta rizadora te brinda ondas ligeras. Además, su doble voltaje es perfecto para casi cualquier lugar del mundo, ideal para viajes.",
+        "imagen": "/img/products/rizador.jpg",
+        "descuento": "in-sale"
+
+    }
+    {
+        "id": "15",
+        "categoria": "electricos",
+        "nombre": "Plancha Hot Tools Pro Doble Placa Profesional",
+        "marca": "Hot Tools",
+        "precio": "$279.920",
+        "descripción": "¿No te alcanza el tiempo? La Plancha Hot Tools Pro Doble Placa Profesional con doble placa te permite peinar tu cabello rápidamente sin esfuerzo. La plancha Hot Tools deja el cabello suave y brillante gracias a sus placas de cerámica de carbón.",
+        "imagen": "/img/products/plancha.jpg",
+        "descuento": "in-sale"
+
+    },
+    {
+        "id": "16",
+        "categoria": "electricos",
+        "nombre": "Secador Hot Tools Turbo Ionica Dryer Signature Series",
+        "marca": "Hot Tools",
+        "precio": "$167.920",
+        "descripción": "¡Look profesional con Hot Tools! El Secador Hot Tools Turbo Ionica Secador Serie Signature cuenta con conducción iónica, para un cabello más suave, brillante y con movimiento. Este secador de cabello, diseñado con el máximo flujo de aire para un secado hasta un 40% más rápido, tiene 2 velocidades y 6 combinaciones de calor que proporcionan versatilidad de estilo y gran rendimiento en diferentes tipos de cabello y texturas. Esta secadora de cabello profesional incluye botón Cool Shot para fijar el peinado, reducir la estática y sellar la cutícula, su diseño ligero con agarre cómodo facilita el trabajo.",
+        "imagen": "/img/products/secador.jpg",
+        "descuento": "in-sale"
+
     }
 ]
