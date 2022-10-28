@@ -34,10 +34,10 @@ router.post("/crearProducto", productosController.store);
 router.get("/detalleProducto/:id", productosController.detalleProducto);
 /***EDIT ONE PRODUCT ***/
 router.get("/editarProducto/:id", productosController.editarProducto);
-router.put("/editarProducto", productosController.actualizar);
-
+router.put("/editarProducto/:id", productosController.actualizarProducto);
 
 /***DELETE ONE PRODUCT ***/
+router.delete("/:id", productosController.eliminarProducto);
 
 //router.get("/ingresarProducto", uploadFile.single("imageProduct") ,productosController.ingresar);
 

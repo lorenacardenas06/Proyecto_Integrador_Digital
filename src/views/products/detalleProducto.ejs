@@ -45,7 +45,7 @@
             <button class="btn btn-round btn-danger" type="button"><i class="fa fa-shopping-cart"></i> Agregar al carrito</button>
           </p>
           <a href="/editarProducto/<%= productos.id%>" class="action-button edit"> Editar Producto</a>
-          <form action="/products/delete/" method="POST" style="display: inline-flex">
+          <form action="/<%= productos.id%>?_method=DELETE" method="POST" style="display: inline-flex">
             <button type="submit" class="action-button delete">Eliminar Producto</button>
           </form>
         </div>
