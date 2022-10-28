@@ -39,13 +39,5 @@ router.put("/editarProducto/:id", productosController.actualizarProducto);
 /***DELETE ONE PRODUCT ***/
 router.delete("/:id", productosController.eliminarProducto);
 
-//router.get("/ingresarProducto", uploadFile.single("imageProduct") ,productosController.ingresar);
-
-//router.get("/productos/:id?", function(req,res) {
-//    req.params.id
-//});
-
-
-
 //-----------EXPORTAR MODULO---------------------------
 module.exports = router;
