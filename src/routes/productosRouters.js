@@ -30,16 +30,16 @@ router.get("/electricos", productosController.electrico);
 /***CREATE ALL PRODUCTS***/
 router.get("/crearProducto", productosController.crearProducto);
 router.post("/crearProducto", productosController.store);
-
-
 /***GET ONE PRODUCT ***/
-//router.get("/carritoProducto/", productosController.carro);
+router.get("/detalleProducto/:id", productosController.detalleProducto);
+/***EDIT ONE PRODUCT ***/
+router.get("/editarProducto/:id", productosController.editarProducto);
+router.put("/editarProducto", productosController.actualizar);
 
-//router.get("/ingresarProducto", productosController.ingresar);
+
+/***DELETE ONE PRODUCT ***/
+
 //router.get("/ingresarProducto", uploadFile.single("imageProduct") ,productosController.ingresar);
-/***CREATE ONE PRODUCT ***/
-//router.get("/detalleProducto", productosController.crearProducto);
-//router.post("/detalleProducto", uploadFile.single("cImage"),productosController.almacenar);
 
 //router.get("/productos/:id?", function(req,res) {
 //    req.params.id
