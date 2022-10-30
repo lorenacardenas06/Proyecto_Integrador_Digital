@@ -45,7 +45,7 @@ const controladorProductos = {
       "marca": datos.marca,
       "precio": parseInt(datos.precio),
       "descripción": datos.descripcion,
-      "imagen": "/img/products/" + datos.imagen,
+      "imagen": "/img/products/"+req.file.filename,
       "descuento": parseInt(datos.descuento)
     };
     products.push(nuevoProducto);
@@ -85,31 +85,43 @@ const controladorProductos = {
     }
   },
   actualizarProducto: (req,res) =>{
+
     let idProducto = req.params.id;
     let datosProducto = req.body;
+    let nombreImagenAntigua ="";
     for (let o of products){
       if (o.id == idProducto){
+        nombreImagenAntigua = o.imagen;
         o.nombre = datosProducto.nombre;
         o.marca = datosProducto.marca;
         o.precio = parseInt(datosProducto.precio);
         o.descripcion = datosProducto.descripcion;
-        o.imagen = "/img/products/" + datosProducto.imagen;
+        o.imagen = "/img/products/" + req.file.filename;
         o.descuento = parseInt(datosProducto.descuento);
         break; 
       }
     }  
     fs.writeFileSync(productosFilePath,JSON.stringify(products,null," "),'utf-8');
+    fs.unlinkSync(__dirname + '/../../public' + nombreImagenAntigua);
     res.redirect("/");
   },
   eliminarProducto: (req,res) =>{
-    const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
     let idProducto = req.params.id;
-    let nuevosProductos =  products.filter(productos=>productos.id!= idProducto);
+    let nombreImagenAntigua ="";
+    for (let o of products){
+      if (o.id == idProducto){
+        nombreImagenAntigua = o.imagen;
+        break; 
+      }
+    }  
+    let nuevosProductos =  products.filter(function(e){
+      return e.id!=idProducto;
+    });
     fs.writeFileSync(productosFilePath,JSON.stringify(nuevosProductos,null," "),'utf-8');
+    fs.unlinkSync(__dirname + '/../../public' + nombreImagenAntigua);
     res.redirect("/");
 
   }
-
 
 }
  

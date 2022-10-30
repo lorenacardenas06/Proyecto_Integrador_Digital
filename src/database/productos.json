@@ -20,16 +20,6 @@
   "descuento": 10
  },
  {
-  "id": 4,
-  "categoria": "cuidado personal",
-  "nombre": "Crema Aclarante Corporal",
-  "marca": "True You",
-  "precio": 29925,
-  "descripcion": "Esta fantástica crema aclarante libre de sulfatos y parabenos aclara progresivamente tu piel hasta recuperar su tono natural mientras la hidrata, su efecto antioxidante reduce la concentración y la producción de melanina unificando el tono de la piel. Además, esta crema hidratante le devuelve la luminosidad y elasticidad a la piel, combate los signos de la edad y previene el envejecimiento prematuro.",
-  "imagen": "/img/products/CremaAclarante.jpg",
-  "descuento": 20
- },
- {
   "id": 5,
   "categoria": "maquillaje",
   "nombre": "Labial Organic Wear",
@@ -138,15 +128,5 @@
   "descripcion": "¿No te alcanza el tiempo? La Plancha Hot Tools Pro Doble Placa Profesional con doble placa te permite peinar tu cabello rápidamente sin esfuerzo. La plancha Hot Tools deja el cabello suave y brillante gracias a sus placas de cerámica de carbón.",
   "imagen": "/img/products/plancha.jpg",
   "descuento": 10
- },
- {
-  "id": 16,
-  "categoria": "electricos",
-  "nombre": "Secador Turbo Ionica",
-  "marca": "Hot Tools",
-  "precio": 167920,
-  "descripcion": "¡Look profesional con Hot Tools! El Secador Hot Tools Turbo Ionica Secador Serie Signature cuenta con conducción iónica, para un cabello más suave, brillante y con movimiento. Este secador de cabello, diseñado con el máximo flujo de aire para un secado hasta un 40% más rápido, tiene 2 velocidades y 6 combinaciones de calor que proporcionan versatilidad de estilo y gran rendimiento en diferentes tipos de cabello y texturas. Esta secadora de cabello profesional incluye botón Cool Shot para fijar el peinado, reducir la estática y sellar la cutícula, su diseño ligero con agarre cómodo facilita el trabajo.",
-  "imagen": "/img/products/secador.jpg",
-  "descuento": 20
  }
 ]
