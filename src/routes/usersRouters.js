@@ -1,11 +1,14 @@
-const controladorUsuarios = require("../controllers/usersControllers");
-
-
+// ------------REQUERIMIENTOS-----------------------
 const express = require("express");
 const router = express.Router();
-router.get("/registro",controladorUsuarios.registrar)
-router.get("/ingreso", controladorUsuarios.ingreso);
-router.get("/perfil", controladorUsuarios.perfil);
+const path = require("path");
 
+//--------------CONTROLADOR----------------------------------
+const usersControllers = require("../controllers/usersControllers");
 
+//----------------RUTAS------------------------------------
+/***LOGIN USER ***/
+router.get("/login", usersControllers.login);
+
+//-----------EXPORTAR MODULO---------------------------
 module.exports = router;

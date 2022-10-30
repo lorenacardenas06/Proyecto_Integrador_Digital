@@ -4,7 +4,6 @@ const router = express.Router();
 const multer  = require('multer'); //multer
 const path= require("path");
 
-//const upload = multer({ dest: './public' })
 //--------------CONTROLADOR----------------------------------
 const productosController = require("../controllers/productosControllers");
 
@@ -21,23 +20,31 @@ const multerDiskStorage = multer.diskStorage({
 const uploadFile = multer({ storage: multerDiskStorage });
 
 //----------------RUTAS------------------------------------
+
 /***GET ALL PRODUCTS***/
 router.get("/", productosController.index);
 router.get("/cuidadoPersonal", productosController.cuidadopersonal);
 router.get("/maquillaje", productosController.maquillaje);
 router.get("/fragancias", productosController.fragancia);
 router.get("/electricos", productosController.electrico);
+
+/**BUY PRODUCTOS */
+router.get("/carritoProducto", productosController.carritoProducto);
+
 /***CREATE ALL PRODUCTS***/
 router.get("/crearProducto", productosController.crearProducto);
 router.post("/crearProducto",uploadFile.single('imagen'), productosController.store);
+
 /***GET ONE PRODUCT ***/
 router.get("/detalleProducto/:id", productosController.detalleProducto);
+
 /***EDIT ONE PRODUCT ***/
 router.get("/editarProducto/:id", productosController.editarProducto);
 router.put("/editarProducto/:id",uploadFile.single('imagen'), productosController.actualizarProducto);
 
 /***DELETE ONE PRODUCT ***/
 router.delete("/:id", productosController.eliminarProducto);
+
 
 //-----------EXPORTAR MODULO---------------------------
 module.exports = router;

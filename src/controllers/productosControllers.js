@@ -30,6 +30,12 @@ const controladorProductos = {
     let productosElectrico = products.filter(productos=>productos.categoria=="electricos")
     res.render("./products/electricoProducto",{productos:productosElectrico}); //mostrar pagina de electricos
   },
+
+  carritoProducto: (req, res) => {
+    const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
+    res.render("./products/carritoProducto"); //mostrar pagina maquillaje
+  },
+
   crearProducto: (req, res) => {
     res.render("./products/crearProducto"); //mostrar pagina de crear producto
   },
@@ -84,6 +90,7 @@ const controladorProductos = {
       res.send("Producto no encontrado");
     }
   },
+
   actualizarProducto: (req,res) =>{
 
     let idProducto = req.params.id;
@@ -124,5 +131,5 @@ const controladorProductos = {
   }
 
 }
- 
+ //------------EXPORTAR MODULO CONTROLADOR PRODUCTOS------------------
 module.exports = controladorProductos;
