@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <title>Registro</title>
-    <link rel="stylesheet" type="text/css" href="/css/log.css">
+    <link rel="stylesheet" type="text/css" href="/css/estilos.css">
     <%-include("../partials/head")%>
   </head>
   <body class="body">
@@ -45,6 +45,11 @@
                 placeholder="crea una contraseña" />
               <label class="form-label" for="contraseña">Contraseña</label>
             </div>
+            <!--imagen-->
+            <div class="col-12 col-md-6" aria-inval id="entradas">
+              <label for="imagen" class="form-label">foto de perfil</label><br>
+              <input type="file" name="imagen" id="imagen"></input>
+            </div> 
             <div class="form-check d-flex justify-content-center mb-5">
                   <input class="form-check-input me-2" type="checkbox" value="" id="terminos" />
                   <label class="form-check-label" for="terminos">
