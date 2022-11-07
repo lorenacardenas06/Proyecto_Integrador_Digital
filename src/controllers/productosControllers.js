@@ -1,6 +1,9 @@
 //-----------------REQUERIMIENTOS-------------------------
 const fs = require('fs');
-const path = require('path')
+const path = require('path');
+const { validationResult } = require('express-validator');
+const bcrypt = require('bcryptjs');
+
 //----------------DATOS DEL JSON----------------------------------------
 const productosFilePath = path.join(__dirname,'../database/productos.json');
 const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));

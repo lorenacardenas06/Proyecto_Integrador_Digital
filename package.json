@@ -1,5 +1,5 @@
 {
-  "name": "Proyecto_Integrador_Digital",
+  "name": "proyecto_integrador_digital",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
@@ -9,13 +9,15 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
-  "description": "",
+  "description": "- Temática y descripción del sitio:",
   "dependencies": {
     "@polkadot/api": "^9.3.3",
+    "bcryptjs": "^2.4.3",
     "bootstrap": "^5.2.1",
     "cookie-parser": "^1.4.6",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
+    "express-session": "^1.17.3",
     "express-validator": "^6.14.2",
     "global": "^4.4.0",
     "i": "^0.3.7",
@@ -33,5 +35,6 @@
   "bugs": {
     "url": "https://github.com/lorenacardenas06/Proyecto_Integrador_Digital/issues"
   },
-  "homepage": "https://github.com/lorenacardenas06/Proyecto_Integrador_Digital#readme"
+  "homepage": "https://github.com/lorenacardenas06/Proyecto_Integrador_Digital#readme",
+  "devDependencies": {}
 }

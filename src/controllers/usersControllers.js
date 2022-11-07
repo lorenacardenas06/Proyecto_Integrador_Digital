@@ -1,6 +1,8 @@
 //-----------------REQUERIMIENTOS-------------------------
 const fs = require('fs');
-const path = require('path')
+const path = require('path');
+const { validationResult } = require('express-validator');
+const bcrypt = require('bcryptjs');
 //----------------DATOS DEL JSON----------------------------------------
 const usuariosFilePath = path.join(__dirname,'../database/usuarios.json');
 const users = JSON.parse(fs.readFileSync(usuariosFilePath,'utf-8'));
