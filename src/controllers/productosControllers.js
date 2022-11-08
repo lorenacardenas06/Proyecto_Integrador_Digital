@@ -7,6 +7,7 @@ const bcrypt = require('bcryptjs');
 //----------------DATOS DEL JSON----------------------------------------
 const productosFilePath = path.join(__dirname,'../database/productos.json');
 const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
+
 //------------OBJETO DEL CONTROLADOR------------------
 const controladorProductos = {
   index: (req, res) => {
@@ -106,7 +107,7 @@ const controladorProductos = {
         o.marca = datosProducto.marca;
         o.precio = parseInt(datosProducto.precio);
         o.descripcion = datosProducto.descripcion;
-        o.imagen = "/img/products/" + req.file.filename;
+        o.imagen = `/img/products/${req.file.filename}`;
         o.descuento = parseInt(datosProducto.descuento);
         break; 
       }

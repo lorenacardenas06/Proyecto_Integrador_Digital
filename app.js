@@ -4,7 +4,6 @@ const app = express(); //Utilizo express
 const path = require("path"); //traigo path
 const methodOverride = require('method-override'); //utilizar el metodo put y delete 
 const session = require('express-session');
-
 const auditoriaUnoMiddleware = require('./src/middlewares/auditoriaUNO'); //importo middleware
 //-------------------------IMPORTACION ENRUTADORES------------------------------------------------------
 const productsRouter = require("./src/routes/productosRouters"); //se trae el enrutador
@@ -18,7 +17,6 @@ app.use(methodOverride('_method')); //utilizar el metodo put y delete
 app.use(session( {secret: "Este es mi secreto"} )); 
 app.use(cookieParser());
 app.use(auditoriaUnoMiddleware); //utilizo middleware
-
 //-------------TEMPLATE ENGINE--------------------------------------------------------------------
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./src/views")); // Define la ubicación de la carpeta de las Vistas

@@ -1,8 +1,17 @@
 [
-    {
-    "nombre":"COSME",
-    "apellido":"FULANITO",
-    "mail":"fulano1254@hotmail.com",
-    "contraseña":"Mooooooo11111"
-    }
+ {
+  "id": 1,
+  "nombre": "COSME",
+  "apellidos": "FULANITO",
+  "email": "fulano1254@hotmail.com",
+  "contraseña": "Mooooooo11111",
+  "imagenUsuario": "/img/users/Jimmy.jpg"
+ },
+ {
+  "id": 2,
+  "nombre": "Lorena",
+  "email": "lorenacardenas06@gmail.com",
+  "contrasena": "",
+  "imagenUsuario": "/img/users/1667872134451.PNG"
+ }
 ]
