@@ -5,7 +5,7 @@ const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 
 //----------------DATOS DEL JSON----------------------------------------
-const productosFilePath = path.join(__dirname,'../database/productos.json');
+const productosFilePath = path.join(__dirname,'../data/productos.json');
 const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
 
 //------------OBJETO DEL CONTROLADOR------------------
