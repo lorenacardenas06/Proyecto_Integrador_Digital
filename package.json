@@ -1,0 +1,42 @@
+{
+  "name": "proyecto_integrador_digital",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "- Temática y descripción del sitio:",
+  "dependencies": {
+    "@polkadot/api": "^9.3.3",
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^5.2.1",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.2",
+    "global": "^4.4.0",
+    "i": "^0.3.7",
+    "jquery": "^3.6.1",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.4",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20",
+    "npm": "^8.19.1",
+    "sequelize": "^6.25.5",
+    "sequelize-cli": "^6.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lorenacardenas06/Proyecto_Integrador_Digital.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lorenacardenas06/Proyecto_Integrador_Digital/issues"
+  },
+  "homepage": "https://github.com/lorenacardenas06/Proyecto_Integrador_Digital#readme"
+}
