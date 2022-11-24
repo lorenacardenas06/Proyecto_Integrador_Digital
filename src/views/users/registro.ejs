@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Registro</title>
+  <link rel="stylesheet" href="/css/estilos.css"></link>
+  <%-include("../partials/head")%>
+</head>
+
+<body>
+
+  <%-include("../partials/header")%>
+    
+    <section class="vh-100">
+      <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://us.123rf.com/450wm/subbotina/subbotina1504/subbotina150400152/39033296-cara-de-ni%C3%B1a-de-belleza-con-maquillaje-vivo-y-colorido-esmalte-de-u%C3%B1as.jpg?ver=6"
+          class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form action="/login/registro" method="POST">
+          <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+            <p class="lead fw-normal mb-0 me-3">REGISTRATE </p>
+          </div>
+          <!--name input-->
+          <div class="form-outline mb-3">
+              <input type="name" id="nombre" class="form-control form-control-lg"
+                name="NOMBRE" />
+              <label class="form-label" for="nombre">NOMBRE</label>
+            </div>
+            <!--apellido input-->
+            <div class="form-outline mb-3">
+              <input type="apellido" id="apellido" class="form-control form-control-lg"
+                name="APELLIDO" />
+              <label class="form-label" for="apellido">APELLIDO</label>
+            </div>
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input type="email" id="email" class="form-control form-control-lg"
+              placeholder="entra una direccion de mail valida" name="EMAIL"/>
+            <label class="form-label" for="email">Email</label>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <input type="password" id="contraseña" class="form-control form-control-lg"
+              placeholder="crea una contraseña" />
+            <label class="form-label" for="contraseña" name="CONTRASEÑA">Contraseña</label>
+          </div>
+          <div class="form-check d-flex justify-content-center mb-5">
+                <input class="form-check-input me-2" type="checkbox" value="" id="terminos" />
+                <label class="form-check-label" for="terminos">
+                  Al hacer clic aquí, acepto los <a href="#!" class="text-body"><u>Términos de uso y la Política de privacidad.</u></a>
+                </label>
+          </div>
+          <div class="form-check d-flex justify-content-center mb-5">
+              <input class="form-check-input me-2" type="checkbox" value="" id="noticias" />
+              <label class="form-check-label" for="noticias">
+                  Regístrese para recibir actualizaciones por correo electrónico sobre productos, información sobre el cuidado de la piel, tutoriales y eventos. Darse de baja en cualquier momento.
+              </label>
+          </div>
+          <div class="col-12 col-md-6" aria-inval id="entradas">
+            <label for="imagen" class="form-label">Cargar imagen del producto:</label><br>
+            <input type="file" name="imagen" id="imagen" multiple/></input>
+          </div> 
+
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">CREAR</button>
+            <p> <a href="#!"
+                class="link-danger"> Volver al inicio</a></p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+      </div>
+      <div
+    class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+  </section>
+  
+  <%-include("../partials/footer")%>
+    
+</body>
+</html>
+        

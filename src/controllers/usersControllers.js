@@ -30,14 +30,3 @@ const controladorUsuarios = {
 };
  //------------EXPORTAR MODULO CONTROLADOR USUARIOS------------------
 module.exports = controladorUsuarios;
-/*
-ingreso:(req, res)=> {
-  res.render("./users/ingreso");
-},//inicio de sesion
-perfil:(req, res)=> {
-  res.render("./users/perfil");
-},//perfil usuario
-registrarUsuario:(req, res)=> { 
-  let datos=req.body
-  console.log(datos)
-*/
