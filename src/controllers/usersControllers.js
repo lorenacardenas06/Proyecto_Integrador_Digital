@@ -1,7 +1,7 @@
 //-----------------REQUERIMIENTOS-------------------------
 const fs = require('fs');
 const path = require('path');
-const { validationResult } = require('express-validator');
+const { validationResult, check } = require('express-validator');
 const bcrypt = require('bcryptjs');
 //----------------DATOS DEL JSON----------------------------------------
 const usuariosFilePath = path.join(__dirname,'../data/usuarios.json');
@@ -28,16 +28,16 @@ const controladorUsuarios = {
     res.redirect('./users/perfil');
   },
 };
+ //------------validacion-----//
+
+ validarRegistro: (req,res) => {
+  const validacion=check(req);
+  
+   if (validacion.errors.length >0){
+     return res.render("login",{
+      errors: validacion.mapped(),
+     });
+   }
+ }
  //------------EXPORTAR MODULO CONTROLADOR USUARIOS------------------
 module.exports = controladorUsuarios;
-/*
-ingreso:(req, res)=> {
-  res.render("./users/ingreso");
-},//inicio de sesion
-perfil:(req, res)=> {
-  res.render("./users/perfil");
-},//perfil usuario
-registrarUsuario:(req, res)=> { 
-  let datos=req.body
-  console.log(datos)
-*/

@@ -7,7 +7,7 @@ const { check } = require('express-validator');
 
 //--------------CONTROLADOR----------------------------------
 const usersControllers = require("../controllers/usersControllers");
-
+//---------MULTER----//
 const multerDiskStorage = multer.diskStorage({
     destination: function(req, file, cb) {       // request, archivo y callback que almacena archivo en destino
      cb(null, path.join(__dirname,'../../public/img/products'));    // Ruta donde almacenamos el archivo
@@ -19,7 +19,19 @@ const multerDiskStorage = multer.diskStorage({
 });
 
 const uploadFile = multer({ storage: multerDiskStorage });
-
+//-------validaciones----//
+const validacionLogin =[
+    check("nombre")
+     .notEmpty().withMessage("introduce nombre valido").bail(),
+    check("apellido")
+    .notEmpty().withMessage("introduce apellido valido").bail(),
+    check("email")
+    .notEmpty().withMessage("introduce un mail valido").bail()
+    .isEmail().withMessage("debes completar el mail"),
+    check("contrasena")
+    .notEmpty().withMessage("introducion contraseña valido").bail()
+    .isLength({min: 8}).withMessage("minimo de ocho caracteres"),
+  ]
 //----------------RUTAS------------------------------------
 /***LOGIN AND CREATE USER ***/
 router.get("/login", usersControllers.login);
