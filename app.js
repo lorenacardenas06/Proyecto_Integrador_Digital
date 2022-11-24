@@ -25,7 +25,21 @@ app.set("views", path.join(__dirname, "./src/views")); // Define la ubicación d
 //-------------------------RUTAS------------------------------------------------------
 app.use("/", productsRouter); // ruta global de productos
 app.use("/", usersRouters); //ruta global para usuarios
+//--------MySQL---//
+
+connection.connect(function(err) {
+  if (err) {
+    console.error('error connecting: ' + err.stack);
+    return;
+  }
+
+  console.log('connected as id ' + connection.threadId);
+});
+
+
+
 //-------------------SE CARGA EL PUERTO-------------------------------------------------
+
 app.listen(process.env.PORT || 3000, function () {
   console.log("servidor corriendo en puerto 3000");
 });

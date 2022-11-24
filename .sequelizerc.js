@@ -6,3 +6,6 @@ config: path.resolve('./src/database/config', 'config.js'),
 'seeders-path': path.resolve('./src/database/seeders'),
 'migrations-path': path.resolve('./src/database/migrations'),
 }
+
+
+
