@@ -25,27 +25,6 @@ app.set("views", path.join(__dirname, "./src/views")); // Define la ubicación d
 //-------------------------RUTAS------------------------------------------------------
 app.use("/", productsRouter); // ruta global de productos
 app.use("/", usersRouters); //ruta global para usuarios
-//--------MySQL---//
-
-const { error } = require("console");
-var mysql= require("mysql");
-var conexion = mysql.createConnection({
-    host:"localhost",
-    database:"usuario_db",
-    user: "root",
-    password:"",
-
-}
-);
-conexion.connect(function(error){
-    if(error){
-        throw error;
-    }else{
-        console.log("conectado");
-
-    }
-  })
-
 
 //-------------------SE CARGA EL PUERTO-------------------------------------------------
 
