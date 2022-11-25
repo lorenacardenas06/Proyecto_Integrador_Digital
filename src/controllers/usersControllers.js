@@ -8,9 +8,13 @@ const usuariosFilePath = path.join(__dirname,'../data/usuarios.json');
 const users = JSON.parse(fs.readFileSync(usuariosFilePath,'utf-8'));
 //------------OBJETO DEL CONTROLADOR------------------
 const controladorUsuarios = {
+ acceso: (req, res) => {
+    res.render("./users/acceso");}, 
   login: (req, res) => {
     res.render("./users/registro");
-  }, //registar usuario
+  }, 
+  
+  //registar usuario
   crearUsuario: (req, res) => {
     const errores = validationResult(req);
     let datosUsuario = req.body;
@@ -33,8 +37,8 @@ const controladorUsuarios = {
   }else{
     res.render('./users/registro',{ errores : errores.mapped(), datosUsuarioViejo: req.body });
   }
+  
 }
-}
-
+};
  //------------EXPORTAR MODULO CONTROLADOR USUARIOS------------------
 module.exports = controladorUsuarios;
