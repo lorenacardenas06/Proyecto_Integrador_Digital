@@ -34,5 +34,39 @@ Object.keys(db).forEach(modelName => {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+const { error } = require("console");
+var mysql= require("mysql");
+var conexion = mysql.createConnection({
+    host:"localhost",
+    database:"usuario_db",
+    user: "root",
+    password:"",
 
+}
+);
+conexion.connect(function(error){
+    if(error){
+        throw error;
+    }else{
+        console.log("conectado");
+
+    }
+
+});
+//---mostrar---//
+conexion.query("SELECT * FROM usuario",funtion(error,filas){
+    if(error){
+        throw error
+    }else{
+        filas.forEach(fila => {
+            console.log(fila)
+            
+        })
+    }
+});
+conexion.end()
+//-----insertar--//
+conexion.query("INSERT INTO usuarios()", function(error,result) {
+
+})
 module.exports = db;

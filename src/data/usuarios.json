@@ -9,23 +9,32 @@
  },
  {
   "id": 2,
-  "nombre": "Lorena",
-  "email": "lorenacardenas06@gmail.com",
-  "contrasena": "",
-  "imagenUsuario": "/img/users/1667872134451.PNG"
+  "imagenUsuario": "/img/users/1669259140642.png"
  },
  {
   "id": 3,
-  "nombre": "aiiaiaiai",
-  "email": "ailem1312@gmail.com",
-  "contrasena": "258258258",
-  "imagenUsuario": "/img/users/1669255740075.png"
+  "nombre": "Lorena",
+  "apellidos": "Cardenas Chizabas",
+  "email": "lorenacardenas06@gmail.com",
+  "contrasena": "asdasd",
+  "imagenUsuario": "/img/users/1669259275567.png"
  },
  {
   "id": 4,
-  "nombre": "aiiaiaiai",
-  "email": "ailem1312@gmail.com",
-  "contrasena": "258258258",
-  "imagenUsuario": "/img/users/1669255876427.png"
+  "nombre": "Lorena",
+  "apellidos": "Cardenas Chizabas",
+  "email": "lorenacardenas06@gmail.com",
+  "contrasena": "adsasd",
+  "categoria": "Admin",
+  "imagenUsuario": "/img/users/1669263589140.png"
+ },
+ {
+  "id": 5,
+  "nombre": "Lorena",
+  "apellidos": "Cardenas Chizabas",
+  "email": "lorenacardenas06@gmail.com",
+  "contrasena": "",
+  "categoria": "Admin",
+  "imagenUsuario": "/img/users/1669263621973.png"
  }
 ]

@@ -45,22 +45,26 @@ const controladorProductos = {
   },
 
   store:(req, res) => {
-    let datos = req.body;
-    let idNuevoProducto = (products[products.length-1].id) + 1;
-    let nuevoProducto =
-    {
-      "id": idNuevoProducto,
-      "categoria": datos.categoria,
-      "nombre": datos.nombre,
-      "marca": datos.marca,
-      "precio": parseInt(datos.precio),
-      "descripción": datos.descripcion,
-      "imagen": "/img/products/"+req.file.filename,
-      "descuento": parseInt(datos.descuento)
-    };
-    products.push(nuevoProducto);
-    fs.writeFileSync(productosFilePath,JSON.stringify(products,null," "),'utf-8');
-    res.redirect('/');
+    if(req.file){
+      let datos = req.body;
+      let idNuevoProducto = (products[products.length-1].id) + 1;
+      let nuevoProducto =
+      {
+        "id": idNuevoProducto,
+        "categoria": datos.categoria,
+        "nombre": datos.nombre,
+        "marca": datos.marca,
+        "precio": parseInt(datos.precio),
+        "descripción": datos.descripcion,
+        "imagen": "/img/products/"+req.file.filename,
+        "descuento": parseInt(datos.descuento)
+      };
+      products.push(nuevoProducto);
+      fs.writeFileSync(productosFilePath,JSON.stringify(products,null," "),'utf-8');
+      res.redirect('/');
+    }else{
+      res.redirect("/crearProducto");
+    } 
   },
 
   detalleProducto: (req,res) =>{
@@ -131,9 +135,7 @@ const controladorProductos = {
     fs.writeFileSync(productosFilePath,JSON.stringify(nuevosProductos,null," "),'utf-8');
     fs.unlinkSync(__dirname + '/../../public' + nombreImagenAntigua);
     res.redirect("/");
-
   }
-
 }
  //------------EXPORTAR MODULO CONTROLADOR PRODUCTOS------------------
 module.exports = controladorProductos;
