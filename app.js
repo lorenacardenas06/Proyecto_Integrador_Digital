@@ -25,6 +25,23 @@ app.set("views", path.join(__dirname, "./src/views")); // Define la ubicación d
 //-------------------------RUTAS------------------------------------------------------
 app.use("/", productsRouter); // ruta global de productos
 app.use("/", usersRouters); //ruta global para usuarios
+//---------------Mysql---//
+var Mysql=require("mysql");
+let conecxion = Mysql.createConnection({
+  host:"localhost",
+  database:"bd_acmaquillaje",
+  user:"root",
+  password:""
+});
+conecxion.connect(function(error){
+  if(error){
+      throw error;
+  }else{
+      console.log("conectado");
+
+  }
+});
+conecxion.end();
 
 //-------------------SE CARGA EL PUERTO-------------------------------------------------
 
