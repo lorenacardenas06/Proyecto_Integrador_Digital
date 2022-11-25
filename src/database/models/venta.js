@@ -21,12 +21,28 @@ module.exports = function(sequelize, DataTypes) {
     }
     let venta = sequelize.define(alias,col,config);
     venta.associate = function(models){
-        venta.hasMany(models.venta, {
+        venta.hasMany(models.producto, {
+            as:"producto",
+            foreignKey:"producto_id",
+        })
+        venta.belongTo(models.local, {
             as:"local",
             foreignKey: "local_id",
-            otherKey:"product_id",
-            otherKey:"detalle_venta_id",
-            otherKey:"usuario_id"
+            
+        })
+        venta.belongTo(models.detalle_venta, {
+            as:"detalle_venta",
+            foreignKey: "detalles_venta_id",
+            
+        })
+        venta.hasMany(models.marca, {
+            as:"marca",
+            foreignKey: "marca_id",
+            
+        })
+        venta.belongTo(models.usuario, {
+            as:"usuario",
+            foreignKey: "usuario_id",
             
         })
     }

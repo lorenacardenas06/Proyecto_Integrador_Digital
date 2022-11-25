@@ -36,14 +36,27 @@ const controladorUsuarios = {
 }
 }
 //-------------------database----------------///
-let db = require("../database/models")
-let usuarioController = {
-  crear: function(req,res){
-    db.usuario.findAll()
-        .then(function(usuario){
-          return res.render("informacion de usuarios",{usuario:perfiles})
+
+let db = require("../database/models");
+let usuariosController={
+    crear: function(req,res){
+        db.usuario.findAll()
+        .then (function(usuario){
+            return res.render("registro",{usuario:registro})
         })
-  }
-}
+    }
+  };
+  db.usuario.create({
+    guardado: function (req,res) {
+      id: req.body.idNuevoUsuario;
+      nombre:  req.body.datosUsuario.nombreUser;
+      apellidos: req.body.datosUsuario.apellidoUser;
+      email: req.body.datosUsuario.emailUser;
+      contrasena: req.body.datosUsuario.contrasenaUser;
+      categoria: req.body.datosUsuario.categoriaUser;
+      imagenUsuario: "/img/users/"+req.file.filename;
+  });
+  res.redirect('./users/perfil');
+  let local=db.usuario.findByPK(req.params.id);
  //------------EXPORTAR MODULO CONTROLADOR USUARIOS------------------
 module.exports = controladorUsuarios;

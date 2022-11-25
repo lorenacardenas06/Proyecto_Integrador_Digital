@@ -27,15 +27,24 @@ app.use("/", productsRouter); // ruta global de productos
 app.use("/", usersRouters); //ruta global para usuarios
 //--------MySQL---//
 
-connection.connect(function(err) {
-  if (err) {
-    console.error('error connecting: ' + err.stack);
-    return;
-  }
+const { error } = require("console");
+var mysql= require("mysql");
+var conexion = mysql.createConnection({
+    host:"localhost",
+    database:"usuario_db",
+    user: "root",
+    password:"",
 
-  console.log('connected as id ' + connection.threadId);
-});
+}
+);
+conexion.connect(function(error){
+    if(error){
+        throw error;
+    }else{
+        console.log("conectado");
 
+    }
+  })
 
 
 //-------------------SE CARGA EL PUERTO-------------------------------------------------

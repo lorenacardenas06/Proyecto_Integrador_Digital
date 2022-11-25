@@ -30,12 +30,17 @@ module.exports = function(sequelize, DataTypes) {
     }
     let producto=sequelize.define(alias,col,config);
     producto.associate = function(models){
-        producto.hasMany(models.local, {
-            as:"producto",
+        producto.belogTo (models.categoria, {
+            as:"categoria",
+            foreignKey: "categoria_id"
+        })
+        productos.belongToMany(models.marca, {
+            as:"marca",
             foreignKey: "marca_id",
-            otherKey:"categoria_id"
+            
         })
     }
+    
     
     return producto;
 }
