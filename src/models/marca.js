@@ -1,7 +1,7 @@
 
 module.exports = function(sequelize, DataTypes) {
-    let alias = "marca";
-    let col ={
+    up: async(QueryInterface,Sequelize)=>{
+        return QueryInterface.create("marca",{ 
         id: {
             type:DataTypes.TINYINT,
             primaryKey: true,
@@ -11,7 +11,8 @@ module.exports = function(sequelize, DataTypes) {
             type:DataTypes.VARCHAR,
             limite: 50
         }
-    }
+    })
+    };
     let config = {
         tableName:"marca",
         timetamps:false

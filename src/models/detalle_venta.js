@@ -1,7 +1,7 @@
 
 module.exports = function(sequelize, DataTypes) {
-    let alias = "detalle_venta";
-    let col ={
+    up: async(QueryInterface,Sequelize)=>{
+        return QueryInterface.create("detalle_venta",{  
         id: {
             type:DataTypes.TINYINT,
             primaryKey: true,
@@ -13,7 +13,8 @@ module.exports = function(sequelize, DataTypes) {
         mono_total: {
             type:DataTypes.DECIMAL
         },
-    }
+    })
+    };
     let config = {
         tableName:"detalle_venta",
         timetamps:false

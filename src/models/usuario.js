@@ -1,8 +1,7 @@
-const { foreign_key } = require("i/lib/methods");
 
 module.exports = function(sequelize, DataTypes) {
-    let alias = "usuario";
-    let col ={
+    up: async(QueryInterface,Sequelize)=>{
+        return QueryInterface.create("usuario",{ 
         id: {
             type:DataTypes.TINYINT,
             primaryKey: true,
@@ -25,8 +24,8 @@ module.exports = function(sequelize, DataTypes) {
         super_admin: {
             type:DataTypes.BIT
         },
-        
-    }
+    })
+    };
     let config = {
         tableName:"usuarios",
         timetamps:false

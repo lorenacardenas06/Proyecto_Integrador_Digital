@@ -35,7 +35,7 @@ let conecxion = Mysql.createConnection({
 });
 conecxion.connect(function(error){
   if(error){
-      throw error;
+      return error;
   }else{
       console.log("conectado");
 

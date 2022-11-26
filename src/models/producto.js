@@ -1,29 +1,37 @@
+const { QueryInterface, Sequelize } = require("sequelize");
+
 module.exports = function(sequelize, DataTypes) {
-    let alias = "producto";
-    let col ={
+up: async(QueryInterface,Sequelize)=>{
+    return QueryInterface.create("producto", {
         id: {
             type:DataTypes.TINYINT,
             primaryKey: true,
-            autoIncrement:true
+            autoIncrement:true,
+            allowNull:false
         },
         nombre: {
             type:DataTypes.VARCHAR,
-            limite: 50
+            limite: 50,
+            allowNull:false
         },
         precio: {
-            type:DataTypes.DECIMAL
+            type:DataTypes.DECIMAL,
+            allowNull:false
         },
         imagen: {
-            type:DataTypes.VARCHAR
+            type:DataTypes.VARCHAR,
+            allowNull:false
         },
         descripcion: {
-            type:DataTypes.LONGTEXT
+            type:DataTypes.LONGTEXT,
+            allowNull:false
         },
         fecha_eliminacion: {
-            type:DataTypes.DATETIME
+            type:DataTypes.DATETIME,
+            allowNull:false
         },
-        
-    }
+    })
+    };
     let config = {
         tableName:"producto",
         timetamps:false
@@ -40,7 +48,6 @@ module.exports = function(sequelize, DataTypes) {
             
         })
     }
+    };
     
-    
-    return producto;
-}
+    return producto

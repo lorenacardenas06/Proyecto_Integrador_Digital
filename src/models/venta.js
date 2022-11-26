@@ -1,7 +1,7 @@
-
+const { Sequelize, QueryInterface } = require("sequelize");
 module.exports = function(sequelize, DataTypes) {
-    let alias = "venta";
-    let col ={
+    up: async(QueryInterface,Sequelize)=>{
+        return QueryInterface.create("venta",{ 
         id: {
             type:DataTypes.TINYINT,
             primaryKey: true,
@@ -13,8 +13,11 @@ module.exports = function(sequelize, DataTypes) {
         cantidad: {
             type:DataTypes.TINYINT,
             limite: 50
-        },
-    }
+        }, 
+      createAt:{type:Sequelize.DataTypes.DATE},
+    updatedAt:{type:Sequelize.DataTypes.DATE},
+    })
+    };
     let config = {
         tableName:"venta",
         timetamps:false
@@ -45,7 +48,10 @@ module.exports = function(sequelize, DataTypes) {
             foreignKey: "usuario_id",
             
         })
-    }
+    };
+
+   down: async (QueryInterface,Sequelize)=> { 
+    return  QueryInterface.dropTable(venta)
+   }
     
-    return venta;
-}
+};
