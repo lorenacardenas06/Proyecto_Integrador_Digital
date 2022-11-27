@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
+const cookieParser = require('cookie-parser');
 
 //----------------DATOS DEL JSON----------------------------------------
 const productosFilePath = path.join(__dirname,'../data/productos.json');
@@ -11,8 +12,12 @@ const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
 //------------OBJETO DEL CONTROLADOR------------------
 const controladorProductos = {
   index: (req, res) => {
-    const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
-    let productosHome = products.filter(productos=>productos.id%2==0)
+    //const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
+    //let productosHome = products.filter(productos=>productos.id%2==0)
+    //req.session.nombre="Lápiz labial"
+    res.cookie();
+    res.cookie.dni();
+
     res.render("home",{productos:productosHome}); //mostrar pagina de inicio
   },
   cuidadopersonal: (req, res) => {
