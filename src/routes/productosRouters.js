@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 const multer  = require('multer'); //multer
 const path= require("path");
-const {check} = require('express-validator');
+const {check, body} = require('express-validator/check');
 
 
 //--------------CONTROLADOR----------------------------------
@@ -23,7 +23,12 @@ const uploadFile = multer({ storage: multerDiskStorage });
 
 //----------VALIDACIONES ----------------
 let validaciones= [
-    check("name").notEmpty().withMessage("Complete campo")
+    body('nombre producto').notEmpty().withMessage("Introduce un nombre valido"),
+    body('marca producto').notEmpty().withMessage("Introduce un apellido valido"),
+    body('Categoria del producto:').notEmpty(),
+    body('Precio del producto:').notEmpty().withMessage("introduce precio valido"),
+    body('Descuento del producto:').notEmpty().withMessage("introduce precio valido"),
+
 ];
 //----------------RUTAS------------------------------------
 
