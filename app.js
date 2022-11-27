@@ -5,6 +5,8 @@ const path = require("path"); //traigo path
 const methodOverride = require('method-override'); //utilizar el metodo put y delete 
 const session = require('express-session');
 const auditoriaUnoMiddleware = require('./src/middlewares/auditoriaUNO'); //importo middleware
+const multer= require("multer");
+const {check} = require("express-validator");
 //-------------------------IMPORTACION ENRUTADORES------------------------------------------------------
 const productsRouter = require("./src/routes/productosRouters"); //se trae el enrutador
 const usersRouters = require("./src/routes/usersRouters"); //se trae el enrutador
@@ -23,7 +25,26 @@ app.set("views", path.join(__dirname, "./src/views")); // Define la ubicación d
 //-------------------------RUTAS------------------------------------------------------
 app.use("/", productsRouter); // ruta global de productos
 app.use("/", usersRouters); //ruta global para usuarios
+//---------------Mysql---//
+var Mysql=require("mysql");
+let conecxion = Mysql.createConnection({
+  host:"localhost",
+  database:"bd_acmaquillaje",
+  user:"root",
+  password:""
+});
+conecxion.connect(function(error){
+  if(error){
+      return error;
+  }else{
+      console.log("conectado");
+
+  }
+});
+conecxion.end();
+
 //-------------------SE CARGA EL PUERTO-------------------------------------------------
+
 app.listen(process.env.PORT || 3000, function () {
   console.log("servidor corriendo en puerto 3000");
 });
