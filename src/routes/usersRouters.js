@@ -3,7 +3,9 @@ const express = require("express");
 const router = express.Router();
 const multer  = require('multer'); //multer
 const path = require("path");
-const { body } = require('express-validator');
+const { body, check } = require('express-validator');
+
+
 
 //--------------CONTROLADOR----------------------------------
 const usersControllers = require("../controllers/usersControllers");
@@ -30,5 +32,7 @@ const validacionRegistro =[
 /***LOGIN AND CREATE USER ***/
 router.get("/registro", usersControllers.login);
 router.post("/registro", uploadFile.single('imagenUser'),validacionRegistro, usersControllers.crearUsuario);
+router.get("/acesso",usersControllers.acceso);
+router.post("/acesso",usersControllers.acceso);
 //-----------EXPORTAR MODULO---------------------------
 module.exports = router;
