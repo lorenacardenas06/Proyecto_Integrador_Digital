@@ -13,10 +13,11 @@ const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
 const controladorProductos = {
   index: (req, res) => {
     //const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
-    //let productosHome = products.filter(productos=>productos.id%2==0)
+    let productosHome = products.filter(productos=>productos.id%2==0)
     //req.session.nombre="Lápiz labial"
-    res.cookie();
-    res.cookie.dni();
+    res.cookie("producto","fsd");
+    //console.log(req.cookie.producto);
+    //res.cookie.dni();
 
     res.render("home",{productos:productosHome}); //mostrar pagina de inicio
   },
@@ -46,7 +47,10 @@ const controladorProductos = {
   },
 
   crearProducto: (req, res) => {
-    res.render("./products/crearProducto"); //mostrar pagina de crear producto
+    let passEncriptada=bcrypt.hashSync("Marcelo",10);
+    console.log(passEncriptada);
+    //res.render("./products/crearProducto"); //mostrar pagina de crear producto
+
   },
 
   store:(req, res) => {
@@ -70,6 +74,7 @@ const controladorProductos = {
     }else{
       res.redirect("/crearProducto");
     } 
+   
   },
 
   detalleProducto: (req,res) =>{

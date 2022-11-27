@@ -19,6 +19,9 @@ app.use(methodOverride('_method')); //utilizar el metodo put y delete
 app.use(session( {secret: "Este es mi secreto"} )); 
 app.use(cookieParser());
 app.use(auditoriaUnoMiddleware); //utilizo middleware
+app.get('/cookie',function(req, res){
+  res.cookie(cookie_name , 'cookie_value').send('Cookie is set');
+});
 //-------------TEMPLATE ENGINE--------------------------------------------------------------------
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./src/views")); // Define la ubicación de la carpeta de las Vistas
