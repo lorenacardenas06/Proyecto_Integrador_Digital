@@ -57,14 +57,17 @@
                 <div class="form-outline mb-3" id="datos_usuario">
                 <label for="categoriaUser" class="form-label">Categoria</label><br>
                   <select name="categoriaUser" id="categoriaUser">
-                    <option value="">Seleccione una opción</option>
                     <option value="admin" <%= locals.datosUsuarioViejo && datosUsuarioViejo.categoriaUser ==="admin" ? 'selected': ''; %> >Administrador</option>
                     <option value="comprador" <%= locals.datosUsuarioViejo && datosUsuarioViejo.categoriaUser ==="comprador" ? 'selected': ''; %> >Comprador</option>
                   </select>
                 </div>
                 <div class="form-outline mb-3" aria-inval id="datos_usuario">
                   <label for="imagenUser" class="form-label">Cargar imagen de perfil:</label><br>
-                  <input type="file" name="imagenUser" id="imagenUser" multiple/></input>
+                  <input type="file" name="imagenUser" id="imagenUser" /></input>
+                  <% if (locals.errores && errores.imagenUser) {  %>
+                    <%= errores.imagenUser.msg %>
+
+                    <% } %>
                 </div> 
 
                 <div>
@@ -86,7 +89,7 @@
           </div>
         </div>
         <div class="row">
-          <p><a href="/users/acceso" class="link-danger">Accede, si ya tienes una cuenta creada</a></p>
+          <p><a href="/login" class="link-danger">Accede, si ya tienes una cuenta creada</a></p>
         </div>
       </div>
     </main>   

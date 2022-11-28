@@ -49,7 +49,7 @@ const controladorProductos = {
   crearProducto: (req, res) => {
     let passEncriptada=bcrypt.hashSync("Marcelo",10);
     console.log(passEncriptada);
-    //res.render("./products/crearProducto"); //mostrar pagina de crear producto
+    res.render("./products/crearProducto"); //mostrar pagina de crear producto
 
   },
 
