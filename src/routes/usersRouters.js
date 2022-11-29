@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 const multer  = require('multer'); //multer
 const path = require("path");
-const { body, check } = require('express-validator');
+const { body } = require('express-validator');
 
 
 

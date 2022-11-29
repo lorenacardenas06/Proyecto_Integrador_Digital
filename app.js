@@ -4,7 +4,7 @@ const app = express(); //Utilizo express
 const path = require("path"); //traigo path
 const methodOverride = require('method-override'); //utilizar el metodo put y delete 
 const session = require('express-session');
-const auditoriaUnoMiddleware = require('./src/middlewares/auditoriaUNO'); //importo middleware
+// const auditoriaUnoMiddleware = require('./src/middlewares/auditoriaUNO'); //importo middleware
 const multer= require("multer");
 const {check} = require("express-validator");
 //-------------------------IMPORTACION ENRUTADORES------------------------------------------------------
@@ -18,7 +18,7 @@ app.use(express.json()); // utilizar el mtodo post
 app.use(methodOverride('_method')); //utilizar el metodo put y delete 
 app.use(session( {secret: "Este es mi secreto"} )); 
 app.use(cookieParser());
-app.use(auditoriaUnoMiddleware); //utilizo middleware
+// app.use(auditoriaUnoMiddleware); //utilizo middleware
 app.get('/cookie',function(req, res){
   res.cookie(cookie_name , 'cookie_value').send('Cookie is set');
 });

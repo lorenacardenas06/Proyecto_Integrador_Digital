@@ -39,6 +39,7 @@ const controladorUsuarios = {
     res.render("./users/login");
   },
   procesoLogin: (req, res) => {
+    /*
     const errores = validationResult(req);
     if(errores.isEmpty()){
       let userJSON = fs.readFileSync('user.json',{encoding});
@@ -57,6 +58,8 @@ const controladorUsuarios = {
       return res.render('./users/login',{ errores : errores.mapped(), datosUsuarioLoginViejo: req.body })
 
     }
-};
+    */
+}
+}
  //------------EXPORTAR MODULO CONTROLADOR USUARIOS------------------
 module.exports = controladorUsuarios;
