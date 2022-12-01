@@ -12,6 +12,7 @@
   "description": "- Temática y descripción del sitio:",
   "dependencies": {
     "@polkadot/api": "^9.3.3",
+    "bcrypt": "^5.1.0",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^5.2.1",
     "cookie-parser": "^1.4.6",

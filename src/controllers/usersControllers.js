@@ -5,7 +5,7 @@ const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 //----------------DATOS DEL JSON----------------------------------------
 const usuariosFilePath = path.join(__dirname,'../data/usuarios.json');
-const users = JSON.parse(fs.readFileSync(usuariosFilePath,'utf-8'));
+const users = JSON.parse(fs.readFileSync(usuariosFilePath,'utf-8')); 
 //------------OBJETO DEL CONTROLADOR------------------
 const controladorUsuarios = {
   registro: (req, res) => {
@@ -24,13 +24,13 @@ const controladorUsuarios = {
         "nombre": datosUsuario.nombreUser,
         "apellidos": datosUsuario.apellidoUser,
         "email": datosUsuario.emailUser,
-        "contrasena": datosUsuario.contrasenaUser,
+        "contrasena": bcrypt.hashSync(datosUsuario.contrasenaUser,10),
         "categoria": datosUsuario.categoriaUser,
-        "imagenUsuario": "/img/users/"+req.file.filename,
+        "imagenUsuario": "/img/users/" +req.file.filename,
       };
       users.push(nuevoUsuario);
       fs.writeFileSync(usuariosFilePath,JSON.stringify(users,null," "),'utf-8');
-      res.redirect('./users/perfil');
+      res.redirect('./users/login');
     }else{
       res.render('./users/registro',{ errores : errores.mapped(), datosUsuarioViejo: req.body });
     }
@@ -39,8 +39,13 @@ const controladorUsuarios = {
     res.render("./users/login");
   },
   procesoLogin: (req, res) => {
+    res.send("LLEGUE");
     const errores = validationResult(req);
+    let datosUsuarioLogin = req.body;
+    console.log(datosUsuarioLogin);
     if(errores.isEmpty()){
+      
+      /*
       const usuariosFilePath = path.join(__dirname,'../data/usuarios.json');
       const usersJSON = fs.readFileSync(usuariosFilePath,'utf-8');
       let users;
@@ -49,24 +54,16 @@ const controladorUsuarios = {
       }else {
         users = JSON.parse(usersJSON);
       }
-      for (let i=0; i< users.length; i++){
-        if(users[i].emailLogin == req.body.emailLogin){
-          if (bcrypt.compareSyn(req.body.contrasenaLogin, users[i].contrasena)){
-            let usuarioLogeado = users[i];
-            break;
-          }
-        }
+      */
+     
+    for (let i=0; i< users.length; i++){
+      if(datosUsuarioLogin.emailLogin == users[i].email){
+       // let usuarioLogeado = users[i];
+        res.send("ESTA EL USUARIO CORRECTO");
+        break;
       }
-      if(usuarioLogeado == undefined){
-        return res.render('./users/login', {errores:[{msg:"Credenciales invalidas"}]
-        });
-      }
-      req.session.usuarioLogeado = usuaioLogeado;
-      res.render('./users/perfil')
-    }else{
-      return res.render('./users/login',{ errores : errores.mapped(), datosUsuarioLoginViejo: req.body })
-
-    }
+    }   
+}
 }
 }
  //------------EXPORTAR MODULO CONTROLADOR USUARIOS------------------

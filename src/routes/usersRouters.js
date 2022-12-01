@@ -27,11 +27,12 @@ const validacionRegistro =[
     body('apellidoUser').notEmpty().withMessage("Introduce un apellido valido"),
     body('emailUser').notEmpty().withMessage("introduce un mail valido").bail().isEmail().withMessage("debes completar el mail"),
     body('contrasenaUser').notEmpty().withMessage("introducion contraseña valido").bail().isLength({min: 8}).withMessage("minimo de ocho caracteres"),
-    body("imagenUser").custom((value,{req}) =>{
-      let imagen = req.file;
+    body("imagenUser").custom((value,{req}) => {
+      let imagenUsuario = req.file;
       let imagenExtensiones = ['.jpg','.png', '.gif'];
-
-      if (!imagen){
+      return true;
+      /*
+      if (imagenUsuario ==false){
         throw new Error("Suba un archivo de imagen");
       }else{
         let imagenExtension = path.extname(file.originalname);
@@ -40,6 +41,9 @@ const validacionRegistro =[
         }
       }
       return true;})
+      */
+     
+    })
   ]
   const validacionLogin =[
     body('emailLogin').notEmpty().withMessage("introduce un mail valido").bail().isEmail().withMessage("debes completar el mail"),
@@ -49,7 +53,7 @@ const validacionRegistro =[
 /***LOGIN AND CREATE USER ***/
 router.get("/registro", usersControllers.registro);
 router.post("/registro", uploadFile.single('imagenUser'),validacionRegistro, usersControllers.crearUsuario);
-router.get("/login",validacionLogin, usersControllers.login);
-router.post("/login",usersControllers.procesoLogin);
+router.get("/login", usersControllers.login);
+router.post("/login",validacionLogin, usersControllers.procesoLogin);
 //-----------EXPORTAR MODULO---------------------------
 module.exports = router;
