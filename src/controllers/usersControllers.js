@@ -39,26 +39,34 @@ const controladorUsuarios = {
     res.render("./users/login");
   },
   procesoLogin: (req, res) => {
-    /*
     const errores = validationResult(req);
     if(errores.isEmpty()){
-      let userJSON = fs.readFileSync('user.json',{encoding});
+      const usuariosFilePath = path.join(__dirname,'../data/usuarios.json');
+      const usersJSON = fs.readFileSync(usuariosFilePath,'utf-8');
       let users;
       if (usersJSON == ""){
         users = [];
       }else {
-        users = JSON.parse(userJSON);
+        users = JSON.parse(usersJSON);
       }
       for (let i=0; i< users.length; i++){
         if(users[i].emailLogin == req.body.emailLogin){
-          if (bcrypt.compareSyn(req.body.contrasenaLogin, ))
+          if (bcrypt.compareSyn(req.body.contrasenaLogin, users[i].contrasena)){
+            let usuarioLogeado = users[i];
+            break;
+          }
         }
       }
+      if(usuarioLogeado == undefined){
+        return res.render('./users/login', {errores:[{msg:"Credenciales invalidas"}]
+        });
+      }
+      req.session.usuarioLogeado = usuaioLogeado;
+      res.render('./users/perfil')
     }else{
       return res.render('./users/login',{ errores : errores.mapped(), datosUsuarioLoginViejo: req.body })
 
     }
-    */
 }
 }
  //------------EXPORTAR MODULO CONTROLADOR USUARIOS------------------

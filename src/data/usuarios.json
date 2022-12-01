@@ -9,32 +9,11 @@
  },
  {
   "id": 2,
-  "imagenUsuario": "/img/users/1669259140642.png"
- },
- {
-  "id": 3,
-  "nombre": "Lorena",
-  "apellidos": "Cardenas Chizabas",
-  "email": "lorenacardenas06@gmail.com",
-  "contrasena": "asdasd",
-  "imagenUsuario": "/img/users/1669259275567.png"
- },
- {
-  "id": 4,
   "nombre": "Lorena",
   "apellidos": "Cardenas Chizabas",
   "email": "lorenacardenas06@gmail.com",
   "contrasena": "adsasd",
   "categoria": "Admin",
   "imagenUsuario": "/img/users/1669263589140.png"
- },
- {
-  "id": 5,
-  "nombre": "Lorena",
-  "apellidos": "Cardenas Chizabas",
-  "email": "lorenacardenas06@gmail.com",
-  "contrasena": "",
-  "categoria": "Admin",
-  "imagenUsuario": "/img/users/1669263621973.png"
  }
 ]
