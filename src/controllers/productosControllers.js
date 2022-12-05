@@ -9,6 +9,8 @@ const cookieParser = require('cookie-parser');
 const productosFilePath = path.join(__dirname,'../data/productos.json');
 const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
 
+
+const db = require('./src/database/models');
 //------------OBJETO DEL CONTROLADOR------------------
 const controladorProductos = {
   index: (req, res) => {

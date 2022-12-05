@@ -1,10 +1,11 @@
 module.exports = {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "bc_acmaquillaje",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "289889",
+    "password": Lore961206*,
+    "database": "bd_acmaquillaje",
+    "host": "mysql-lorenacardenas06.alwaysdata.net",
+    "dialect": "mysql",
+    "port": 3306
   },
   "test": {
     "username": "root",
@@ -22,6 +23,7 @@ module.exports = {
   }
 }
 require("dotenv").config();
+
 module.exports = {
     "development": {
       "username": process.env.DB_USER,
