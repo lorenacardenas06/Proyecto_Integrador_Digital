@@ -18,7 +18,7 @@ app.use(express.json()); // utilizar el mtodo post
 app.use(methodOverride('_method')); //utilizar el metodo put y delete 
 app.use(session( {secret: "Este es mi secreto"} )); 
 app.use(cookieParser());
-app.use(auditoriaUnoMiddleware); //utilizo middleware
+app.use(auditoriaUnoMiddleware); //utilizo middlewarhola como
 app.get('/cookie',function(req, res){
   res.cookie(cookie_name , 'cookie_value').send('Cookie is set');
 });

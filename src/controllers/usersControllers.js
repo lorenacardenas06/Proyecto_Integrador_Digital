@@ -8,7 +8,7 @@ const usuariosFilePath = path.join(__dirname,'../data/usuarios.json');
 const users = JSON.parse(fs.readFileSync(usuariosFilePath,'utf-8'));
 //------------OBJETO DEL CONTROLADOR------------------
 const controladorUsuarios = {
- acceso: (req, res) => {
+  acceso: (req, res) => {
     res.render("./users/acceso");}, 
   login: (req, res) => {
     res.render("./users/registro");
@@ -35,7 +35,7 @@ const controladorUsuarios = {
       fs.writeFileSync(usuariosFilePath,JSON.stringify(users,null," "),'utf-8');
       res.redirect('./users/perfil');
   }else{
-    res.render('./users/registro',{ errores : errores.mapped(), datosUsuarioViejo: req.body });
+    res.render('./users/registro',{ errors : errors.array(), datosUsuarioViejo: req.body });
   }
   
 }

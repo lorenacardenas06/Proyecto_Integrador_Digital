@@ -72,8 +72,8 @@ const controladorProductos = {
       fs.writeFileSync(productosFilePath,JSON.stringify(products,null," "),'utf-8');
       res.redirect('/');
     }else{
-      res.redirect("/crearProducto");
-    } 
+      res.render("/crearProducto",{errors:errors.array()});
+    }
    
   },
 
