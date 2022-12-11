@@ -23,12 +23,12 @@ const uploadFile = multer({ storage: multerDiskStorage });
 
 //----------VALIDACIONES ----------------
 let validaciones= [
-    body('nombre producto').notEmpty().withMessage("Introduce un nombre valido"),
-    body('marca producto').notEmpty().withMessage("Introduce un apellido valido"),
+    body('nombre').notEmpty().withMessage("Introduce un nombre valido"),
+    body('marca').notEmpty().withMessage("Introduce un apellido valido"),
+    body('precio').notEmpty().withMessage("introduce precio valido"),
+    body('descuento').notEmpty().withMessage("introduce precio valido"),
+    body('descuento').notEmpty().withMessage("introduce precio valido"),
     body('Categoria del producto:').notEmpty(),
-    body('Precio del producto:').notEmpty().withMessage("introduce precio valido"),
-    body('Descuento del producto:').notEmpty().withMessage("introduce precio valido"),
-
 ];
 //----------------RUTAS------------------------------------
 

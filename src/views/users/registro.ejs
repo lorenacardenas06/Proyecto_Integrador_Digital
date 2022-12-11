@@ -15,10 +15,10 @@
           <div class="col">
             <h3 class="products-title">Registrarse</h3>
             <div class = "box-form-user">
-                <form action="/registro" method="POST" enctype="multipart/form-data">
+              <form action="/registro" method="POST" enctype="multipart/form-data">
                 <div class="form-outline mb-3" id="datos_usuario">
                   <label for="nombre" class="form-label" >Nombre:</label><br>
-                  <input type="name" id="nombreUser" required name="nombreUser" class="form-input" minlength="2" value="<%= locals.datosUsuarioViejo && datosUsuarioViejo.nombreUser ? datosUsuarioViejo.nombreUser: ''%>"/>
+                  <input type="name" id="nombreUser" name="nombreUser" class="form-input" value="<%= locals.datosUsuarioViejo && datosUsuarioViejo.nombreUser ? datosUsuarioViejo.nombreUser: ''%>"/>
                 </div>
                 <% if (locals.errores && errores.nombreUser){ %>
                   <div class="text-errores">
@@ -27,7 +27,7 @@
                 <% } %>
                 <div class="form-outline mb-3" id="datos_usuario">
                   <label for="apellido" class="form-label">Apellidos:</label><br>
-                  <input type="apellido" id="apellidoUser" name="apellidoUser" required minlength="2" class="form-input" value="<%= locals.datosUsuarioViejo && datosUsuarioViejo.apellidoUser ? datosUsuarioViejo.apellidoUser: '' %>" />
+                  <input type="apellido" id="apellidoUser" name="apellidoUser" minlength="2" class="form-input" value="<%= locals.datosUsuarioViejo && datosUsuarioViejo.apellidoUser ? datosUsuarioViejo.apellidoUser: '' %>" />
                 </div>
                 <% if (locals.errores && errores.apellidoUser){ %>
                   <div class="text-errores">
@@ -37,7 +37,7 @@
 
                 <div class="form-outline mb-4" id="datos_usuario">
                   <label for="email" class="form-label" >Correo Electrónico:</label><br>
-                  <input type="email" id="emailUser" name="emailUser" required class="form-input" value="<%= locals.datosUsuarioViejo && datosUsuarioViejo.emailUser ? datosUsuarioViejo.emailUser: '' %>"/>
+                  <input type="email" id="emailUser" name="emailUser" class="form-input" value="<%= locals.datosUsuarioViejo && datosUsuarioViejo.emailUser ? datosUsuarioViejo.emailUser: '' %>"/>
                 </div>
                 <% if (locals.errores && errores.emailUser){ %>
                   <div class="text-errores">
@@ -47,7 +47,7 @@
 
                 <div class="form-outline mb-3" id="datos_usuario">
                   <label for="contrasena" class="form-label">Contraseña</label><br>
-                  <input type="password" id="contrasenaUser" name="contrasenaUser" class="form-input" placeholder="Contraseña" required minlength="8"/>
+                  <input type="password" id="contrasenaUser" name="contrasenaUser" class="form-input" placeholder="Contraseña"/>
                 </div>
                 <% if (locals.errores && errores.contrasenaUser){ %>
                   <div class="text-errores">
@@ -57,14 +57,17 @@
                 <div class="form-outline mb-3" id="datos_usuario">
                 <label for="categoriaUser" class="form-label">Categoria</label><br>
                   <select name="categoriaUser" id="categoriaUser">
-                    <option value="">Seleccione una opción</option>
                     <option value="admin" <%= locals.datosUsuarioViejo && datosUsuarioViejo.categoriaUser ==="admin" ? 'selected': ''; %> >Administrador</option>
                     <option value="comprador" <%= locals.datosUsuarioViejo && datosUsuarioViejo.categoriaUser ==="comprador" ? 'selected': ''; %> >Comprador</option>
                   </select>
                 </div>
                 <div class="form-outline mb-3" aria-inval id="datos_usuario">
                   <label for="imagenUser" class="form-label">Cargar imagen de perfil:</label><br>
-                  <input type="file" required name="imagenUser" id="imagenUser" multiple/></input>
+                  <input type="file" name="imagenUser" id="imagenUser" /></input>
+                  <% if (locals.errores && errores.imagenUser) {  %>
+                    <%= errores.imagenUser.msg %>
+
+                    <% } %>
                 </div> 
 
                 <div>
@@ -86,7 +89,7 @@
           </div>
         </div>
         <div class="row">
-          <p><a href="/users/acceso" class="link-danger">Accede, si ya tienes una cuenta creada</a></p>
+          <p><a href="/login" class="link-danger">Accede, si ya tienes una cuenta creada</a></p>
         </div>
       </div>
     </main>   

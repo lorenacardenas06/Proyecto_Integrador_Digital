@@ -9,6 +9,7 @@ const cookieParser = require('cookie-parser');
 const productosFilePath = path.join(__dirname,'../data/productos.json');
 const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
 
+const db = require('./src/database/models');
 //------------OBJETO DEL CONTROLADOR------------------
 const controladorProductos = {
   index: (req, res) => {
@@ -49,7 +50,7 @@ const controladorProductos = {
   crearProducto: (req, res) => {
     let passEncriptada=bcrypt.hashSync("Marcelo",10);
     console.log(passEncriptada);
-    //res.render("./products/crearProducto"); //mostrar pagina de crear producto
+    res.render("./products/crearProducto"); //mostrar pagina de crear producto
 
   },
 
