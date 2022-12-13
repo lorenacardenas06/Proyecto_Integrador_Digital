@@ -1,15 +1,13 @@
 //-----------------REQUERIMIENTOS-------------------------
 const fs = require('fs');
 const path = require('path');
-const { validationResult } = require('express-validator');
+const { body } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const cookieParser = require('cookie-parser');
 
 //----------------DATOS DEL JSON----------------------------------------
 const productosFilePath = path.join(__dirname,'../data/productos.json');
 const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
-
-const db = require('./src/database/models');
 //------------OBJETO DEL CONTROLADOR------------------
 const controladorProductos = {
   index: (req, res) => {
@@ -55,6 +53,19 @@ const controladorProductos = {
   },
 
   store:(req, res) => {
+    let errors = validationResult(req);
+
+		if ( errors.isEmpty() ) {
+
+			idNuevo=0;
+
+		for (let s of products){
+			if (idNuevo<s.id){
+				idNuevo=s.id;
+			}
+		}
+
+		idNuevo++;
     if(req.file){
       let datos = req.body;
       let idNuevoProducto = (products[products.length-1].id) + 1;
@@ -76,7 +87,7 @@ const controladorProductos = {
       res.render("/crearProducto",{errors:errors.array()});
     }
    
-  },
+  }},
 
   detalleProducto: (req,res) =>{
     let idProducto = req.params.id;
@@ -95,6 +106,7 @@ const controladorProductos = {
   },
 
   editarProducto: (req,res) =>{
+    
     let idProducto = req.params.id;
     let productoBuscado=0;
     for (let o of products){

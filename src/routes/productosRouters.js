@@ -9,6 +9,7 @@ const {check, body} = require('express-validator/check');
 //--------------CONTROLADOR----------------------------------
 const productosController = require("../controllers/productosControllers");
 
+//-multer
 const multerDiskStorage = multer.diskStorage({
     destination: function(req, file, cb) {       // request, archivo y callback que almacena archivo en destino
      cb(null, path.join(__dirname,'../../public/img/products'));    // Ruta donde almacenamos el archivo
@@ -22,18 +23,20 @@ const multerDiskStorage = multer.diskStorage({
 const uploadFile = multer({ storage: multerDiskStorage });
 
 //----------VALIDACIONES ----------------
-let validaciones= [
-    body('nombre').notEmpty().withMessage("Introduce un nombre valido"),
-    body('marca').notEmpty().withMessage("Introduce un apellido valido"),
-    body('precio').notEmpty().withMessage("introduce precio valido"),
-    body('descuento').notEmpty().withMessage("introduce precio valido"),
-    body('descuento').notEmpty().withMessage("introduce precio valido"),
-    body('Categoria del producto:').notEmpty(),
+const validacionesProduct = [
+    body('name').notEmpty().withMessage('Campo vacio'),
+    body('marca').notEmpty().withMessage('Campo vacio'),
+    body('precio').notEmpty().withMessage('Campo vacio'),
+    body('descripcion').notEmpty().withMessage('Campo vacio'),
+        body("imagenUser").custom((value,{req}) => {
+          let imagenUsuario = req.file;
+          let imagenExtensiones = ['.jpg','.png', '.gif'];
+          return true;})
 ];
 //----------------RUTAS------------------------------------
 
 /***GET ALL PRODUCTS***/
-router.get("/", productosController.index);
+router.get("/" );
 router.get("/cuidadoPersonal", productosController.cuidadopersonal);
 router.get("/maquillaje", productosController.maquillaje);
 router.get("/fragancias", productosController.fragancia);
@@ -44,7 +47,7 @@ router.get("/carritoProducto", productosController.carritoProducto);
 
 /***CREATE ALL PRODUCTS***/
 router.get("/crearProducto", productosController.crearProducto);
-router.post("/crearProducto",validaciones, uploadFile.single('imagen'), productosController.store);
+//router.post("/crearProducto",validaciones, uploadFile.single('imagen'), productosController.store);
 
 /***GET ONE PRODUCT ***/
 router.get("/detalleProducto/:id", productosController.detalleProducto);

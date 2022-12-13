@@ -19,6 +19,14 @@ const multerDiskStorage = multer.diskStorage({
      cb(null, imageName);         
     }
 });
+const fileFilter = (req, file, cb) => {
+  if ((file.mimetype),includes('gif')|| (file.mimetype) .includes('png') || (file.mimetype).includes('jpg')) {
+     cb(null, true);
+ } else {
+                                           I
+     //cb(new multer.MulterError('not a PNG'), false);
+     cb(null, false);
+     return cb(new Error('No es -una imagen'));}}
 
 const uploadFile = multer({ storage: multerDiskStorage });
 //-------validaciones----//
@@ -51,7 +59,7 @@ const validacionRegistro =[
   ]
 //----------------RUTAS------------------------------------
 /***LOGIN AND CREATE USER ***/
-router.get("/registro", usersControllers.registro);
+router.get("/registro",usersControllers.login);
 router.post("/registro", uploadFile.single('imagenUser'),validacionRegistro, usersControllers.crearUsuario);
 router.get("/login", usersControllers.login);
 router.post("/login",validacionLogin, usersControllers.procesoLogin);
