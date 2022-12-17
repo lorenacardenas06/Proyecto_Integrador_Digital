@@ -14,7 +14,7 @@ function tiendaData(sequelize, Datatypes)
            as: "Usuarios",
            foreignKey: "tienda_id_FK",
         });
-    },
+    }
     return tienda;
 }
 
