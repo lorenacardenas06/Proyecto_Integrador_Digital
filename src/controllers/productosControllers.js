@@ -53,19 +53,19 @@ const controladorProductos = {
   },
 
   store:(req, res) => {
-    let validacionesProduct = [
-      body('name').notEmpty().withMessage('Campo vacio').isAlpha().bail(),
+    let validacionesProducto= [
+      body('name').notEmpty().withMessage('Campo vacio').isAlpha().bail(),/*
       body('marca').notEmpty().withMessage('Campo vacio').isAlpha().bail(),
       body('precio').notEmpty().withMessage('Campo vacio').isNumeric().withMessage("el valor ingresado no es un numero").bail(),
       body('descuento').isNumeric().withMessage("el valor ingresado no es un numero").bail(),
       body('descripcion').notEmpty().withMessage('Campo vacio').isAlpha().bail(),
-          body("imagenUser").custom((value,{req}) => {
+          body("imagen").custom((value,{req}) => {
             let imagenUsuario = req.file;
             let imagenExtensiones = ['.jpg','.png', '.gif'];
-            return true;})
+            return true;})*/
   ];;
 
-		if ( validacionesProduct==0) {
+		if ( validacionesProducto==0) {
 
 			idNuevo=0;
 
