@@ -3,6 +3,7 @@
   <head>
     <title>Registro</title>
     <link rel="stylesheet" href="/css/login.css"></link>
+    <script defer src="./jsDeFormulari/formulariologin.js"></script>
     <%-include("../partials/head")%>
   </head>
 
@@ -16,7 +17,7 @@
           <div class="col">
             <h3 class="products-title">Acceder</h3>
             <div class = "box-form-user">
-              <form action="/login" method="POST" enctype="multipart/form-data">
+              <form action="/login" method="POST" enctype="multipart/form-data" id="formulario">
                 <!-- Email input -->
                 <div class="form-outline mb-6" id="datos_usuarioCreado">
                   <label for="email" class="form-label" >Correo Electrónico:</label><br>
@@ -28,12 +29,17 @@
                   <input type="password" id="contrasenaLogin" name="contrasenaLogin" class="form-input" placeholder="Contraseña" />
                 </div>
                 <div class="text-center text-lg-start mt-4 pt-2">
-                  <button type="submit" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Ingresar</button>
+                  <button type="submit" id="boton" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Ingresar</button>
                 </div>
                 <div>
                   <a href="#!" class="text-body"><u>¿Olvidaste tu contraseña?</u></a>
                 </div>
               </form>
+              <div id="errores">
+                <ul>  
+                  
+                </ul>
+              </div>
             </div>
           </div>
         <div class="row">

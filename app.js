@@ -27,7 +27,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./src/views")); // Define la ubicación de la carpeta de las Vistas
 //-------------------------RUTAS------------------------------------------------------
 app.use("/", productsRouter); // ruta global de productos
-app.use("/usuario", usersRouters); //ruta global para usuarios
+app.use("/router/userRouter", usersRouters); //ruta global para usuarios
 //---------------Mysql---//
 var Mysql=require("mysql");
 let conecxion = Mysql.createConnection({
