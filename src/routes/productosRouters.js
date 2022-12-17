@@ -36,7 +36,7 @@ const validacionesProduct = [
 //----------------RUTAS------------------------------------
 
 /***GET ALL PRODUCTS***/
-router.get("/" );
+router.get("/", productosController.index);
 router.get("/cuidadoPersonal", productosController.cuidadopersonal);
 router.get("/maquillaje", productosController.maquillaje);
 router.get("/fragancias", productosController.fragancia);
