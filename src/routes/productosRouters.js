@@ -24,10 +24,10 @@ const uploadFile = multer({ storage: multerDiskStorage });
 
 //----------VALIDACIONES ----------------
 const validacionesProduct = [
-    body('name').notEmpty().withMessage('Campo vacio'),
-    body('marca').notEmpty().withMessage('Campo vacio'),
-    body('precio').notEmpty().withMessage('Campo vacio'),
-    body('descripcion').notEmpty().withMessage('Campo vacio'),
+    body('name').notEmpty().withMessage('Campo vacio').bail(),
+    body('marca').notEmpty().withMessage('Campo vacio').bail,
+    body('precio').notEmpty().withMessage('Campo vacio').bail(),
+    body('descripcion').notEmpty().withMessage('Campo vacio').bail(),
         body("imagenUser").custom((value,{req}) => {
           let imagenUsuario = req.file;
           let imagenExtensiones = ['.jpg','.png', '.gif'];
@@ -47,6 +47,7 @@ router.get("/carritoProducto", productosController.carritoProducto);
 
 /***CREATE ALL PRODUCTS***/
 router.get("/crearProducto", productosController.crearProducto);
+router.post("/crearProducto", productosController.store)
 //router.post("/crearProducto",validaciones, uploadFile.single('imagen'), productosController.store);
 
 /***GET ONE PRODUCT ***/

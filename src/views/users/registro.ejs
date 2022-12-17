@@ -3,6 +3,7 @@
   <head>
     <title>Registro</title>
     <link rel="stylesheet" href="/css/login.css"></link>
+    <script defer src="./jsDeFormulari/formularioregistro.js"></script>
     <%-include("../partials/head")%>
   </head>
   %>
@@ -15,7 +16,7 @@
           <div class="col">
             <h3 class="products-title">Registrarse</h3>
             <div class = "box-form-user">
-              <form action="/registro" method="POST" enctype="multipart/form-data">
+              <form action="/registro" id="formulario"  method="POST" enctype="multipart/form-data">
                 <div class="form-outline mb-3" id="datos_usuario">
                   <label for="nombre" class="form-label" >Nombre:</label><br>
                   <input type="name" id="nombreUser" name="nombreUser" class="form-input" value="<%= locals.datosUsuarioViejo && datosUsuarioViejo.nombreUser ? datosUsuarioViejo.nombreUser: ''%>"/>

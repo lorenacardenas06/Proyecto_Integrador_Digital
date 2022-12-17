@@ -3,6 +3,7 @@
 <head>
   <title>Crear un Producto</title>
   <link rel="stylesheet" href="/css/crearProducto.css"></link>
+  <script defer src="./jsProducyo/jsCrearP.js"></script>
   <%-include("../partials/head")%>
 </head>
 
@@ -22,8 +23,8 @@
                   <div class="col-12 col-md-6" id="entradas">
                     <label for="categoria" class="form-label">Categoria del producto:</label><br>
                     <select name="categoria" id="categoria" class="form-input">
+                      <option value="elegi"> </option>
                       <option value="cuidado personal">Cuidado Personal</option>
-                      <option value="elegi">Elegi</option>
                       <option value="maquillaje">Maquillaje</option>
                       <option value="fragancias">Fragancias</option>
                       <option value="electricos">Electricos</option>

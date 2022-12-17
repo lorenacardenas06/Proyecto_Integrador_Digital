@@ -9,6 +9,7 @@ const { body } = require('express-validator');
 
 //--------------CONTROLADOR----------------------------------
 const usersControllers = require("../controllers/usersControllers");
+const { string } = require("i/lib/util");
 //---------MULTER----//
 const multerDiskStorage = multer.diskStorage({
     destination: function(req, file, cb) {       // request, archivo y callback que almacena archivo en destino
@@ -31,8 +32,8 @@ const fileFilter = (req, file, cb) => {
 const uploadFile = multer({ storage: multerDiskStorage });
 //-------validaciones----//
 const validacionRegistro =[
-    body('nombreUser').notEmpty().withMessage("Introduce un nombre valido"),
-    body('apellidoUser').notEmpty().withMessage("Introduce un apellido valido"),
+    body('nombreUser').notEmpty().withMessage("Introduce un nombre valido").bail().isAlpha(string),
+    body('apellidoUser').notEmpty().withMessage("Introduce un apellido valido").bail().isAlpha(string),
     body('emailUser').notEmpty().withMessage("introduce un mail valido").bail().isEmail().withMessage("debes completar el mail"),
     body('contrasenaUser').notEmpty().withMessage("introducion contraseña valido").bail().isLength({min: 8}).withMessage("minimo de ocho caracteres"),
     body("imagenUser").custom((value,{req}) => {
@@ -59,9 +60,10 @@ const validacionRegistro =[
   ]
 //----------------RUTAS------------------------------------
 /***LOGIN AND CREATE USER ***/
-router.get("/registro",usersControllers.login);
+
+router.get("/registro",usersControllers.crearUsuario);
 router.post("/registro", uploadFile.single('imagenUser'),validacionRegistro, usersControllers.crearUsuario);
-router.get("/login", usersControllers.login);
+router.get("/",usersControllers.login);
 router.post("/login",validacionLogin, usersControllers.procesoLogin);
 //-----------EXPORTAR MODULO---------------------------
 module.exports = router;
