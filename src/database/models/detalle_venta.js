@@ -9,7 +9,13 @@ function detalle_ventaData(sequelize, Datatypes)
     }
 
     let c = {camelCase: false, timestamps: false, tableName: 'Detalle_Venta'};
-    const detalle_venta= sequelize.define(a,b,c)
+    const detalle_venta= sequelize.define(a,b,c);
+    detalle_venta.associate = function (modelos){
+        detalle_venta.hasMany(modelos.Venta, {
+           as: "Venta",
+           foreignKey: "detalle_id_FK",
+        });
+    } 
     return detalle_venta;
 }
 

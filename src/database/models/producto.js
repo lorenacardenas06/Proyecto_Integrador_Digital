@@ -28,6 +28,13 @@ function productoData(sequelize, Datatypes)
             foreignKey: "categoria_id_FK"
             });
     }
+    productos.associate = function (modelos){
+        productos.hasMany(modelos.Venta, {
+           as: "Venta",
+           foreignKey: "producto_id_FK",
+        });
+    } 
+    
 
     return productos;
 

@@ -17,8 +17,8 @@ function ventaData(sequelize, Datatypes)
            foreignKey: "producto_id_FK"
             });
 
-        ventas.belongsTo(modelos.Detalle_Venta, {   
-            as: "Detalle_Venta",
+        ventas.belongsTo(modelos.detalle_venta, {   
+            as: "detalle_venta",
             foreignKey: "detalle_id_FK"
             });
         ventas.belongsTo(modelos.Usuario, {   

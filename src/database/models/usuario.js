@@ -13,9 +13,20 @@ function usuarioData(sequelize, Datatypes)
     }
 
     let c = {camelCase: false, timestamps: false, tableName: 'Usuario'};
-    const usuarios= sequelize.define(a,b,c)
+    const usuarios= sequelize.define(a,b,c);
+    usuarios.associate = function (modelos){
+        usuarios.hasMany(modelos.Venta, {
+           as: "Venta",
+           foreignKey: "usuario_id_FK",
+        });
+    },
+    usuarios.associate = function (modelos){
+        usuarios.belongsTo(modelos.tienda, {   
+           as: "tienda",
+           foreignKey: "tienda_id_FK",
+            });
+    }
+
     return usuarios;
 }
 module.exports = usuarioData;
-
-  tienda_id_FK INTEGER DEFAULT NULL,
