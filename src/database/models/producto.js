@@ -14,32 +14,23 @@ function productoData(sequelize, Datatypes)
     }
 
     let c = {camelCase: false, timestamps: false, tableName: 'Producto'};
-    const productos= sequelize.define(a,b,c)
-    
-    productos.associate = function (modelos){
+    const Producto= sequelize.define(a,b,c)
+    Producto.associate = function (modelos){
+        Producto.belongsTo(modelos.Marca, {   
+            as: "Marca",
+            foreignKey: "marca_id_FK"
+        });
 
-        productos.belongsTo(modelos.Marca, {   
-           as: "Marca",
-           foreignKey: "marca_id_FK"
-            });
-
-        productos.belongsTo(modelos.Categoria, {   
+        Producto.belongsTo(modelos.Categoria, {   
             as: "Categoria",
             foreignKey: "categoria_id_FK"
-            });
-    }
-    productos.associate = function (modelos){
-        productos.hasMany(modelos.Venta, {
-           as: "Venta",
-           foreignKey: "producto_id_FK",
+        });
+        Producto.hasMany(modelos.Venta, {
+            as: "Venta",
+            foreignKey: "producto_id_FK",
         });
     } 
-    
-
-    return productos;
-
+    return Producto;
 }
 
 module.exports = productoData;
-
-

@@ -1,4 +1,3 @@
-
 const formulario= document.getElementById("formulario");
 const boton= document.getElementsById("boton");
 formulario.addEventListener("submit", function(e){

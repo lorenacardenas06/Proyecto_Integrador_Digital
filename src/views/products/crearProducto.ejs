@@ -24,51 +24,26 @@
                     <label for="categoria" class="form-label">Categoria del producto:</label><br>
                     <select name="categoria" id="categoria" class="form-input">
                       <option value="elegi"> </option>
-                      <option value="cuidado personal">Cuidado Personal</option>
-                      <option value="maquillaje">Maquillaje</option>
-                      <option value="fragancias">Fragancias</option>
-                      <option value="electricos">Electricos</option>
+                      <% for (let i of c){ %>
+                        <option value="<%= i.id%>"> <%= i.nombre%> </option>
+                        <% } %>
                     </select>
                   </div>
                   <div class="col-12 col-md-6" id="entradas">
                     <label for="nombre" class="form-label">Nombre del producto:</label><br>
                     <input type="text" id="nombre" name="nombre" placeholder= "Shampoo Capilar" class="form-input">
-                    	
-						<% if (locals && locals.errors) { %>
-							<% if (locals.errors[0].param=="name") { %>
-								<h3> <%= locals.errors[0].msg %>  </h3> 
-							<% } %>
-						<% } %>
                   </div>
                   <div class="col-12 col-md-6" id="entradas">
                     <label for="marca" class="form-label">Marca del producto:</label><br>
                     <input type="text" id="marca" name="marca" placeholder="Natura" class="form-input">
-                    	
-						<% if (locals && locals.errors) { %>
-							<% if (locals.errors[0].param=="name") { %>
-								<h3> <%= locals.errors[0].msg %>  </h3> 
-							<% } %>
-						<% } %>
                   </div>
                   <div class="col-12 col-md-6" id="entradas">
                     <label for="precio" class="form-label">Precio del producto:</label><br>
                     <input type="text" id="precio" name="precio" placeholder= "30.000" class="form-input">
-                    	
-						<% if (locals && locals.errors) { %>
-							<% if (locals.errors[0].param=="name") { %>
-								<h3> <%= locals.errors[0].msg %>  </h3> 
-							<% } %>
-						<% } %>
                   </div> 
                   <div class="col-12 col-md-6" id="entradas">
                     <label for="descripcion" class="form-label">Descripcion del producto:</label><br>
                     <textarea type="text" id="descripcion" name="descripcion" placeholder= "Producto extrahidratante para el cabello" class="form-input"></textarea>
-                    	
-						<% if (locals && locals.errors) { %>
-							<% if (locals.errors[0].param=="name") { %>
-								<h3> <%= locals.errors[0].msg %>  </h3> 
-							<% } %>
-						<% } %>
                   </div> 
                   <div class="col-12 col-md-6" aria-inval id="entradas">
                     <label for="imagen" class="form-label">Cargar imagen del producto:</label><br>

@@ -2,76 +2,77 @@
 <html lang="es">
   <head>
     <title>Registro</title>
-    <link rel="stylesheet" href="/css/login.css"></link>
-    <script defer src="./jsDeFormulari/formularioregistro.js"></script>
+    <link rel="stylesheet" href="/css/registro.css"></link>
     <%-include("../partials/head")%>
   </head>
-  %>
+  <%-include("../partials/header")%>
   <body class="body">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <%-include("../partials/header")%>
     <main>
-      <div class="container">
+      <div>
         <div class="row">
           <div class="col">
-            <h3 class="products-title">Registrarse</h3>
             <div class = "box-form-user">
-              <form action="/registro" id="formulario"  method="POST" enctype="multipart/form-data">
-                <div class="form-outline mb-3" id="datos_usuario">
-                  <label for="nombre" class="form-label" >Nombre:</label><br>
-                  <input type="name" id="nombreUser" name="nombreUser" class="form-input" value="<%= locals.datosUsuarioViejo && datosUsuarioViejo.nombreUser ? datosUsuarioViejo.nombreUser: ''%>"/>
-                </div>
-                <% if (locals.errores && errores.nombreUser){ %>
-                  <div class="text-errores">
-                    <p><%= errores.nombreUser.msg%></p>
-                  </div>
-                <% } %>
-                <div class="form-outline mb-3" id="datos_usuario">
-                  <label for="apellido" class="form-label">Apellidos:</label><br>
-                  <input type="apellido" id="apellidoUser" name="apellidoUser" minlength="2" class="form-input" value="<%= locals.datosUsuarioViejo && datosUsuarioViejo.apellidoUser ? datosUsuarioViejo.apellidoUser: '' %>" />
-                </div>
-                <% if (locals.errores && errores.apellidoUser){ %>
-                  <div class="text-errores">
-                    <p><%= errores.apellidoUser.msg%></p>
-                  </div>
-                <% } %>
-
-                <div class="form-outline mb-4" id="datos_usuario">
-                  <label for="email" class="form-label" >Correo Electrónico:</label><br>
-                  <input type="email" id="emailUser" name="emailUser" class="form-input" value="<%= locals.datosUsuarioViejo && datosUsuarioViejo.emailUser ? datosUsuarioViejo.emailUser: '' %>"/>
-                </div>
-                <% if (locals.errores && errores.emailUser){ %>
-                  <div class="text-errores">
-                    <p><%= errores.emailUser.msg%></p>
-                  </div>
-                <% } %>
-
-                <div class="form-outline mb-3" id="datos_usuario">
-                  <label for="contrasena" class="form-label">Contraseña</label><br>
-                  <input type="password" id="contrasenaUser" name="contrasenaUser" class="form-input" placeholder="Contraseña"/>
-                </div>
-                <% if (locals.errores && errores.contrasenaUser){ %>
-                  <div class="text-errores">
-                    <p><%= errores.contrasenaUser.msg%></p>
-                  </div>
-                <% } %>
-                <div class="form-outline mb-3" id="datos_usuario">
-                <label for="categoriaUser" class="form-label">Categoria</label><br>
-                  <select name="categoriaUser" id="categoriaUser">
-                    <option value="admin" <%= locals.datosUsuarioViejo && datosUsuarioViejo.categoriaUser ==="admin" ? 'selected': ''; %> >Administrador</option>
-                    <option value="comprador" <%= locals.datosUsuarioViejo && datosUsuarioViejo.categoriaUser ==="comprador" ? 'selected': ''; %> >Comprador</option>
-                  </select>
-                </div>
-                <div class="form-outline mb-3" aria-inval id="datos_usuario">
-                  <label for="imagenUser" class="form-label">Cargar imagen de perfil:</label><br>
-                  <input type="file" name="imagenUser" id="imagenUser" /></input>
-                  <% if (locals.errores && errores.imagenUser) {  %>
-                    <%= errores.imagenUser.msg %>
-
+              <form action="/user/registro" id="formulario"  method="POST" enctype="multipart/form-data">
+                <div class="container-1">
+                  <div class = "container-2">
+                    <div class = "encabezado">
+                      <h3 class="products-title">Registro de usuario</h3>
+                    </div>
+                    <div class="form-outline mb-3" id="datos_usuario">
+                      <label for="nombre" class="form-label" >Nombre:</label><br>
+                      <input type="name" id="nombre" name="nombre" class="form-input" placeholder= "Ingrese su nombre" value="<%= locals.datosUsuarioViejo && datosUsuarioViejo.nombre ? datosUsuarioViejo.nombre: ''%>"/>
+                    </div>
+                    <% if (locals.errores && errores.nombre){ %>
+                      <div class="text-errores">
+                        <p><%= errores.nombre.msg%></p>
+                      </div>
                     <% } %>
-                </div> 
+                    <div class="form-outline mb-3" id="datos_usuario">
+                      <label for="apellido" class="form-label">Apellidos:</label><br>
+                      <input type="apellido" id="apellido" name="apellido" minlength="2" class="form-input" placeholder= "Ingrese sus apellidos" value="<%= locals.datosUsuarioViejo && datosUsuarioViejo.apellido ? datosUsuarioViejo.apellido: '' %>" />
+                    </div>
+                    <% if (locals.errores && errores.apellido){ %>
+                      <div class="text-errores">
+                        <p><%= errores.apellido.msg%></p>
+                      </div>
+                    <% } %>
 
-                <div>
+                    <div class="form-outline mb-4" id="datos_usuario">
+                      <label for="email" class="form-label" >Correo Electrónico:</label><br>
+                      <input type="email" id="email" name="email" class="form-input" placeholder= "Ingrese su correo electrónico" value="<%= locals.datosUsuarioViejo && datosUsuarioViejo.email ? datosUsuarioViejo.email: '' %>"/>
+                    </div>
+                    <% if (locals.errores && errores.email){ %>
+                      <div class="text-errores">
+                        <p><%= errores.email.msg%></p>
+                      </div>
+                    <% } %>
+
+                    <div class="form-outline mb-3" id="datos_usuario">
+                      <label for="contrasena" class="form-label">Contraseña</label><br>
+                      <input type="password" id="contrasena" name="contrasena" class="form-input" placeholder="Ingrese una contraseña"/>
+                    </div>
+                    <% if (locals.errores && errores.contrasena){ %>
+                      <div class="text-errores">
+                        <p><%= errores.contrasena.msg%></p>
+                      </div>
+                    <% } %>
+                    <div class="form-outline mb-3" id="datos_usuario">
+                    <label for="rol" class="form-label">Rol</label><br>
+                      <select name="rol" class="form-input" id="rol">
+                        <option value="admin" <%= locals.datosUsuarioViejo && datosUsuarioViejo.rol ==="admin" ? 'selected': ''; %> >Administrador</option>
+                        <option value="comun" <%= locals.datosUsuarioViejo && datosUsuarioViejo.rol ==="comun" ? 'selected': ''; %> >Comprador</option>
+                      </select>
+                    </div>
+                    <div class="form-outline mb-3" aria-inval id="datos_usuario">
+                      <label for="imagen" class="form-label">Cargar imagen de perfil:</label><br>
+                      <input type="file" name="imagen" id="imagen"class="form-input" /></input>
+                      <% if (locals.errores && errores.imagen) {  %>
+                        <%= errores.imagen.msg %>
+                        <% } %>
+                    </div> 
+
+                <!-- <div>
                   <input class="form-check-input me-2" type="checkbox" value="" id="terminos" />
                   <label for="terminos" class="form-check-label" > Al hacer clic aquí, acepto los <a href="#!" class="text-body"><u>Términos de uso y la Política de privacidad.</u></a> </label>
                 </div>
@@ -79,19 +80,18 @@
                 <div>
                   <input class="form-check-input me-2" type="checkbox" value="" id="noticias" />
                   <label for="noticias" class="form-check-label" > Regístrese para recibir actualizaciones por correo electrónico. </label>
+                </div> -->
+                    <div>
+                      <button type="submit" class="boton" style="padding-left: 2.5rem; padding-right: 2.5rem;">Enviar</button>
+                      <p><a href="/user/login" class="link-dark">Accede, si ya tienes una cuenta creada</a></p>
+                    </div>
+                  </div>
                 </div>
-
-                <div>
-                  <button type="submit" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Registrarse</button>
-                </div>
-
               </form> 
             </div>
           </div>
         </div>
-        <div class="row">
-          <p><a href="/login" class="link-danger">Accede, si ya tienes una cuenta creada</a></p>
-        </div>
+
       </div>
     </main>   
     <%-include("../partials/footer")%>  

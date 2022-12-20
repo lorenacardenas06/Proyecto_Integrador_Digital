@@ -1,23 +1,14 @@
 //-----------------REQUERIMIENTOS-------------------------
 const fs = require('fs');
 const path = require('path');
-const { body } = require('express-validator');
-const bcrypt = require('bcryptjs');
-const cookieParser = require('cookie-parser');
-
-//----------------DATOS DEL JSON----------------------------------------
-const productosFilePath = path.join(__dirname,'../data/productos.json');
-const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
+const { validationResult } = require('express-validator');
+//----------------IMPORTO MODELOS----------------------------------------
+const db = require("../database/models");
 //------------OBJETO DEL CONTROLADOR------------------
 const controladorProductos = {
   index: (req, res) => {
-    //const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
-    let productosHome = products.filter(productos=>productos.id%2==0)
-    //req.session.nombre="Lápiz labial"
-    res.cookie("producto","fsd");
-    //console.log(req.cookie.producto);
-    //res.cookie.dni();
-
+    const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
+    let productosHome = products.filter(productos=>productos.id%2==0);
     res.render("home",{productos:productosHome}); //mostrar pagina de inicio
   },
   cuidadopersonal: (req, res) => {
@@ -44,61 +35,54 @@ const controladorProductos = {
     const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
     res.render("./products/carritoProducto"); //mostrar pagina maquillaje
   },
-
-  crearProducto: (req, res) => {
-    let passEncriptada=bcrypt.hashSync("Marcelo",10);
-    console.log(passEncriptada);
-    res.render("./products/crearProducto"); //mostrar pagina de crear producto
-
+//mostrar pagina de crear producto
+  crearProducto: async (req, res) => 
+  {
+    let categoria = await db.Categoria.findAll()
+    let marca = await db.Marca.findAll()
+    res.render("./products/crearProducto",{c:categoria, m:marca}); 
+  },
+  //---crear producto
+  store:(req, res) => {
+    // const errores = validationResult(req);
+    if (true) 
+    {
+      db.Producto.findOne({where: {nombre: req.body.nombre}}).then(function(producto)
+      {
+        if (producto)
+        {
+          console.log("El producto ya existe")
+          return res.render('./products/crearProducto')
+        }else{
+          let productoNuevo = 
+            {
+              "nombre": req.body.nombre,
+              "precio": req.body.precio,
+              "descripcion": req.body.descripcion,
+              "imagen": "/img/products/"+req.file.filename,
+              "categoria_id_FK": req.body.categoria
+            }
+          db.Producto.create(productoNuevo).then(function(producto)
+          {
+            return res.render('/')
+          })
+        }
+      })
+    }else{
+      res.render ('./user/registro');
+     // res.render("/crearProducto",{errores : errores.array()});;
+    }
   },
 
-  store:(req, res) => {
-    let validacionesProducto= [
-      body('name').notEmpty().withMessage('Campo vacio').isAlpha().bail(),/*
-      body('marca').notEmpty().withMessage('Campo vacio').isAlpha().bail(),
-      body('precio').notEmpty().withMessage('Campo vacio').isNumeric().withMessage("el valor ingresado no es un numero").bail(),
-      body('descuento').isNumeric().withMessage("el valor ingresado no es un numero").bail(),
-      body('descripcion').notEmpty().withMessage('Campo vacio').isAlpha().bail(),
-          body("imagen").custom((value,{req}) => {
-            let imagenUsuario = req.file;
-            let imagenExtensiones = ['.jpg','.png', '.gif'];
-            return true;})*/
-  ];;
-
-		if ( validacionesProducto==0) {
-
-			idNuevo=0;
-
-		for (let s of products){
-			if (idNuevo<s.id){
-				idNuevo=s.id;
-			}
-		}
-
-		idNuevo++;
-    if(req.file){
-      let datos = req.body;
-      let idNuevoProducto = (products[products.length-1].id) + 1;
-      let nuevoProducto =
-      {
-        "id": idNuevoProducto,
-        "categoria": datos.categoria,
-        "nombre": datos.nombre,
-        "marca": datos.marca,
-        "precio": parseInt(datos.precio),
-        "descripción": datos.descripcion,
-        "imagen": "/img/products/"+req.file.filename,
-        "descuento": parseInt(datos.descuento)
-      };
-      products.push(nuevoProducto);
-      fs.writeFileSync(productosFilePath,JSON.stringify(products,null," "),'utf-8');
-      res.redirect('/');
-    }else{
-      res.render("/crearProducto",{errors:errors.array()});
-    }
-   
-  }},
-
+      /*
+      idNuevo=0;
+      for (let s of products){
+        if (idNuevo<s.id){
+          idNuevo=s.id;
+        }
+      }
+      idNuevo++;
+      */
   detalleProducto: (req,res) =>{
     let idProducto = req.params.id;
     let productoBuscado=0;
@@ -172,3 +156,7 @@ const controladorProductos = {
 }
  //------------EXPORTAR MODULO CONTROLADOR PRODUCTOS------------------
 module.exports = controladorProductos;
+
+//----------------DATOS DEL JSON----------------------------------------
+// const productosFilePath = path.join(__dirname,'../data/productos.json');
+// const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));

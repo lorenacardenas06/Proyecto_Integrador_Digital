@@ -8,14 +8,13 @@ function categoriaData(sequelize, Datatypes)
     }
 
     let c = {camelCase: false, timestamps: false, tableName: 'Categoria'};
-    const categoria= sequelize.define(a,b,c);
-    categoria.associate = function (modelos){
-        categoria.hasMany(modelos.Producto, {
+    const Categoria= sequelize.define(a,b,c);
+    Categoria.associate = function (modelos){
+        Categoria.hasMany(modelos.Producto, {
            as: "Producto",
            foreignKey: "categoria_id_FK"
         });
     } 
-    return categoria;
+    return Categoria
 }
-
 module.exports = categoriaData;

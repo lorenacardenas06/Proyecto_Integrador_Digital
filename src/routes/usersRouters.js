@@ -5,12 +5,10 @@ const multer  = require('multer'); //multer
 const path = require("path");
 const { body } = require('express-validator');
 
-
-
 //--------------CONTROLADOR----------------------------------
 const usersControllers = require("../controllers/usersControllers");
 const { string } = require("i/lib/util");
-//---------MULTER----//
+//---------MULTER---------------------------------------------------//
 const multerDiskStorage = multer.diskStorage({
     destination: function(req, file, cb) {       // request, archivo y callback que almacena archivo en destino
      cb(null, path.join(__dirname,'../../public/img/users'));    // Ruta donde almacenamos el archivo
@@ -32,11 +30,11 @@ const fileFilter = (req, file, cb) => {
 const uploadFile = multer({ storage: multerDiskStorage });
 //-------validaciones----//
 const validacionRegistro =[
-    body('nombreUser').notEmpty().withMessage("Introduce un nombre valido").bail().isAlpha(string),
-    body('apellidoUser').notEmpty().withMessage("Introduce un apellido valido").bail().isAlpha(string),
-    body('emailUser').notEmpty().withMessage("introduce un mail valido").bail().isEmail().withMessage("debes completar el mail"),
-    body('contrasenaUser').notEmpty().withMessage("introducion contraseña valido").bail().isLength({min: 8}).withMessage("minimo de ocho caracteres"),
-    body("imagenUser").custom((value,{req}) => {
+    body('nombre').notEmpty().withMessage("Introduce un nombre valido").bail(),
+    body('apellido').notEmpty().withMessage("Introduce un apellido valido").bail(),
+    body('email').notEmpty().withMessage("Introduce un email valido").bail().isEmail().withMessage("debes completar el mail"),
+    body('contrasena').notEmpty().withMessage("introducion contraseña valido").bail().isLength({min: 8}).withMessage("minimo de ocho caracteres"),
+    body("imagen").custom((value,{req}) => {
       let imagenUsuario = req.file;
       let imagenExtensiones = ['.jpg','.png', '.gif'];
       return true;
@@ -55,15 +53,20 @@ const validacionRegistro =[
     })
   ]
   const validacionLogin =[
-    body('emailLogin').notEmpty().withMessage("introduce un mail valido").bail().isEmail().withMessage("debes completar el mail"),
-    body('contrasenaLogin').notEmpty().withMessage("introducion contraseña valido").bail().isLength({min: 8}).withMessage("minimo de ocho caracteres"),
+    body('email').notEmpty().withMessage("introduce un mail valido").bail().isEmail().withMessage("debes completar el mail"),
+    body('contrasena').notEmpty().withMessage("introducion contraseña valido").bail().isLength({min: 8}).withMessage("minimo de ocho caracteres"),
   ]
 //----------------RUTAS------------------------------------
 /***LOGIN AND CREATE USER ***/
-
-router.get("/registro",usersControllers.crearUsuario);
-router.post("/registro", uploadFile.single('imagenUser'),validacionRegistro, usersControllers.crearUsuario);
-router.get("/",usersControllers.login);
+/***Mostrar pagina de registro ***/
+router.get("/registro",usersControllers.usuarioRegistro);
+/*** Crear Usuario ***/
+router.post("/registro", uploadFile.single('imagen'),validacionRegistro, usersControllers.crearUsuario);
+/*** Mostrar pagina de login***/
+router.get("/login",usersControllers.login);
+/*** Autenticación del login***/
 router.post("/login",validacionLogin, usersControllers.procesoLogin);
+/*** Mostrar perfil de usuario***/
+/*** Cerrar sesion***/
 //-----------EXPORTAR MODULO---------------------------
 module.exports = router;

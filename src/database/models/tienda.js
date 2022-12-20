@@ -8,14 +8,14 @@ function tiendaData(sequelize, Datatypes)
     }
 
     let c = {camelCase: false, timestamps: false, tableName: 'Tienda'};
-    const tienda= sequelize.define(a,b,c);
-    tienda.associate = function (modelos){
-        tienda.hasMany(modelos.usuarios, {
-           as: "Usuarios",
+    const Tienda= sequelize.define(a,b,c);
+    Tienda.associate = function (modelos){
+        Tienda.hasMany(modelos.Usuario, {
+           as: "Usuario",
            foreignKey: "tienda_id_FK",
         });
     }
-    return tienda;
+    return Tienda;
 }
 
 module.exports = tiendaData;
