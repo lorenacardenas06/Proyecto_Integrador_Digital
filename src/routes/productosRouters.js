@@ -49,18 +49,16 @@ router.get("/carritoProducto", productosController.carritoProducto);
 /***CREATE ALL PRODUCTS***/
 router.get("/crearProducto", productosController.crearProducto);
 
-router.post("/crearProducto", uploadFile.single('imagen'),validacionesProducto, productosController.store);
+router.post("/crearProducto", uploadFile.single('imagen'), productosController.store);
 
 /***GET ONE PRODUCT ***/
 router.get("/detalleProducto/:id", productosController.detalleProducto);
 
 /***EDIT ONE PRODUCT ***/
 router.get("/editarProducto/:id", productosController.editarProducto);
-router.put("/editarProducto/:id",uploadFile.single('imagen'), productosController.actualizarProducto);
+// router.put("/editarProducto/:id",uploadFile.single('imagen'), productosController.actualizarProducto);
 
 /***DELETE ONE PRODUCT ***/
-router.delete("/:id", productosController.eliminarProducto);
-
-
+// router.delete("/:id", productosController.eliminarProducto);
 //-----------EXPORTAR MODULO---------------------------
 module.exports = router;

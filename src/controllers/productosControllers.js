@@ -1,48 +1,61 @@
-//-----------------REQUERIMIENTOS-------------------------
+//------------REQUERIMIENTOS-------------------------
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
-//----------------IMPORTO MODELOS----------------------------------------
-const db = require("../database/models");
-//------------OBJETO DEL CONTROLADOR------------------
-const controladorProductos = {
-  index: (req, res) => {
-    const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
-    let productosHome = products.filter(productos=>productos.id%2==0);
-    res.render("home",{productos:productosHome}); //mostrar pagina de inicio
-  },
-  cuidadopersonal: (req, res) => {
-    const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
-    let productosCuidadoPersonal = products.filter(productos=>productos.categoria=="cuidado personal")
-    res.render("./products/cuidadoPersonalProducto",{productos:productosCuidadoPersonal}); //mostrar pagina cuidado personal
-  },
-  maquillaje: (req, res) => {
-    const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
-    let productosMaquillaje = products.filter(productos=>productos.categoria=="maquillaje")
-    res.render("./products/maquillajeProducto",{productos:productosMaquillaje}); //mostrar pagina maquillaje
-  },
-  fragancia: (req, res) => {
-    let productosFragancia = products.filter(productos=>productos.categoria=="fragancias")
-    res.render("./products/fraganciaProducto",{productos:productosFragancia}); //mostrar pagina de fragancias
-  },
-  electrico: (req, res) => {
-    const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
-    let productosElectrico = products.filter(productos=>productos.categoria=="electricos")
-    res.render("./products/electricoProducto",{productos:productosElectrico}); //mostrar pagina de electricos
-  },
 
+//------------IMPORTO MODELOS-------------------------
+const db = require("../database/models");
+
+//------------OBJETO DEL CONTROLADOR------------------
+const controladorProductos = 
+{
+//------------MOSTRAR PAGINA PRINCIPAL---------------
+  index: (req, res) =>{
+    db.Producto.findAll().then(function(producto){
+      res.render("home",{producto:producto})
+    })},
+//------------MOSTRAR PAGINA CUIDADO PERSONAL---------------
+  cuidadopersonal: (req, res) => {
+    db.Producto.findAll({where: {categoria_id_FK: 1}}).then(function(producto){
+      res.render("./products/cuidadoPersonalProducto",{producto:producto})
+    })},
+//------------MOSTRAR PAGINA MAQUILLAJE---------------
+  maquillaje: (req, res) => {
+    db.Producto.findAll({where: {categoria_id_FK: 2}}).then(function(producto){
+      res.render("./products/maquillajeProducto",{producto:producto})
+    })},
+//------------MOSTRAR PAGINA FRAGANCIAS---------------
+  fragancia: (req, res) => {
+    db.Producto.findAll({where: {categoria_id_FK: 3}}).then(function(producto){
+      res.render("./products/fraganciaProducto",{producto:producto})
+    })},
+//------------MOSTRAR PAGINA ELECTRICOS---------------
+  electrico: (req, res) => {
+    db.Producto.findAll({where: {categoria_id_FK: 4}}).then(function(producto){
+      res.render("./products/electricoProducto",{producto:producto})
+    })},
+//------------MOSTRAR PAGINA DETALLE DE PRODUCTO---------------
+  detalleProducto: async (req,res) =>{
+    let producto = await db.Producto.findOne({where: {id: req.params.id}}).then(function(producto){
+        if(producto){
+          console.log("Producto encontrado");
+          res.render("./products/detalleProducto", {producto : producto})
+        }else{
+          res.send("Producto no encontrado");
+        }
+      })
+  },
+//------------MOSTRAR PAGINA CARRITO DE COMPRAS---------------
   carritoProducto: (req, res) => {
-    const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));
     res.render("./products/carritoProducto"); //mostrar pagina maquillaje
   },
-//mostrar pagina de crear producto
-  crearProducto: async (req, res) => 
-  {
+//------------MOSTRAR PAGINA CREAR PRODUCTO---------------
+  crearProducto: async (req, res) => {
     let categoria = await db.Categoria.findAll()
     let marca = await db.Marca.findAll()
     res.render("./products/crearProducto",{c:categoria, m:marca}); 
   },
-  //---crear producto
+//------------PROCESO CREAR PRODUCTO---------------
   store:(req, res) => {
     // const errores = validationResult(req);
     if (true) 
@@ -60,6 +73,8 @@ const controladorProductos = {
               "precio": req.body.precio,
               "descripcion": req.body.descripcion,
               "imagen": "/img/products/"+req.file.filename,
+              "fecha_eliminación": req.body.fecha_eliminación,
+              "marca_id_FK": req.body.marca,
               "categoria_id_FK": req.body.categoria
             }
           db.Producto.create(productoNuevo).then(function(producto)
@@ -69,91 +84,61 @@ const controladorProductos = {
         }
       })
     }else{
-      res.render ('./user/registro');
      // res.render("/crearProducto",{errores : errores.array()});;
     }
   },
-
-      /*
-      idNuevo=0;
-      for (let s of products){
-        if (idNuevo<s.id){
-          idNuevo=s.id;
-        }
+//------------MOSTRAR PAGINA EDITAR PRODUCTO---------------
+  editarProducto: async (req,res) =>{
+    let categoria = await db.Categoria.findAll()
+    let marca = await db.Marca.findAll()
+    let producto = await db.Producto.findOne({where: {id: req.params.id}}).then(function(producto){
+      if(producto){
+        console.log("Producto encontrado");
+        res.render("./products/editarProducto", {producto : producto, c:categoria, m:marca})
+      }else{
+        res.send("Producto no encontrado");
       }
-      idNuevo++;
-      */
-  detalleProducto: (req,res) =>{
-    let idProducto = req.params.id;
-    let productoBuscado=0;
-    for (let o of products){
-      if (o.id == idProducto){
-        productoBuscado = o;
-        break; 
-      }
-    }
-    if(productoBuscado!=0){
-      res.render("./products/detalleProducto", {productos:productoBuscado})
-    }else{
-      res.send("Producto no encontrado");
-    }
-  },
-
-  editarProducto: (req,res) =>{
-    
-    let idProducto = req.params.id;
-    let productoBuscado=0;
-    for (let o of products){
-      if (o.id == idProducto){
-        productoBuscado = o;
-        break; 
-      }
-    }
-    if(productoBuscado!=0){
-      res.render("./products/editarProducto", {productos:productoBuscado})
-    }else{
-      res.send("Producto no encontrado");
-    }
-  },
-
-  actualizarProducto: (req,res) =>{
-
-    let idProducto = req.params.id;
-    let datosProducto = req.body;
-    let nombreImagenAntigua ="";
-    for (let o of products){
-      if (o.id == idProducto){
-        nombreImagenAntigua = o.imagen;
-        o.nombre = datosProducto.nombre;
-        o.marca = datosProducto.marca;
-        o.precio = parseInt(datosProducto.precio);
-        o.descripcion = datosProducto.descripcion;
-        o.imagen = `/img/products/${req.file.filename}`;
-        o.descuento = parseInt(datosProducto.descuento);
-        break; 
-      }
-    }  
-    fs.writeFileSync(productosFilePath,JSON.stringify(products,null," "),'utf-8');
-    fs.unlinkSync(__dirname + '/../../public' + nombreImagenAntigua);
-    res.redirect("/");
-  },
-  eliminarProducto: (req,res) =>{
-    let idProducto = req.params.id;
-    let nombreImagenAntigua ="";
-    for (let o of products){
-      if (o.id == idProducto){
-        nombreImagenAntigua = o.imagen;
-        break; 
-      }
-    }  
-    let nuevosProductos =  products.filter(function(e){
-      return e.id!=idProducto;
-    });
-    fs.writeFileSync(productosFilePath,JSON.stringify(nuevosProductos,null," "),'utf-8');
-    fs.unlinkSync(__dirname + '/../../public' + nombreImagenAntigua);
-    res.redirect("/");
+    })
   }
 }
+  // actualizarProducto: (req,res) =>{
+
+  //   let idProducto = req.params.id;
+  //   let datosProducto = req.body;
+  //   let nombreImagenAntigua ="";
+  //   for (let o of products){
+  //     if (o.id == idProducto){
+  //       nombreImagenAntigua = o.imagen;
+  //       o.nombre = datosProducto.nombre;
+  //       o.marca = datosProducto.marca;
+  //       o.precio = parseInt(datosProducto.precio);
+  //       o.descripcion = datosProducto.descripcion;
+  //       o.imagen = `/img/products/${req.file.filename}`;
+  //       o.descuento = parseInt(datosProducto.descuento);
+  //       break; 
+  //     }
+  //   }  
+  //   fs.writeFileSync(productosFilePath,JSON.stringify(products,null," "),'utf-8');
+  //   fs.unlinkSync(__dirname + '/../../public' + nombreImagenAntigua);
+  //   res.redirect("/");
+  // },
+  // eliminarProducto: (req,res) =>{
+  //   let idProducto = req.params.id;
+  //   let nombreImagenAntigua ="";
+  //   for (let o of products){
+  //     if (o.id == idProducto){
+  //       nombreImagenAntigua = o.imagen;
+  //       break; 
+  //     }
+  //   }  
+  //   let nuevosProductos =  products.filter(function(e){
+  //     return e.id!=idProducto;
+  //   });
+  //   fs.writeFileSync(productosFilePath,JSON.stringify(nuevosProductos,null," "),'utf-8');
+  //   fs.unlinkSync(__dirname + '/../../public' + nombreImagenAntigua);
+  //   res.redirect("/");
+  // }
+
  //------------EXPORTAR MODULO CONTROLADOR PRODUCTOS------------------
 module.exports = controladorProductos;
 

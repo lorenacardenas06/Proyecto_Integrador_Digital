@@ -10,14 +10,13 @@ const controladorUsuarios =
 {
 //------------mostrar pagina de registro------------------
   usuarioRegistro: (req,res) => 
-  {
-    res.render("users/registro");
-  },
+  { res.render("users/registro"); },
 //------------mostrar pagina login ------------------
   login: (req, res) => 
-  {
-    res.render ('users/login');
-  },
+  { res.render ('users/login'); },
+//-------------mostrar perfil de usuario ---------
+perfil: (req, res) => 
+  { res.render ('users/perfil'); },
 //------------------crear usuario-----------------
   crearUsuario: (req, res) => 
   {
@@ -61,12 +60,12 @@ const controladorUsuarios =
         /* Se envia un mensaje de error si no se encuentra el usuario*/
         if (!usuario) {
           console.log("El usuario no se encuentra registrado")
-          return res.redirect('./user/registro')
+          return res.render('users/registro')
         }
         if (bcrypt.compareSync(req.body.contrasena, usuario.contrasena)) {
         /* Crear cookie */
           res.cookie("email", usuario.email, { maxAge: 600000 * 144, httpOnly: true })
-          return res.redirect('users/perfil/')
+          return res.render('users/perfil')
           // return res.redirect(`users/perfil/${usuario.id}`)
         }else{
           /* Se envia un mensaje de error por contraseña incorrecta */

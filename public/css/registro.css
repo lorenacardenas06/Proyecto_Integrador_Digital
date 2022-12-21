@@ -1,7 +1,6 @@
 main{
     background-color:white; 
     margin: 0% 10% 0% 10%;
-    font-family: 'Inter';
 }
 .encabezado h3{
     font-weight: 600;
@@ -15,7 +14,7 @@ main{
     border-radius: 8px;
     display: grid;
     grid-template-rows: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% ;
-    height: 50em;
+    height: 45em;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -23,7 +22,7 @@ main{
     -o-border-radius: 8px;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding-bottom: 70px;
+    padding-bottom: 80px;
 }
 
 .form-input{
@@ -33,11 +32,10 @@ main{
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
     width: 300px;
-    height: 50px;
+    height: 40px;
     cursor: pointer;
 }
 .form-label{
-    font-family: 'Inter';
     font-weight: 600;
     font-size: 20px;
 }
@@ -49,11 +47,10 @@ main{
     -o-border-radius: 8px;
     background-color: white;
     font-weight: 600;
-    font-family: 'Inter';
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
     width: 300px;
-    height: 50px;
+    height: 40px;
 }
 .boton:hover{
     background-color: black;

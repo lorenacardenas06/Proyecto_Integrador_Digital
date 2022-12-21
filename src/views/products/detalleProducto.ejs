@@ -13,22 +13,18 @@
   <main>
     <div class="container products-wrapper">
       <div class="row">
-        <div class="col-12">
-          <h3>Detalle del producto: <%= productos.nombre%></h3>
+        <div class="col-12 encabezado">
+          <h3>Detalle del producto: <%= producto.nombre%></h3>
         </div>
       </div>
       <div class="row row-cols-2">
         <div class="col">
-          <img src="<%=productos.imagen %>" class="img-fluid" alt="imagen de producto">
-          <p><%= productos.descripcion%></p>
+          <img src="<%=producto.imagen %>" class="img-fluid" alt="imagen de producto">
+          <p><%= producto.descripcion%></p>
         </div>
         <div class="col">
           <p>PRECIO</p>
-          <p>$<%= productos.precio%></p>
-          <p>DESCUENTO</p>
-          <p><%= productos.descuento%>%</p>
-          <p>PRECIO FINAL</p>
-          <p><%= (( (100 -productos.descuento) * productos.precio)/100) %> </p>
+          <p>$<%= producto.precio%></p>
           <p>Paga en 12 cuotas sin interes</p>
           <p>Disponible para retiro en tienda</p>
           <div class="form-group col-md-6">
@@ -44,8 +40,8 @@
           <p>
             <button class="btn btn-round btn-danger" type="button"><i class="fa fa-shopping-cart"></i> Agregar al carrito</button>
           </p>
-          <a href="/editarProducto/<%= productos.id%>" class="action-button edit"> Editar Producto</a>
-          <form action="/<%= productos.id%>?_method=DELETE" method="POST" style="display: inline-flex">
+          <a href="/editarProducto/<%= producto.id%>" class="action-button edit"> Editar Producto</a>
+          <form action="/<%= producto.id%>?_method=DELETE" method="POST" style="display: inline-flex">
             <button type="submit" class="action-button delete">Eliminar Producto</button>
           </form>
         </div>

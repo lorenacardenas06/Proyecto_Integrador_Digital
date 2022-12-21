@@ -6,10 +6,11 @@ function usuarioData(sequelize, Datatypes)
         nombre:{type:Datatypes.STRING(50)},
         apellido:{type:Datatypes.STRING(50)},
         email:{type:Datatypes.STRING(50)},
+        contrasena: {type:Datatypes.STRING(200)},
         imagen:{type:Datatypes.STRING(200)},
         rol:{type:Datatypes.ENUM("comun","admin","superAdmin")},
         tienda_id_FK:{type: Datatypes.INTEGER},
-        contrasena: {type:Datatypes.STRING(200)}
+
     }
 
     let c = {camelCase: false, timestamps: false, tableName: 'Usuario'};
