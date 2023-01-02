@@ -67,7 +67,7 @@ router.get("/login",usersControllers.login);
 /*** Autenticación del login***/
 router.post("/login",validacionLogin, usersControllers.procesoLogin);
 /*** Mostrar perfil de usuario***/
-router.get("/perfil",usersControllers.perfil);
+router.get("/perfil/:id",usersControllers.perfil);
 /*** Cerrar sesion***/
 //-----------EXPORTAR MODULO---------------------------
 module.exports = router;

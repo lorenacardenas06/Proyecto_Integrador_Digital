@@ -3,7 +3,6 @@
 <head>
   <title>Crear un Producto</title>
   <link rel="stylesheet" href="/css/crearProducto.css"></link>
-  <script defer src="./jsProducyo/jsCrearP.js"></script>
   <%-include("../partials/head")%>
 </head>
 
@@ -19,37 +18,35 @@
                   <div class="encabezado col-12">
                     <h3 class="products-title">Formulario de creación de productos</h3>
                   </div>
-                  <div class="col-12 col-md-6 entradas">
+                  <div class="col-12 col-md-6">
                     <label for="categoria" class="form-label">Categoria del producto:</label><br>
                     <select name="categoria" id="categoria" class="form-input">
-                      <option value="categoria"> </option>
                       <% for (let i of c){ %>
                         <option value="<%= i.id%>"> <%= i.nombre%> </option>
                       <% } %>
                     </select>
                   </div>
-                  <div class="col-12 col-md-6 entradas">
+                  <div class="col-12 col-md-6">
                     <label for="nombre" class="form-label">Nombre del producto:</label><br>
                     <input type="text" id="nombre" name="nombre" placeholder= "Shampoo Capilar" class="form-input">
                   </div>
-                  <div class="col-12 col-md-6 entradas">
+                  <div class="col-12 col-md-6">
                     <label for="marca" class="form-label">Marca del producto:</label><br>
                     <select name="marca" id="marca" class="form-input">
-                      <option value="marca"> </option>
                       <% for (let i of m){ %>
                         <option value="<%= i.id%>"> <%= i.nombre%> </option>
                       <% } %>
                     </select>
                   </div>
-                  <div class="col-12 col-md-6 entradas">
+                  <div class="col-12 col-md-6">
                     <label for="precio" class="form-label">Precio del producto:</label><br>
                     <input type="text" id="precio" name="precio" placeholder= "30.000" class="form-input">
                   </div> 
-                  <div class="col-12 col-md-6 entradas">
+                  <div class="col-12 col-md-6">
                     <label for="descripcion" class="form-label">Descripcion del producto:</label><br>
                     <textarea type="text" id="descripcion" name="descripcion" placeholder= "Producto extrahidratante para el cabello" class="form-input"></textarea>
                   </div> 
-                  <div class="col-12 col-md-6 entradas">
+                  <div class="col-12 col-md-6">
                     <label for="imagen" class="form-label">Cargar imagen del producto:</label><br>
                     <input type="file" name="imagen" id="imagen" multiple/></input>
                   </div> 

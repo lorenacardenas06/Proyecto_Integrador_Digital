@@ -9,14 +9,17 @@ const db = require("../database/models");
 const controladorUsuarios = 
 {
 //------------mostrar pagina de registro------------------
-  usuarioRegistro: (req,res) => 
-  { res.render("users/registro"); },
+  usuarioRegistro: (req,res) => { 
+    res.render("users/registro"); },
 //------------mostrar pagina login ------------------
-  login: (req, res) => 
-  { res.render ('users/login'); },
+  login: (req, res) => { 
+    res.render ('users/login'); },
 //-------------mostrar perfil de usuario ---------
-perfil: (req, res) => 
-  { res.render ('users/perfil'); },
+  perfil: async (req, res) => { 
+    let usuario = await db.Usuario.findOne({where: {id: req.params.id}})
+    res.render("users/perfil", {usuario : usuario})
+
+},
 //------------------crear usuario-----------------
   crearUsuario: (req, res) => 
   {
@@ -65,7 +68,7 @@ perfil: (req, res) =>
         if (bcrypt.compareSync(req.body.contrasena, usuario.contrasena)) {
         /* Crear cookie */
           res.cookie("email", usuario.email, { maxAge: 600000 * 144, httpOnly: true })
-          return res.render('users/perfil')
+          return res.render('users/perfil',{usuario : usuario})
           // return res.redirect(`users/perfil/${usuario.id}`)
         }else{
           /* Se envia un mensaje de error por contraseña incorrecta */

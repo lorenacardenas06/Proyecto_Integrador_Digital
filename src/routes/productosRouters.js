@@ -56,9 +56,9 @@ router.get("/detalleProducto/:id", productosController.detalleProducto);
 
 /***EDIT ONE PRODUCT ***/
 router.get("/editarProducto/:id", productosController.editarProducto);
-// router.put("/editarProducto/:id",uploadFile.single('imagen'), productosController.actualizarProducto);
+router.put("/editarProducto/:id",uploadFile.single('imagen'), productosController.actualizarProducto);
 
 /***DELETE ONE PRODUCT ***/
-// router.delete("/:id", productosController.eliminarProducto);
+router.delete("/:id", productosController.eliminarProducto);
 //-----------EXPORTAR MODULO---------------------------
 module.exports = router;
