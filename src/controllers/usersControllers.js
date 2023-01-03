@@ -65,12 +65,7 @@ const controladorUsuarios =
             httpOnly: true,
           });
           // we're going to save the email in the session
-          return res.render("users/perfil", {
-            email: usuario.email,
-            name: usuario.nombre,
-            apellido: usuario.apellido,
-            imagen: usuario.imagen,
-          });
+          return res.render("users/perfil", {usuario:usuario});
           // return res.redirect(`users/perfil/${usuario.id}`)
         } else {
           /* Se envia un mensaje de error por contraseña incorrecta */
@@ -80,6 +75,18 @@ const controladorUsuarios =
       });
     }
   },
+  editarPerfil: (req,res) =>{
+    let usuario = db.Usuario.findOne({where: {id: req.params.id}}).then(function(usuario){
+      return res.render("users/editarPerfil", {usuario:usuario});
+    })
+  },
+
+  actualizarPerfil: (req,res) =>{
+  },
+  consultaUsuario : async (req, res) => {
+    const usuarios = await db.Usuario.findAll()
+    res.json(usuarios)
+  }
 };
 //   //   res.render('./users/registro',{ errors : errors.mapped(), datosUsuarioViejo: req.body });
 //------------EXPORTAR MODULO CONTROLADOR USUARIOS------------------

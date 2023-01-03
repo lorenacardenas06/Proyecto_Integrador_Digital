@@ -5,11 +5,11 @@ formulario.addEventListener("submit", function(e){
     let errores = [];
     let campoEmail=document.querySelector("input.emailLogin");
     if (campoNombre.value==""||campoNombre.value==null){
-        error.push("El campo deve estar completo")
+        error.push("El campo debe estar completo")
     };
     let campoPassword=document.querySelector("input.contrasenaLogin");
     if (campoPassword.value==""||campoPassword.value==null){
-        error.push("El campo deve estar completo")
+        error.push("El campo debe estar completo")
     }
     if (errores.length > 0 ){
         e.preventDefault();
