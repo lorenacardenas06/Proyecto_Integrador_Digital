@@ -26,9 +26,10 @@
                       <% } %>
                     </select>
                   </div>
-                  <div class="col-12 col-md-6">
+                  <!-- validaciones de creacion de productos en html usando atributos-->
+                  <div class="col-12 col-md-6 entradas">
                     <label for="nombre" class="form-label">Nombre del producto:</label><br>
-                    <input type="text" id="nombre" name="nombre" placeholder= "Shampoo Capilar" class="form-input">
+                    <input minlength="5" required type="text" id="nombre" name="nombre" placeholder= "Shampoo Capilar" class="form-input">
                   </div>
                   <div class="col-12 col-md-6">
                     <label for="marca" class="form-label">Marca del producto:</label><br>
@@ -44,11 +45,11 @@
                   </div> 
                   <div class="col-12 col-md-6">
                     <label for="descripcion" class="form-label">Descripcion del producto:</label><br>
-                    <textarea type="text" id="descripcion" name="descripcion" placeholder= "Producto extrahidratante para el cabello" class="form-input"></textarea>
+                    <textarea required minlength="20" type="text" id="descripcion" name="descripcion" placeholder= "Producto extrahidratante para el cabello" class="form-input"></textarea>
                   </div> 
                   <div class="col-12 col-md-6">
                     <label for="imagen" class="form-label">Cargar imagen del producto:</label><br>
-                    <input type="file" name="imagen" id="imagen" multiple/></input>
+                    <input required accept="image/jpeg, image/jpg, image/png, image/gif" type="file" name="imagen" id="imagen" multiple/></input>
                   </div> 
                   <div class="col-12 box-boton">
                     <button type="submit" class="boton">Guardar</button>

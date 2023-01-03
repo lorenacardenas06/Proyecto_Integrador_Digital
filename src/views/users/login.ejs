@@ -20,12 +20,12 @@
                   <!-- Email input -->
                     <div class="form-outline mb-6" id="datos_usuarioCreado">
                       <label for="email" class="form-label" >Correo Electrónico:</label><br>
-                      <input type="email" id="email" name="email" class="form-input" placeholder="Ingrese un correo electrónico valido" />
+                      <input required type="email" id="email" name="email" class="form-input" placeholder="Ingrese un correo electrónico valido" />
                     </div>
                   <!-- Password input -->
                     <div class="form-outline mb-6" id="datos_usuarioCreado">
                       <label for="contrasena" class="form-label" >Contraseña</label><br>
-                      <input type="password" id="contrasena" name="contrasena" class="form-input" placeholder="Contraseña" />
+                      <input required type="password" id="contrasena" name="contrasena" class="form-input" placeholder="Contraseña" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="La contraseña debe ser de al menos 8 caracteres y tener letras mayúsculas, minúsculas, un número y un carácter especial." />
                     </div>
                     <div class="text-center text-lg-start mt-4 pt-2">
                       <button type="submit" id="boton" class="boton" style="padding-left: 2.5rem; padding-right: 2.5rem;">Ingresar</button>
