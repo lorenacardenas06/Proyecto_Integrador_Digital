@@ -81,7 +81,15 @@ const controladorUsuarios =
     })
   },
 
-  actualizarPerfil: (req,res) =>{
+  actualizarPerfil: async (req,res) =>{
+    let nuevosDatos = {
+      nombre: req.body.nombre,
+      apellido: req.body.apellido,
+      imagen: "/img/users/" + req.file.filename,
+    }
+    let actualizarUsuario = await db.Usuario.update(nuevosDatos, {where: {id: req.params.id}});
+    let usuario = await db.Usuario.findOne({where: {id: req.params.id}})
+    res.render("users/perfil", {usuario : usuario})
   },
   consultaUsuario : async (req, res) => {
     const usuarios = await db.Usuario.findAll()

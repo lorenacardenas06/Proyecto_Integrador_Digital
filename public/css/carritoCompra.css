@@ -1,0 +1,67 @@
+main{
+    background-color:white; 
+    margin: 0% 10% 0% 10%;
+}
+.encabezado h3{
+    font-weight: 600;
+    font-size: 34px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor{
+    background-color:#FA8072;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    border-radius: 8px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+.resumenCarrito{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+
+}
+.informacion-compra{
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+.cupon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding: 10px;
+}
+
+.contenedor-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.boton{
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    background-color: white;
+    font-weight: 600;
+    font-size: 25px;
+    cursor: pointer;
+    width: 300px;
+    height: 40px;
+}
+.boton:hover{
+    background-color: black;
+    color: white;
+}

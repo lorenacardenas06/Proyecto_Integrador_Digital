@@ -42,6 +42,7 @@ const controladorProductos =
           res.send("Producto no encontrado");
         }
       })
+    
   },
 //------------MOSTRAR PAGINA CARRITO DE COMPRAS---------------
   carritoProducto: (req, res) => {
@@ -108,7 +109,7 @@ const controladorProductos =
       "marca_id_FK": req.body.marca,
       "categoria_id_FK": req.body.categoria
     }
-    let actualizarUsuario = await db.Producto.update(nuevosDatos, {where: {id: req.params.id}});
+    let actualizarProducto = await db.Producto.update(nuevosDatos, {where: {id: req.params.id}});
     res.redirect("/")
   },
   eliminarProducto: (req,res) =>{

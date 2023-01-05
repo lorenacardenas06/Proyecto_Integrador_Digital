@@ -39,7 +39,7 @@ router.post("/login", usersControllers.procesoLogin);
 router.get("/perfil/:id",usersControllers.perfil);
 /*** Editar el perfil de usuario***/
 router.get("/editarPerfil/:id",usersControllers.editarPerfil);
-//router.put("/editarProducto/:id", productosController.actualizarPerfil);
+router.put("/editarPerfil/:id", uploadFile.single('imagen'), usersControllers.actualizarPerfil);
 /*** Consulta usuarios***/
 router.get("/consultaUsuario", usersControllers.consultaUsuario)
 //-----------EXPORTAR MODULO---------------------------

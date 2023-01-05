@@ -7,8 +7,7 @@
     <%-include("../partials/header")%>
 </head>
 <body class="body">
-  <body>
-    <main>
+  <main>
     <div class="container">
         <div class="main-body">
           <div class="row gutters-sm">
@@ -18,52 +17,63 @@
                   <div class="d-flex flex-column align-items-center text-center">
                     <img src="<%=usuario.imagen%>" alt="Imagen de usuario" class="rounded-circle" width="150">
                     <div class="mt-3">
-                      <h4>PAGINA DIFERENTE PA EDITAR</h4>
-                      <p class="text-muted font-size-sm">ROL</p>
+                      <h4><%=usuario.nombre%> <%=usuario.apellido%></h4>
+                      <p class="text-muted font-size-sm"><%=usuario.rol%></p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-md-8">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Nombre:</h6>
+              <form action="/user/editarPerfil/<%= usuario.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0">Nombre:</h6>
+                      </div>
+                      <div class="col-sm-9 text-secondary">
+                        <input type="text" id="nombre" name="nombre" class="form-input"> 
+                      </div>
                     </div>
-                    <div class="col-sm-9 text-secondary">
-                      AQUI EDITAR
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0">Apellidos</h6>
+                      </div>
+                      <div class="col-sm-9 text-secondary">
+                        <input type="text" id="apellido" name="apellido" class="form-input"> 
+                      </div>
                     </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Apellidos</h6>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0">Email</h6>
+                      </div>
+                      <div class="col-sm-9 text-secondary">
+                        <%=usuario.email%>
+                      </div>
                     </div>
-                    <div class="col-sm-9 text-secondary">
-                      fip@jukmuh.al
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0">Cargue nueva imagen:</h6>
+                      </div>
+                      <div class="col-sm-9 text-secondary">
+                        <input type="file" name="imagen" id="imagen" multiple/></input>
+                      </div>
                     </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Email</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                      <%=usuario.email%>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <a class="btn btn-dark" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Actualizar</a>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <button type="submit" class="boton">Actualizar datos</button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-        </div>
-      </main>
-    <%-include("../partials/footer")%>
+              </form>
+            </div>
+  </main>
+  <%-include("../partials/footer")%>
 </body>
 </html>

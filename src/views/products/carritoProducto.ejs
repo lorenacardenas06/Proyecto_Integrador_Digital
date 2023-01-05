@@ -3,85 +3,68 @@
 
 <head>
   <title>Carrito de compras</title>
-  <link rel="stylesheet" href="/css/CarritoCompras.css"></link>
+  <link rel="stylesheet" href="/css/carritoCompra.css"></link>
   <%-include("../partials/head")%>
-  <%-include("../partials/header")%>
 </head>
 
 <body class="body">
-    <main class="main">
-        <div class="productos">
-          <div class="container-fluid">
-            <div class="row" id="tituloresumen">
+  <%-include("../partials/header")%>
+    <main>
+        <div class="contenedor">
+            <div class="encabezado">
               <h2>Resumen del carrito</h2>
             </div>
-            <div class="row">
-                <div class="col-3" id="resumenCarrito">
-                  <h5>Producto</h5>
-                  <img src="img/labial.jpg" class="img-fluid" alt="labial" width="50px" height="50px"/>
-                  <a>Labial Matte Intransferible UPA</a>
-                  
-                </div>
-                <div class="col-3" id="resumenCarrito">
-                  <h5>Precio</h5>
-                  <p>$1000</p>
-                </div>
-                <div class="col-3" id="resumenCarrito">
-                  <h5>Cantidad</h5>
-                  <div class="box">
-                    <input type="number" min="0" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            <div class="informacion-compra">
+              <div class="resumenCarrito">
+                  <div class="contenedor-item">
+                    <div class="item">
+                      <h5>Producto</h5>
+                      <img src="img/labial.jpg" class="img-fluid" alt="labial" width="50px" height="50px"/>
+                    </div>
                   </div>
-                </div>
-                <div class="col-3" id="resumenCarrito">
-                  <h5>Total</h5>
-                  <p>$2000</p>
-                </div>
-            </div>
-            <div class="row" id="cupon">
-              <div class="col-5">
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Código de cupón" aria-label="Código de cupón" aria-describedby="Código de cupón">
-                  <span class="input-group-text" id="aplicarCupon">Aplicar Cupón</span>
-                </div>
-              </div>
-                <div class="col-7" align="right">
-                  <a type="button" class="btn btn-secondary" disabled>Actualizar Carrito</a>
-                </div>
-            </div>
-            <div class="row justify-content-end">
-              <div class="col-6" id="totalCarrito">
-                <h2>Total del carrito</h2>
-                  <div class="row">
-                    <div class="col-4">
-                      <h5>Subtotal</h5>
-                    </div>                      
-                    <div class="col-8">
+                  <div class="contenedor-item">
+                    <div class="item">
+                      <h5>Precio</h5>
                       <p>$1000</p>
                     </div>
-                    <div class="col-4">
-                      <h5>Envio o recogida</h5>
+                  </div>
+                  <div class="contenedor-item">
+                    <div class="item">
+                      <h5>Cantidad</h5>
+                      <input type="number" min="0" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                     </div>
-                    <div class="col-8">
-                      <p>Recoger en punto de entrega (Poblado - Medellín) Enviar a Antioquia.</p>
-                    </div>
-                    <div class="col-4">
+                  </div>
+                  <div class="contenedor-item">
+                    <div class="item">
                       <h5>Total</h5>
-                    </div>
-                    <div class="col-8">
-                      <p>$1000</p>
+                      <p>$2000</p>
                     </div>
                   </div>
-                <div class="d-grid gap-2 col-6 mx-auto">
-                  <a href="#" type="button" align="center" class="btn btn-secondary btn-lg" disabled>Finalizar compra</a>
-                </div> 
+              </div>
+              <div class="cupon">
+                <div>
+
+                </div>
+                <div>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Código de cupón" aria-label="Código de cupón" aria-describedby="Código de cupón">
+                    <button class="input-group-text" id="aplicarCupon">Aplicar Cupón</button>
+                  </div>
+                  <div>
+                    <h5>Envio o recogida</h5>
+                  </div>
+                  <div>
+                    <p>Recoger en punto de entrega (Poblado - Medellín) Enviar a Antioquia.</p>
+                  </div>
+                  <div>
+                    <button type="submit" id="boton" class="boton" style="padding-left: 2.5rem; padding-right: 2.5rem;">Iniciar compra</button>
+                  </div> 
+                </div>
               </div>
             </div>
           </div>
-        </div>
   </main>
-
   <%-include("../partials/footer")%> 
-  
 </body>
   
 
