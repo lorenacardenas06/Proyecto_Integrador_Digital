@@ -1,0 +1,76 @@
+main{
+    background-color:white; 
+    margin: 0% 10% 0% 10%;
+}
+.contenedor{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    background-color:#FA8072;
+    border-radius: 8px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+}
+.contenedor-producto{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+.texto{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.descripcion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-align: center;
+}
+.informacion{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.informacion-precio{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.informacion-precio-item{
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.botones{
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+.imagen{
+    padding: 10px;
+}
+.img-fluid{
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.encabezado h3{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 34px;  
+}

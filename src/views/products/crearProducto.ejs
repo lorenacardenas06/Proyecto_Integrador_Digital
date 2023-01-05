@@ -4,60 +4,55 @@
   <title>Crear un Producto</title>
   <link rel="stylesheet" href="/css/crearProducto.css"></link>
   <%-include("../partials/head")%>
+  <%-include("../partials/header")%>
 </head>
 
 <body class="body">
-  <%-include("../partials/header")%>
   <main>
-    <!--última visita-->
-    <div class="container products-wrapper">
-        <div class="row">
-            <div class="col-12">
-              <form action="/crearProducto" method="POST" enctype="multipart/form-data">
-                <div class="row product-detail">
-                  <div class="encabezado col-12">
-                    <h3 class="products-title">Formulario de creación de productos</h3>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <label for="categoria" class="form-label">Categoria del producto:</label><br>
-                    <select name="categoria" id="categoria" class="form-input">
-                      <% for (let i of c){ %>
-                        <option value="<%= i.id%>"> <%= i.nombre%> </option>
-                      <% } %>
-                    </select>
-                  </div>
-                  <!-- validaciones de creacion de productos en html usando atributos-->
-                  <div class="col-12 col-md-6 entradas">
-                    <label for="nombre" class="form-label">Nombre del producto:</label><br>
-                    <input minlength="5" required type="text" id="nombre" name="nombre" placeholder= "Shampoo Capilar" class="form-input">
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <label for="marca" class="form-label">Marca del producto:</label><br>
-                    <select name="marca" id="marca" class="form-input">
-                      <% for (let i of m){ %>
-                        <option value="<%= i.id%>"> <%= i.nombre%> </option>
-                      <% } %>
-                    </select>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <label for="precio" class="form-label">Precio del producto:</label><br>
-                    <input type="text" id="precio" name="precio" placeholder= "30.000" class="form-input">
-                  </div> 
-                  <div class="col-12 col-md-6">
-                    <label for="descripcion" class="form-label">Descripcion del producto:</label><br>
-                    <textarea required minlength="20" type="text" id="descripcion" name="descripcion" placeholder= "Producto extrahidratante para el cabello" class="form-input"></textarea>
-                  </div> 
-                  <div class="col-12 col-md-6">
-                    <label for="imagen" class="form-label">Cargar imagen del producto:</label><br>
-                    <input required accept="image/jpeg, image/jpg, image/png, image/gif" type="file" name="imagen" id="imagen" multiple/></input>
-                  </div> 
-                  <div class="col-12 box-boton">
-                    <button type="submit" class="boton">Guardar</button>
-                  </div>
-                </div>
-              </form>
-            </div>
+    <div class="container">
+      <form action="/crearProducto" method="POST" enctype="multipart/form-data">
+        <div class="encabezado">
+          <h3>Formulario de creación de productos</h3>
         </div>
+        <div class="detail-product">
+          <div>
+            <label for="categoria" class="form-label">Categoria del producto:</label><br>
+            <select name="categoria" id="categoria" class="form-input">
+            <% for (let i of c){ %>
+              <option value="<%= i.id%>"> <%= i.nombre%> </option>
+            <% } %>
+            </select>
+          </div>
+        <!-- validaciones de creacion de productos en html usando atributos-->
+          <div>
+            <label for="nombre" class="form-label">Nombre del producto:</label><br>
+            <input minlength="5" required type="text" id="nombre" name="nombre" placeholder= "Ingrese el nombre del producto" class="form-input">
+          </div>
+          <div>
+            <label for="marca" class="form-label">Marca del producto:</label><br>
+            <select name="marca" id="marca" class="form-input">
+              <% for (let i of m){ %>
+                <option value="<%= i.id%>"> <%= i.nombre%> </option>
+              <% } %>
+            </select>
+          </div>
+          <div>
+            <label for="precio" class="form-label">Precio del producto:</label><br>
+            <input type="text" id="precio" name="precio" placeholder= "Ingrese el precio del producto" class="form-input">
+          </div> 
+          <div>
+            <label for="descripcion" class="form-label">Descripcion del producto:</label><br>
+            <textarea required minlength="20" type="text" id="descripcion" name="descripcion" placeholder= "Ingrese una breve descripción del producto" class="form-input"></textarea>
+          </div> 
+          <div>
+            <label for="imagen" class="form-label">Cargar imagen del producto:</label><br>
+            <input required accept="image/jpeg, image/jpg, image/png, image/gif" type="file" name="imagen" id="imagen" multiple/></input>
+          </div> 
+          <div>
+            <button type="submit" class="boton">Crear</button>
+          </div>
+      </div>
+      </form>
     </div>
   </main>
   <%-include("../partials/footer")%>

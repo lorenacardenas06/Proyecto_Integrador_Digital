@@ -18,7 +18,7 @@
                     <div class = "encabezado">
                       <h3 class="products-title">Registro de usuario</h3>
                     </div>
-                    <div class="form-outline mb-3" id="datos_usuario">
+                    <div class="form-outline mb-4" id="datos_usuario">
                       <label for="nombre" class="form-label" >Nombre:</label><br>
                       <!-- con required and minlenght podemos validar los caracteres minimos y que sea obligatorio -->
                       <input minlength="2" required type="name" id="nombre" name="nombre" class="form-input" placeholder= "Ingrese su nombre" value="<%= locals.datosUsuarioViejo && datosUsuarioViejo.nombre ? datosUsuarioViejo.nombre: ''%>"/>
@@ -72,16 +72,6 @@
                         <%= errores.imagen.msg %>
                         <% } %>
                     </div> 
-
-                <!-- <div>
-                  <input class="form-check-input me-2" type="checkbox" value="" id="terminos" />
-                  <label for="terminos" class="form-check-label" > Al hacer clic aquí, acepto los <a href="#!" class="text-body"><u>Términos de uso y la Política de privacidad.</u></a> </label>
-                </div>
-
-                <div>
-                  <input class="form-check-input me-2" type="checkbox" value="" id="noticias" />
-                  <label for="noticias" class="form-check-label" > Regístrese para recibir actualizaciones por correo electrónico. </label>
-                </div> -->
                     <div>
                       <button type="submit" class="boton" style="padding-left: 2.5rem; padding-right: 2.5rem;">Enviar</button>
                       <p><a href="/user/login" class="link-dark">Accede, si ya tienes una cuenta creada</a></p>
@@ -92,10 +82,9 @@
             </div>
           </div>
         </div>
-
       </div>
-    </main>     
+    </main>   
+    <%-include("../partials/footer")%>  
   </body>
-<%-include("../partials/footer")%>
 </html>
       
