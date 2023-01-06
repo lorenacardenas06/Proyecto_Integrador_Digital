@@ -33,7 +33,9 @@
                         <h6 class="mb-0">Nombre:</h6>
                       </div>
                       <div class="col-sm-9 text-secondary">
-                        <input type="text" id="nombre" name="nombre" class="form-input"> 
+                        <!--same as in registro-->
+                        <input type="text" id="nombre" name="nombre" class="form-input required" minlength="2" maxlength="20" pattern="[A-Za-z ]{2,20}" title="El nombre debe tener entre 2 y 20 caracteres y solo puede contener letras" required>
+                        
                       </div>
                     </div>
                     <hr>
@@ -42,7 +44,7 @@
                         <h6 class="mb-0">Apellidos</h6>
                       </div>
                       <div class="col-sm-9 text-secondary">
-                        <input type="text" id="apellido" name="apellido" class="form-input"> 
+                        <input type="text" id="apellido" name="apellido" class="form-input" minlength="2" maxlength="20" pattern="[A-Za-z ]{2,20}" title="El apellido debe tener entre 2 y 20 caracteres y solo puede contener letras" required>
                       </div>
                     </div>
                     <hr>
@@ -60,7 +62,7 @@
                         <h6 class="mb-0">Cargue nueva imagen:</h6>
                       </div>
                       <div class="col-sm-9 text-secondary">
-                        <input type="file" name="imagen" id="imagen" multiple/></input>
+                        <input type="file" name="imagen" id="imagen" multiple accept="image/jpeg, image/jpg, image/png, image/gif" /></input>
                       </div>
                     </div>
                     <hr>

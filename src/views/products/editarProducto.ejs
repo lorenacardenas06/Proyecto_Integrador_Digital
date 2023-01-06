@@ -26,7 +26,7 @@
           </div>
           <div>
             <label for="nombre" class="form-label">Nombre del producto:</label><br>
-            <input type="text" id="nombre" name="nombre" placeholder= "Shampoo Capilar" class="form-input" value="<%=producto.nombre%>">
+            <input minlength="5" required type="text" id="nombre" name="nombre" placeholder= "Shampoo Capilar" class="form-input" value="<%=producto.nombre%>">
           </div>
           <div>
             <label for="marca" class="form-label">Marca del producto:</label><br>
@@ -39,11 +39,11 @@
           </div>
           <div>
             <label for="precio" class="form-label">Precio del producto:</label><br>
-            <input type="text" id="precio" name="precio" placeholder= "30.000" class="form-input" value="<%=producto.precio%>">
+            <input required pattern="^[0-9]*$" title="solo numeros" type="text" id="precio" name="precio" placeholder= "30.000" class="form-input" value="<%=producto.precio%>">
           </div> 
           <div>
             <label for="descripcion" class="form-label">Descripcion del producto:</label><br>
-            <textarea type="text" id="descripcion" name="descripcion" placeholder= "Producto extrahidratante para el cabello" class="form-input"> <%=producto.descripcion%> </textarea>
+            <textarea minlength="20" type="text" id="descripcion" name="descripcion" placeholder= "Producto extrahidratante para el cabello" class="form-input"> <%=producto.descripcion%> </textarea>
           </div> 
           <div>
             <label for="imagen" class="form-label">Cargar imagen del producto:</label><br>

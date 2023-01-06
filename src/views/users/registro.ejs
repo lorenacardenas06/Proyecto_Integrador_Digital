@@ -21,7 +21,7 @@
                     <div class="form-outline mb-4" id="datos_usuario">
                       <label for="nombre" class="form-label" >Nombre:</label><br>
                       <!-- con required and minlenght podemos validar los caracteres minimos y que sea obligatorio -->
-                      <input minlength="2" required type="name" id="nombre" name="nombre" class="form-input" placeholder= "Ingrese su nombre" value="<%= locals.datosUsuarioViejo && datosUsuarioViejo.nombre ? datosUsuarioViejo.nombre: ''%>"/>
+                      <input title="no puedes ingresar numeros y debe ser mayor a 2 caracteres" minlength="2" pattern="[^0-9]*" required type="name" id="nombre" name="nombre" class="form-input" placeholder= "Ingrese su nombre" value="<%= locals.datosUsuarioViejo && datosUsuarioViejo.nombre ? datosUsuarioViejo.nombre: ''%>"/>
                     </div>
                     <% if (locals.errores && errores.nombre){ %>
                       <div class="text-errores">
