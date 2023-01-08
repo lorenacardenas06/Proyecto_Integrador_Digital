@@ -5,7 +5,7 @@ function productoData(sequelize, Datatypes)
     let b = {
         id:{type: Datatypes.INTEGER, primaryKey: true, autoIncrement: true},
         nombre:{type:Datatypes.STRING(50)},
-        precio:{type:Datatypes.FLOAT},
+        precio:{type:Datatypes.INTEGER},
         imagen:{type:Datatypes.STRING(200)},
         descripcion:{type:Datatypes.STRING(200)},
         fecha_eliminacion:{type:Datatypes.DATE},

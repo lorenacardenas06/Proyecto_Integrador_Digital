@@ -4,13 +4,14 @@ const app = express(); //Utilizo express
 const path = require("path"); //traigo path
 const methodOverride = require('method-override'); //utilizar el metodo put y delete 
 const session = require('express-session');
+const cookieParser = require("cookie-parser");
 // const auditoriaUnoMiddleware = require('./src/middlewares/auditoriaUNO'); //importo middleware
 const multer= require("multer");
 const {check} = require("express-validator");
 //-------------------------IMPORTACION ENRUTADORES------------------------------------------------------
 const productsRouter = require("./src/routes/productosRouters"); //se trae el enrutador
 const usersRouters = require("./src/routes/usersRouters"); //se trae el enrutador
-const cookieParser = require("cookie-parser");
+
 //----------------MIDDLEWARES-----------------------------------------------------------------
 app.use(express.static(path.resolve(__dirname, './public')));//vuelve publica la carpeta public
 app.use(express.urlencoded({extended:false})); // utilizar el metodo POST

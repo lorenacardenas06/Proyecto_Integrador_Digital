@@ -4,33 +4,37 @@
   <title>Cuidado Personal</title>
   <link rel="stylesheet" href="/css/Home.css"></link>
   <%-include("../partials/head")%>
+  
 </head>
 <body class="body">
-  <%-include("../partials/header")%>
+    <%-include("../partials/header")%>
   <main>
-    <div class="container products-wrapper">
+    <div class="container">
         <div class="row">
-            <div class="col-12 encabezado">
-                <h3>Productos</h3>
+            <div class="encabezado">
+                <h3>Todos los productos</h3>
             </div>
-            <%for(let p of producto){%>
-            <div class="col-sm-3">
-                <section class="product-box">
-                    <a href="/detalleProducto/<%=p.id %>">
-                        <figure class="product-box_image">
-                            <img src="<%=p.imagen %>" class="img-fluid" alt="imagen de producto">
-                        </figure>
-                        <article class="product-box_data">
-                            <p>$<%=p.precio%></p>
-                            <p><%=p.nombre%></p>
-                            <div class="iconProducto" align="right">
-                                <i class="fas fa-truck"></i>
+            <div class="contenedor-producto">
+                <%for(let p of producto){%>
+                    <div class="contenedor-for">
+                        <a href="/detalleProducto/<%=p.id %>">
+                            <div class="contenedor-imagen">
+                                <img src="<%=p.imagen %>" class="img-fluid" alt="imagen de producto">
                             </div>
-                        </article>
-                    </a>
-                </section>
+                        </a> 
+                            <div class="contenedor-datos">
+                                <div class="datos">
+                                    <p>$<%=p.precio%></p>
+                                    <p><%=p.nombre%></p>
+                                </div>
+                                <div class="iconProducto">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                            </div> 
+                    </div> 
+                <% } %>   
             </div>
-            <% } %>
+            
         </div>
     </div>
   </main>
