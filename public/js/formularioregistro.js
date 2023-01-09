@@ -1,5 +1,5 @@
 const formulario = document.getElementById("formulario");
-const boton = document.getElementsById("boton");
+const boton = document.getElementById("boton");
 formulario.addEventListener("submit", function (e) {
   e.preventDefault();
   let errores = [];
@@ -36,3 +36,7 @@ formulario.addEventListener("submit", function (e) {
     }
   }
 });
+
+function miFunc() {
+  alert('Se ha registrado!');
+}
