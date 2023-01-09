@@ -2,17 +2,21 @@ main{
     background-color:white; 
     margin: 0% 10% 0% 10%;
 }
+
 .encabezado h3{
     font-weight: 600;
     font-size: 34px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+.imagenCarro{
+    width: 50px;
+    height: 50px
 }
 .contenedor{
-    background-color:#FA8072;
+    display: flex;
+    align-items: center;
     display: grid;
-    grid-template-rows: 20% 80%;
+    grid-template-rows: 10% 10% 60% 10% 10%;
+    background-color:#FA8072;
     border-radius: 8px;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
     -webkit-border-radius: 8px;
@@ -21,33 +25,39 @@ main{
     -o-border-radius: 8px;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding-bottom: 10px;
+    padding: 50px;
+    height: auto !important;
 }
-.resumenCarrito{
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
 
-}
 .informacion-compra{
-    display: grid;
-    grid-template-rows: 50% 50%;
-}
-.cupon{
     display: flex;
     justify-content: center;
     align-items: center;
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 25% 25% 25% 25%;
     padding: 10px;
 }
-
-.contenedor-item{
+.productos-item{
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 10px;
 }
 
+.total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    display: grid;
+    padding: 5px;
+    padding-right: 20px;
+    grid-template-columns: 70% 30%;
+
+}
 .boton{
     border-radius: 8px;
     -webkit-border-radius: 8px;

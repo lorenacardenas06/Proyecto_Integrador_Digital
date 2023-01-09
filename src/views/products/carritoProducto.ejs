@@ -15,57 +15,32 @@
               <h2>Resumen del carrito</h2>
             </div>
             <div class="informacion-compra">
-              <div class="resumenCarrito">
                   <div class="contenedor-item">
-                    <div class="item">
                       <h5>Producto</h5>
-                      <img src="img/labial.jpg" class="img-fluid" alt="labial" width="50px" height="50px"/>
-                    </div>
                   </div>
                   <div class="contenedor-item">
-                    <div class="item">
                       <h5>Precio</h5>
-                      <p>$1000</p>
-                    </div>
                   </div>
                   <div class="contenedor-item">
-                    <div class="item">
                       <h5>Cantidad</h5>
-                      <input type="number" min="0" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-                    </div>
                   </div>
                   <div class="contenedor-item">
-                    <div class="item">
                       <h5>Total</h5>
-                      <p>$2000</p>
-                    </div>
                   </div>
-              </div>
-              <div class="cupon">
-                <div>
-
-                </div>
-                <div>
-                  <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Código de cupón" aria-label="Código de cupón" aria-describedby="Código de cupón">
-                    <button class="input-group-text" id="aplicarCupon">Aplicar Cupón</button>
-                  </div>
-                  <div>
-                    <h5>Envio o recogida</h5>
-                  </div>
-                  <div>
-                    <p>Recoger en punto de entrega (Poblado - Medellín) Enviar a Antioquia.</p>
-                  </div>
-                  <div>
-                    <button type="submit" id="boton" class="boton" style="padding-left: 2.5rem; padding-right: 2.5rem;">Iniciar compra</button>
-                  </div> 
-                </div>
-              </div>
             </div>
+            <div class="productos">
+            </div>
+            <div class = "total">
+              <h5>Total</h5>
+            </div>
+            <div class = "boton">
+              <a href="/carritoProducto"> <button class="boton" id="LimpiarCarrito">  Limpiar carrito  </button> </a>
+              <button class="boton" id="FinalizarCompra"> Finalizar compra</button>
+            </div>
+            
           </div>
   </main>
+  <script src="/js/mostrarCarrito.js"></script>
   <%-include("../partials/footer")%> 
 </body>
-  
-
 </html>

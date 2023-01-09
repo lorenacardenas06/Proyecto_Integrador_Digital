@@ -59,6 +59,7 @@ const controladorUsuarios =
           return res.render("users/registro");
         }
         if (bcrypt.compareSync(req.body.contrasena, usuario.contrasena)) {
+          req.session.usuarioLogged = usuario;
           /* Crear cookie */
           res.cookie("email", usuario.email, {
             maxAge: 600000 * 144,
@@ -91,6 +92,7 @@ const controladorUsuarios =
     let usuario = await db.Usuario.findOne({where: {id: req.params.id}})
     res.render("users/perfil", {usuario : usuario})
   },
+  /* Datos para API USUARIO */
   consultaUsuario : async (req, res) => {
     const usuarios = await db.Usuario.findAll()
     res.json(usuarios)

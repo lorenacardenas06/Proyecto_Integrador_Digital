@@ -42,11 +42,10 @@ const controladorProductos =
           res.send("Producto no encontrado");
         }
       })
-    
   },
 //------------MOSTRAR PAGINA CARRITO DE COMPRAS---------------
   carritoProducto: (req, res) => {
-    res.render("./products/carritoProducto"); //mostrar pagina maquillaje
+    res.render("./products/carritoProducto");
   },
 //------------MOSTRAR PAGINA CREAR PRODUCTO---------------
   crearProducto: async (req, res) => {
@@ -99,6 +98,7 @@ const controladorProductos =
       }
     })
   },
+  //------------ACTUALIZAR PRODUCTO---------------
   actualizarProducto: async (req,res) =>{
     let nuevosDatos = {
       "nombre": req.body.nombre,
@@ -112,14 +112,25 @@ const controladorProductos =
     let actualizarProducto = await db.Producto.update(nuevosDatos, {where: {id: req.params.id}});
     res.redirect("/")
   },
+  //------------ELIMINAR PRODUCTO---------------
   eliminarProducto: (req,res) =>{
     db.Producto.destroy({where: {id: req.params.id}}).then(function(){
       return res.redirect('/')})
-    }
+    },
+  /* Datos para API USUARIO */
+  consultaProducto : async (req, res) => {
+      const productos = await db.Producto.findAll()
+      res.json(productos)
   }
+
+  // consultaCategorias: async (req, res) => {
+  //   const categoria = await db.Categoria.findAll()
+  //   res.json(categoria)
+}
 
  //------------EXPORTAR MODULO CONTROLADOR PRODUCTOS------------------
 module.exports = controladorProductos;
+
 //----------------DATOS DEL JSON----------------------------------------
 // const productosFilePath = path.join(__dirname,'../data/productos.json');
 // const products = JSON.parse(fs.readFileSync(productosFilePath,'utf-8'));

@@ -26,20 +26,27 @@ const fileFilter = (req, file, cb) => {
 
 const uploadFile = multer({ storage: multerDiskStorage });
 //----------------RUTAS------------------------------------
+
 /***LOGIN AND CREATE USER ***/
 /***Mostrar pagina de registro ***/
 router.get("/registro",usersControllers.usuarioRegistro);
-/*** Crear Usuario ***/
-router.post("/registro", uploadFile.single('imagen'),usersControllers.crearUsuario);
+
 /*** Mostrar pagina de login***/
 router.get("/login",usersControllers.login);
-/*** Autenticación del login***/
-router.post("/login", usersControllers.procesoLogin);
+
 /*** Mostrar perfil de usuario***/
 router.get("/perfil/:id",usersControllers.perfil);
+
+/*** Crear Usuario ***/
+router.post("/registro", uploadFile.single('imagen'),usersControllers.crearUsuario);
+
+/*** Autenticación del login***/
+router.post("/login", usersControllers.procesoLogin);
+
 /*** Editar el perfil de usuario***/
 router.get("/editarPerfil/:id",usersControllers.editarPerfil);
 router.put("/editarPerfil/:id", uploadFile.single('imagen'), usersControllers.actualizarPerfil);
+
 /*** Consulta usuarios***/
 router.get("/consultaUsuario", usersControllers.consultaUsuario)
 //-----------EXPORTAR MODULO---------------------------
