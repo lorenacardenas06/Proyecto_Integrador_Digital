@@ -96,7 +96,8 @@ const controladorUsuarios =
   consultaUsuario : async (req, res) => {
     const usuarios = await db.Usuario.findAll()
     res.json(usuarios)
-  }
+  },
+  
 };
 //   //   res.render('./users/registro',{ errors : errors.mapped(), datosUsuarioViejo: req.body });
 //------------EXPORTAR MODULO CONTROLADOR USUARIOS------------------
