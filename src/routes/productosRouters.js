@@ -6,7 +6,7 @@ const productosController = require("../controllers/productosControllers");
 const multer = require("multer"); //multer
 const path = require("path");
 const authMiddleware = require("../middlewares/authMiddleware.js");
-const { body } = require("express-validator");
+const { body, validationResult } = require("express-validator");
 
 //---------MULTER------------------------------------
 
@@ -36,6 +36,7 @@ router.get("/electricos", productosController.electrico);
 router.get("/crearProducto", productosController.crearProducto);
 router.post(
   "/crearProducto",
+  body("nombre").notEmpty().withMessage("Campo vacio").bail(),
   uploadFile.single("imagen"),
   productosController.store
 );
