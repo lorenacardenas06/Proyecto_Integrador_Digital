@@ -121,11 +121,11 @@ const controladorProductos =
   consultaProducto : async (req, res) => {
       const productos = await db.Producto.findAll()
       res.json(productos)
+  },
+  consultaCategorias: async (req, res) => {
+    const categorias = await db.Categoria.findAll()
+    res.json(categorias)
   }
-
-  // consultaCategorias: async (req, res) => {
-  //   const categoria = await db.Categoria.findAll()
-  //   res.json(categoria)
 }
 
  //------------EXPORTAR MODULO CONTROLADOR PRODUCTOS------------------

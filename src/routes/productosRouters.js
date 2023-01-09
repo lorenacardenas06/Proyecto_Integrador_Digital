@@ -47,6 +47,10 @@ router.delete("/:id", productosController.eliminarProducto);
 /**BUY PRODUCTOS */
 router.get("/carritoProducto", productosController.carritoProducto);
 
+/*** Consultas API***/
+router.get("/consultaProductos", productosController.consultaProducto);
+router.get("/consultaCategorias", productosController.consultaCategoria);
+
 //-----------EXPORTAR MODULO---------------------------
 module.exports = router;
 
