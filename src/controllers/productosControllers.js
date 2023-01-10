@@ -70,17 +70,15 @@ const controladorProductos = {
   //------------PROCESO CREAR PRODUCTO---------------
   store: (req, res) => {
     // const errores = validationResult(req);
-    if (true) {
+    console.log("body", req.body);
+    const errors = validationResult(req);
+    if (errors.isEmpty()) {
       db.Producto.findOne({ where: { nombre: req.body.nombre } }).then(
         function (producto) {
           if (producto) {
             console.log("El producto ya existe");
             return res.render("./products/crearProducto");
           } else {
-            const errors = validationResult(req);
-            if (!errors.isEmpty()) {
-              return res.status(422).json({ errors: errors.array() });
-            }
             let productoNuevo = {
               nombre: req.body.nombre,
               precio: req.body.precio,
@@ -90,18 +88,16 @@ const controladorProductos = {
               marca_id_FK: req.body.marca,
               categoria_id_FK: req.body.categoria,
             };
-
-            //validaciones con express validator
             db.Producto.create(productoNuevo).then(function (producto) {
               return res.redirect("/");
             });
           }
         }
       );
+    } else {
+      return res.status(422).json({ errors: errors.array() });
+      // res.render("/crearProducto",{errores : errores.array()});;
     }
-    // }else{
-    //  // res.render("/crearProducto",{errores : errores.array()});;
-    // }
   },
   //------------MOSTRAR PAGINA EDITAR PRODUCTO---------------
   editarProducto: async (req, res) => {

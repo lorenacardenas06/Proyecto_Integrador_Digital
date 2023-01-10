@@ -35,13 +35,11 @@ router.get("/electricos", productosController.electrico);
 /***CREATE ALL PRODUCTS***/
 router.get("/crearProducto", productosController.crearProducto);
 router.post(
-  "/crearProducto",
-  body("nombre").notEmpty().withMessage("Campo vacio").bail(), 
-  body("nombre").isLength({min:2}).withMessage("Debe tener más de dos caracteres").bail(),
-  body("nombre").matches(/^[^0-9]*$/).withMessage("Ingrese un carácter válido").bail(),
-  body("precio").isNumeric().withMessage("solo puede ingresar números").bail(),
+  "/crearProducto",uploadFile.single("imagen"),
   
-  uploadFile.single("imagen"),
+  [body("nombre").notEmpty().withMessage("Campo vacio")],
+
+  
   productosController.store
 );
 
