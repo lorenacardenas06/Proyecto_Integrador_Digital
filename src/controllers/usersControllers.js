@@ -93,11 +93,57 @@ const controladorUsuarios =
     res.render("users/perfil", {usuario : usuario})
   },
   /* Datos para API USUARIO */
-  consultaUsuario : async (req, res) => {
-    const usuarios = await db.Usuario.findAll()
-    res.json(usuarios)
+  consultaUsuarios : (req, res) => {
+    db.Usuario.findAll().then(function(usuario) {
+      let listaUsuario = [];
+      for(const u of usuario) {
+        let obj = {
+          id: u.id,
+          nombre:  u.nombre,
+          apellido: u.apellido,
+          email:  u.email,
+          contrasena: u.contrasena,
+          rol: u.rol,
+          imagen: u.imagen,
+        }
+        listaUsuario.push(obj)
+      }
+      return res.status(200).json({
+        status: 200,
+        message: "User list Request was successfully",
+        count: listaUsuario.length,
+        users: listaUsuario
+      })    
+    }).catch (err => {
+        return res.status(400).json({
+          status: 400,
+          message: "Bad Request",
+          errors: err                   
+        })
+      })
   },
-  
+  consultaUsuariosID : (req, res) => {
+    db.Usuario.findByPk(req.params.id).then(function(usuario){
+      let detalleUsuario = {
+        nombre: usuario.nombre,
+        apellido: usuario.apellido,
+        email: usuario.email,
+        rol: usuario.rol,
+        imagen: usuario.imagen,
+      }
+      return res.status(200).json({
+        status: 200,
+        message: "Respuesta satisfactoria",
+        data: detalleUsuario
+    })
+  }).catch (err => {
+    return res.status(400).json({
+        status: 400,
+        message: "Bad Request",
+        errors: err                   
+    })
+  })
+  }
 };
 //   //   res.render('./users/registro',{ errors : errors.mapped(), datosUsuarioViejo: req.body });
 //------------EXPORTAR MODULO CONTROLADOR USUARIOS------------------

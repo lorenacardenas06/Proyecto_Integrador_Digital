@@ -48,7 +48,9 @@ router.get("/editarPerfil/:id",usersControllers.editarPerfil);
 router.put("/editarPerfil/:id", uploadFile.single('imagen'), usersControllers.actualizarPerfil);
 
 /*** Consulta usuarios***/
-router.get("/consultaUsuario", usersControllers.consultaUsuario)
+router.get("/consultaUsuarios", usersControllers.consultaUsuarios);
+router.get("/consultaUsuarios/:id",uploadFile.single('imagen'), usersControllers.consultaUsuariosID);
+
 //-----------EXPORTAR MODULO---------------------------
 module.exports = router;
 

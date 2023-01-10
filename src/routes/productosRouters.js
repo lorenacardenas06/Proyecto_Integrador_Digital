@@ -49,7 +49,8 @@ router.get("/carritoProducto", productosController.carritoProducto);
 
 /*** Consultas API***/
 router.get("/consultaProductos", productosController.consultaProducto);
-router.get("/consultaCategorias", productosController.consultaCategoria);
+router.get("/consultaProductos/:id", productosController.consultaProductoID);
+router.get("/consultaCategorias", productosController.consultaCategorias);
 
 //-----------EXPORTAR MODULO---------------------------
 module.exports = router;

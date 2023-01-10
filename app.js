@@ -5,7 +5,6 @@ const path = require("path"); //traigo path
 const methodOverride = require('method-override'); //utilizar el metodo put y delete 
 const session = require('express-session');
 const cookieParser = require("cookie-parser");
-// const auditoriaUnoMiddleware = require('./src/middlewares/auditoriaUNO'); //importo middleware
 const multer= require("multer");
 const {check} = require("express-validator");
 //-------------------------IMPORTACION ENRUTADORES------------------------------------------------------
@@ -30,6 +29,6 @@ app.set("views", path.join(__dirname, "./src/views")); // Define la ubicación d
 app.use("/", productsRouter); // ruta global de productos
 app.use("/user", usersRouters); //ruta global para usuarios
 //-------------------SE CARGA EL PUERTO-------------------------------------------------
-app.listen(process.env.PORT || 3000, function () {
-  console.log("servidor corriendo en puerto 3000");
+app.listen(process.env.PORT || 3001, function () {
+  console.log("servidor corriendo en puerto 3001");
 });

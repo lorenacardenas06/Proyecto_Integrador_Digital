@@ -3,6 +3,8 @@ const db = require("../database/models");
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
+const Sequelize = require('sequelize');
+const { Association } = require("sequelize");
 
 //------------OBJETO DEL CONTROLADOR------------------
 const controladorProductos = 
@@ -119,12 +121,86 @@ const controladorProductos =
     },
   /* Datos para API USUARIO */
   consultaProducto : async (req, res) => {
-      const productos = await db.Producto.findAll()
-      res.json(productos)
+    db.Producto.findAll({include:[{association:'Marca'},{association:'Categoria'}] }).then(function(producto) {
+      console.log(producto)
+      let listaProducto = [];
+      for (p of producto){
+        let obj = {
+          id: p.id,
+          nombre: p.nombre,
+          precio: p.precio,
+          imagen: p.imagen,
+          descripcion: p.descripcion,
+          fecha_eliminacion: p.fecha_eliminacion,
+          marca: p.Marca,
+          categoria: p.Categoria
+        }   
+
+      listaProducto.push(obj)
+      }
+      return res.status(200).json({
+        status: 200,
+        message: "Product list Request was successfully",
+        count: listaProducto.length,
+        // count_by_category: countByCategory,
+        products: listaProducto
+      })
+      }).catch (err => {
+          return res.status(400).json({
+              status: 400,
+              message: "Bad Request",
+              errors: err                   
+          })
+      })
   },
+  consultaProductoID : async (req, res) => {
+    db.Producto.findByPk(req.params.id).then(function(producto){
+      let detalleProducto = {
+        nombre: producto.nombre,
+        precio: producto.precio,
+        imagen: producto.imagen,
+        descripcion: producto.descripcion,
+        fecha_eliminacion: producto.fecha_eliminacion,
+        // marca_id_FK : producto.marca,
+        // categoria_id_FK: producto.categoria
+      }
+      return res.status(200).json({
+        status: 200,
+        message: "Respuesta satisfactoria",
+        data: detalleProducto
+    })
+  }).catch (err => {
+    return res.status(400).json({
+        status: 400,
+        message: "Bad Request",
+        errors: err                   
+    })
+  })
+  },
+
   consultaCategorias: async (req, res) => {
-    const categorias = await db.Categoria.findAll()
-    res.json(categorias)
+    db.Categoria.findAll().then(function(categoria) {
+      let listaCategoria = [];
+      for(const c of categoria) {
+        let obj = {
+          id: c.id,
+          nombre:  c.nombre,
+        }
+        listaCategoria.push(obj)
+      }
+      return res.status(200).json({
+        status: 200,
+        message: "User list Request was successfully",
+        count: listaCategoria.length,
+        users: listaCategoria
+      })    
+    }).catch (err => {
+        return res.status(400).json({
+          status: 400,
+          message: "Bad Request",
+          errors: err                   
+        })
+      })
   }
 }
 
