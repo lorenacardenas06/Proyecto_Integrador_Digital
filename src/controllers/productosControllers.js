@@ -213,8 +213,8 @@ const controladorProductos = {
       return res.status(200).json({
         status: 200,
         message: "User list Request was successfully",
-        count: listaCategoria.length,
-        users: listaCategoria
+        count_categorias: listaCategoria.length,
+        data : {categorias : listaCategoria}
       })    
     }).catch (err => {
         return res.status(400).json({

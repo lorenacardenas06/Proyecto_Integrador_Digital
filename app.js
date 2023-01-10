@@ -7,7 +7,7 @@ const session = require('express-session');
 const cookieParser = require("cookie-parser");
 const multer= require("multer");
 const {check} = require("express-validator");
-const cors = requiere('cors');
+const cors = require('cors');
 //-------------------------IMPORTACION ENRUTADORES------------------------------------------------------
 const productsRouter = require("./src/routes/productosRouters"); //se trae el enrutador
 const usersRouters = require("./src/routes/usersRouters"); //se trae el enrutador
