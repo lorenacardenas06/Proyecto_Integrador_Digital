@@ -20,6 +20,4 @@ formulario.addEventListener("submit", function (e) {
   }
 });
 
-function miFunc() {
-  alert('Ha iniciado sesión!');
-}
+
