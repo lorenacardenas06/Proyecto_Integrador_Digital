@@ -7,6 +7,7 @@ const session = require('express-session');
 const cookieParser = require("cookie-parser");
 const multer= require("multer");
 const {check} = require("express-validator");
+const cors = requiere('cors');
 //-------------------------IMPORTACION ENRUTADORES------------------------------------------------------
 const productsRouter = require("./src/routes/productosRouters"); //se trae el enrutador
 const usersRouters = require("./src/routes/usersRouters"); //se trae el enrutador
@@ -18,6 +19,7 @@ app.use(express.json()); // utilizar el mtodo post
 app.use(methodOverride('_method')); //utilizar el metodo put y delete 
 app.use(session( {secret: "Este es mi secreto"} )); 
 app.use(cookieParser());
+app.use(cors());
 // app.use(auditoriaUnoMiddleware); //utilizo middleware
 app.get('/cookie',function(req, res){
   res.cookie(cookie_name , 'cookie_value').send('Cookie is set');
