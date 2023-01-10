@@ -33,11 +33,14 @@ router.get("/fragancias", productosController.fragancia);
 router.get("/electricos", productosController.electrico);
 
 /***CREATE ALL PRODUCTS***/
+
 router.get("/crearProducto", productosController.crearProducto);
 router.post(
   "/crearProducto",uploadFile.single("imagen"),
-  
-  [body("nombre").notEmpty().withMessage("Campo vacio")],
+
+  [body("nombre").notEmpty().withMessage("Campo vacio"),body("nombre").isLength({min:2}).withMessage("Debe tener más de dos caracteres").bail(),
+  body("nombre").matches(/^[^0-9]*$/).withMessage("Ingrese un carácter válido").bail(),
+  body("precio").isNumeric().withMessage("solo puede ingresar números").bail()],
 
   
   productosController.store
