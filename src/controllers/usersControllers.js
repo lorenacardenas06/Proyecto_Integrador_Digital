@@ -111,7 +111,7 @@ const controladorUsuarios =
       return res.status(200).json({
         status: 200,
         message: "User list Request was successfully",
-        count: listaUsuario.length,
+        count_users: listaUsuario.length,
         users: listaUsuario
       })    
     }).catch (err => {

@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="encabezado">
-                <h3>Productos</h3>
+                <h3>Categorias populares</h3>
             </div>
             <div class="contenedor-producto">
                 <%for(let p of producto){%>
@@ -23,11 +23,9 @@
                         </a> 
                             <div class="contenedor-datos">
                                 <div class="datos">
-                                    <p>$<%=p.precio%></p>
-                                    <p><%=p.nombre%></p>
-                                </div>
-                                <div class="iconProducto">
-                                    <i class="fas fa-truck"></i>
+                                    <p class="precio">$ <%=p.precio%> COP</p>
+                                    <p class ="letra"><i class="fas fa-truck"></i> Envio gratis  </p>
+                                    <p class ="nombre"><%=p.nombre%></p>
                                 </div>
                             </div> 
                     </div> 

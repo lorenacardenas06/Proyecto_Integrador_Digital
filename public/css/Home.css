@@ -4,7 +4,8 @@ body{
 }
 
 .encabezado h3{
-    font-weight: 600;
+    padding: 20px;
+    font-weight: 400;
     font-size: 34px;  
 }
 .container{
@@ -48,19 +49,35 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    display: grid;
-    grid-template-columns: 80% 20%;
 }
 .datos{
     display: grid;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 33.3%  33.3% 33.3%;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     color:black;
+    text-align: center;
 }
 .img-fluid{
     border-radius: 8px;
 
+}
 
+.precio{
+    font-size: 25px;
+}
+.letra{
+    color:#FA8072 ;
+    font-size: 20px;
+
+}
+.iconProducto{
+    color:#FA8072 ;
+    width: 20px;
+    height: 20px;
+
+}
+.nombre{
+    font-size: 15px;
 }

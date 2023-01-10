@@ -12,11 +12,11 @@
     <div class="container">
       <form action="/crearProducto" method="POST" enctype="multipart/form-data">
         <div class="encabezado">
-          <h3>Formulario de creación de productos</h3>
+          <h3> Añadir productos</h3>
         </div>
         <div class="detail-product">
           <div>
-            <label for="categoria" class="form-label">Categoria del producto:</label><br>
+            <label for="categoria" class="form-label">Categoria:</label><br>
             <select name="categoria" id="categoria" class="form-input">
             <% for (let i of c){ %>
               <option value="<%= i.id%>"> <%= i.nombre%> </option>
@@ -25,11 +25,11 @@
           </div>
         <!-- validaciones de creacion de productos en html usando atributos-->
           <div>
-            <label for="nombre" class="form-label">Nombre del producto:</label><br>
+            <label for="nombre" class="form-label">Nombre:</label><br>
             <input minlength="5" required type="text" id="nombre" name="nombre" placeholder= "Ingrese el nombre del producto" class="form-input">
           </div>
           <div>
-            <label for="marca" class="form-label">Marca del producto:</label><br>
+            <label for="marca" class="form-label">Marca:</label><br>
             <select name="marca" id="marca" class="form-input">
               <% for (let i of m){ %>
                 <option value="<%= i.id%>"> <%= i.nombre%> </option>
@@ -37,19 +37,19 @@
             </select>
           </div>
           <div>
-            <label for="precio" class="form-label">Precio del producto:</label><br>
+            <label for="precio" class="form-label">Precio:</label><br>
             <input required pattern="^[0-9]*$" title="Solo debe tener números" type="text" id="precio" name="precio" placeholder= "Ingrese el precio del producto" class="form-input">
           </div> 
           <div>
-            <label for="descripcion" class="form-label">Descripcion del producto:</label><br>
+            <label for="descripcion" class="form-label">Descripcion:</label><br>
             <textarea required minlength="20" type="text" id="descripcion" name="descripcion" placeholder= "Ingrese una breve descripción del producto" class="form-input"></textarea>
           </div> 
           <div>
-            <label for="imagen" class="form-label">Cargar imagen del producto:</label><br>
+            <label for="imagen" class="form-label">Imagen:</label><br>
             <input required accept="image/jpeg, image/jpg, image/png, image/gif" type="file" name="imagen" id="imagen" multiple/></input>
           </div> 
           <div>
-            <button type="submit" class="boton">Crear</button>
+            <button type="submit" class="boton">Añadir</button>
           </div>
       </div>
       </form>

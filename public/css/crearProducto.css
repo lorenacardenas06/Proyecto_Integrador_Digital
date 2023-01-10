@@ -16,8 +16,10 @@
 }
 
 .encabezado h3 {
-  font-weight: 600;
-  font-size: 34px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 400;
+  font-size: 34px;  
 }
 /* BASIC */
 .entradas {

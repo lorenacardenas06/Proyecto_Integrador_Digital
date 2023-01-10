@@ -5,8 +5,10 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const { Association } = require("sequelize");
 const { validationResult, check } = require("express-validator");
+
 //------------OBJETO DEL CONTROLADOR------------------
 const controladorProductos = {
+
   //------------MOSTRAR PAGINA PRINCIPAL---------------
   index: (req, res) => {
     db.Producto.findAll().then(function (producto) {
@@ -163,7 +165,7 @@ const controladorProductos = {
       return res.status(200).json({
         status: 200,
         message: "Product list Request was successfully",
-        count: listaProducto.length,
+        count_product: listaProducto.length,
         // count_by_category: countByCategory,
         products: listaProducto
       })
@@ -214,7 +216,7 @@ const controladorProductos = {
         status: 200,
         message: "User list Request was successfully",
         count_categorias: listaCategoria.length,
-        data : {categorias : listaCategoria}
+        categorias : listaCategoria
       })    
     }).catch (err => {
         return res.status(400).json({

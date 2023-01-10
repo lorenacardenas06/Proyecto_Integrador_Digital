@@ -1,4 +1,3 @@
-/* Redirecciona a login en caso de no haber iniciado sesión */
 function authMiddleware(req, res, next) {
     let logged = req.session.usuarioLogged
     if (!logged || logged.id != req.params.id) {
@@ -7,4 +6,3 @@ function authMiddleware(req, res, next) {
     next()
 }
 
-module.exports = authMiddleware
