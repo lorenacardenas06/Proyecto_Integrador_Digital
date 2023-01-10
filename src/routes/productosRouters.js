@@ -3,21 +3,23 @@
 const express = require("express");
 const router = express.Router();
 const productosController = require("../controllers/productosControllers");
-const multer  = require('multer'); //multer
-const path= require("path");
-const authMiddleware = require('../middlewares/authMiddleware.js')
-const {body} = require('express-validator');
+const multer = require("multer"); //multer
+const path = require("path");
+const authMiddleware = require("../middlewares/authMiddleware.js");
+const { body, validationResult } = require("express-validator");
 
 //---------MULTER------------------------------------
 
 const multerDiskStorage = multer.diskStorage({
-    destination: function(req, file, cb) {       // request, archivo y callback que almacena archivo en destino
-     cb(null, path.join(__dirname,'../../public/img/products'));    // Ruta donde almacenamos el archivo
-    },
-    filename: function(req, file, cb) {          // request, archivo y callback que almacena archivo en destino
-     let imageName = Date.now() + path.extname(file.originalname);   // milisegundos y extensión de archivo original
-     cb(null, imageName);         
-    }
+  destination: function (req, file, cb) {
+    // request, archivo y callback que almacena archivo en destino
+    cb(null, path.join(__dirname, "../../public/img/products")); // Ruta donde almacenamos el archivo
+  },
+  filename: function (req, file, cb) {
+    // request, archivo y callback que almacena archivo en destino
+    let imageName = Date.now() + path.extname(file.originalname); // milisegundos y extensión de archivo original
+    cb(null, imageName);
+  },
 });
 const uploadFile = multer({ storage: multerDiskStorage });
 
@@ -31,15 +33,29 @@ router.get("/fragancias", productosController.fragancia);
 router.get("/electricos", productosController.electrico);
 
 /***CREATE ALL PRODUCTS***/
+
 router.get("/crearProducto", productosController.crearProducto);
-router.post("/crearProducto", uploadFile.single('imagen'), productosController.store);
+router.post(
+  "/crearProducto",uploadFile.single("imagen"),
+
+  [body("nombre").notEmpty().withMessage("Campo vacio"),body("nombre").isLength({min:2}).withMessage("Debe tener más de dos caracteres").bail(),
+  body("nombre").matches(/^[^0-9]*$/).withMessage("Ingrese un carácter válido").bail(),
+  body("precio").isNumeric().withMessage("solo puede ingresar números").bail()],
+
+  
+  productosController.store
+);
 
 /***GET ONE PRODUCT ***/
 router.get("/detalleProducto/:id", productosController.detalleProducto);
 
 /***EDIT ONE PRODUCT ***/
 router.get("/editarProducto/:id", productosController.editarProducto);
-router.put("/editarProducto/:id",uploadFile.single('imagen'), productosController.actualizarProducto);
+router.put(
+  "/editarProducto/:id",
+  uploadFile.single("imagen"),
+  productosController.actualizarProducto
+);
 
 /***DELETE ONE PRODUCT ***/
 router.delete("/:id", productosController.eliminarProducto);

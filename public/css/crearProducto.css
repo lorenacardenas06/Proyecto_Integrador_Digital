@@ -1,8 +1,8 @@
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:#FA8072;
+  background-color: #fa8072;
   border-radius: 8px;
   box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
   -webkit-border-radius: 8px;
@@ -15,13 +15,13 @@
   padding-top: 10px;
 }
 
-.encabezado h3{
+.encabezado h3 {
   font-weight: 600;
-  font-size: 34px;  
+  font-size: 34px;
 }
 /* BASIC */
-.entradas{
-  text-align:center;
+.entradas {
+  text-align: center;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -35,7 +35,7 @@
   font-size: 20px;
   padding: 50px 50px 50px 50px;
 }
-.form-input{
+.form-input {
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -46,7 +46,7 @@
   cursor: pointer;
   text-align: center;
 }
- .boton{
+.boton {
   margin-top: 50px;
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -60,20 +60,37 @@
   width: 400px;
   height: 40px;
 }
-.boton:hover{
+.boton:hover {
   background-color: black;
   color: white;
 }
-.box-boton{
+.box-boton {
   align-items: center;
   justify-content: center;
   align-content: center;
 }
 
-.detail-product{
+.detail-product {
   display: flex;
   justify-content: center;
   align-content: center;
   display: grid;
   grid-template-rows: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
+}
+@media screen and (max-width: 768px) {
+  .detail-product {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    display: grid;
+    grid-template-rows: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
+  }
+}
+@media screen and (max-width: 430px) {
+  .form-input {
+    width: 300px;
+  }
+  .boton {
+    width: 300px;
+  }
 }

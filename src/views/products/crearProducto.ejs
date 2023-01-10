@@ -38,7 +38,7 @@
           </div>
           <div>
             <label for="precio" class="form-label">Precio del producto:</label><br>
-            <input type="text" id="precio" name="precio" placeholder= "Ingrese el precio del producto" class="form-input">
+            <input required pattern="^[0-9]*$" title="Solo debe tener números" type="text" id="precio" name="precio" placeholder= "Ingrese el precio del producto" class="form-input">
           </div> 
           <div>
             <label for="descripcion" class="form-label">Descripcion del producto:</label><br>
