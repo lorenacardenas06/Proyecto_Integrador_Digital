@@ -2,6 +2,7 @@ const formulario = document.getElementById("formulario");
 const boton = document.getElementById("boton");
 formulario.addEventListener("submit", function (e) {
   e.preventDefault();
+  alert('Se ha registrado!');
   let errores = [];
   let campoNombre = document.querySelector("input.nombreUser");
   if (campoNombre.value == "" || campoNombre.value == null) {
@@ -37,6 +38,3 @@ formulario.addEventListener("submit", function (e) {
   }
 });
 
-function miFunc() {
-  alert('Se ha registrado!');
-}
