@@ -7,7 +7,7 @@ function productoData(sequelize, Datatypes)
         nombre:{type:Datatypes.STRING(50)},
         precio:{type:Datatypes.INTEGER},
         imagen:{type:Datatypes.STRING(200)},
-        descripcion:{type:Datatypes.STRING(5000)},
+        descripcion:{type:Datatypes.STRING(1000)},
         fecha_eliminacion:{type:Datatypes.DATE},
         marca_id_FK:{type: Datatypes.INTEGER},
         categoria_id_FK:{type: Datatypes.INTEGER}

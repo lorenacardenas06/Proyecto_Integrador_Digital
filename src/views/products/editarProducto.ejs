@@ -20,9 +20,8 @@
           <div>
             <label for="categoria" class="form-label"><b>Categoria:</b></label><br>
             <select name="categoria" id="categoria" class="form-input">
-              <option value="categoria"> </option>
               <% for (let i of c){ %>
-              <option value=<% i.nombre%>> <%= i.nombre%> </option>
+              <option value=<%= i.id%>> <%= i.nombre%> </option>
               <% } %>
             </select>
           </div>
@@ -33,9 +32,8 @@
           <div>
             <label for="marca" class="form-label"><b>Marca:</b></label><br>
             <select name="marca" id="marca" class="form-input">
-              <option value="marca"> </option>
               <% for (let i of m){ %>
-                <option value="<% i.id%>"> <%= i.nombre%> </option>
+                <option value="<%= i.id%>"> <%= i.nombre%> </option>
               <% } %>
             </select>
           </div>

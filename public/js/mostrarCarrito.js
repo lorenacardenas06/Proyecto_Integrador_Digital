@@ -4,6 +4,7 @@ let productos = JSON.parse(localStorage.getItem("carrito"));
 let totalCarrito = 0;
 
 let boton = document.getElementById("LimpiarCarrito");
+
 boton.addEventListener("click",function(){
     localStorage.clear()
 })

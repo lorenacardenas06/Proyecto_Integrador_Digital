@@ -25,6 +25,52 @@ const fileFilter = (req, file, cb) => {
      return cb(new Error('No es -una imagen'));}}
 
 const uploadFile = multer({ storage: multerDiskStorage });
+
+
+//------------------VALIDACIONES-----------------------------
+const validacionRegistro =[
+    body('nombre').notEmpty().withMessage("Introduce un nombre valido").bail(),
+    body('apellido').notEmpty().withMessage("Introduce un apellido valido").bail(),
+    body('email').notEmpty().withMessage("Introduce un email valido").bail().isEmail().withMessage("debes escribir un formato valido"),
+    body('contrasena').notEmpty().withMessage("introducion contraseña valido").bail().isLength({min: 8}).withMessage("minimo de ocho caracteres"),
+    body('rol').notEmpty().withMessage("Elige un rol"),
+/*     body("imagen").custom((value,{req}) => {
+        let imagen = req.file;
+        let imagenExtensiones = ['.jpg','.png', '.gif'];
+        if (!imagen){
+            throw new Error("Suba un archivo de imagen");
+        }else{
+            let imagenExtension = path.extname(file.originalname);
+            if(!imagenExtensiones.includes(imagenExtension)){
+                throw new Error('La extension de la imagen no es permitida.')
+             }
+        }
+    return true; 
+})*/
+
+]
+const validacionLogin =[
+    body('email').notEmpty().withMessage("introduce un mail valido").bail().isEmail().withMessage("debes completar el mail"),
+    body('contrasena').notEmpty().withMessage("introducion contraseña valido").bail().isLength({min: 8}).withMessage("minimo de ocho caracteres"),
+]
+const validacionEditarPerfil =[
+    body('nombre').notEmpty().withMessage("Introduce un nombre valido").bail(),
+    body('apellido').notEmpty().withMessage("Introduce un apellido valido").bail(),
+/*     body("imagen").custom((value,{req}) => {
+        let imagen = req.file;
+        let imagenExtensiones = ['.jpg','.png', '.gif'];
+        if (!imagen){
+            throw new Error("Suba un archivo de imagen");
+        }else{
+            let imagenExtension = path.extname(file.originalname);
+            if(!imagenExtensiones.includes(imagenExtension)){
+                throw new Error('La extension de la imagen no es permitida.')
+             }
+        }
+    return true; 
+})*/
+
+]
 //----------------RUTAS------------------------------------
 
 /***LOGIN AND CREATE USER ***/
@@ -38,14 +84,14 @@ router.get("/login",usersControllers.login);
 router.get("/perfil/:id",usersControllers.perfil);
 
 /*** Crear Usuario ***/
-router.post("/registro", uploadFile.single('imagen'),usersControllers.crearUsuario);
+router.post("/registro", uploadFile.single('imagen'),validacionRegistro, usersControllers.crearUsuario);
 
 /*** Autenticación del login***/
-router.post("/login", usersControllers.procesoLogin);
+router.post("/login", validacionLogin, usersControllers.procesoLogin);
 
 /*** Editar el perfil de usuario***/
 router.get("/editarPerfil/:id",usersControllers.editarPerfil);
-router.put("/editarPerfil/:id", uploadFile.single('imagen'), usersControllers.actualizarPerfil);
+router.put("/editarPerfil/:id", uploadFile.single('imagen'), validacionEditarPerfil, usersControllers.actualizarPerfil);
 
 /*** Consulta usuarios***/
 router.get("/consultaUsuarios", usersControllers.consultaUsuarios);
@@ -53,32 +99,3 @@ router.get("/consultaUsuarios/:id",uploadFile.single('imagen'), usersControllers
 
 //-----------EXPORTAR MODULO---------------------------
 module.exports = router;
-
-
-// //const validacionRegistro =[
-//  body('nombre').notEmpty().withMessage("Introduce un nombre valido").bail(),
-//  body('apellido').notEmpty().withMessage("Introduce un apellido valido").bail(),
-//  body('email').notEmpty().withMessage("Introduce un email valido").bail().isEmail().withMessage("debes completar el mail"),
-//  body('contrasena').notEmpty().withMessage("introducion contraseña valido").bail().isLength({min: 8}).withMessage("minimo de ocho caracteres"),
-//  body("imagen").custom((value,{req}) => {
-//     let imagenUsuario = req.file;
-//     let imagenExtensiones = ['.jpg','.png', '.gif'];
-//     return true;
-//     /*
-//     if (imagenUsuario ==false){
-//       throw new Error("Suba un archivo de imagen");
-//     }else{
-//       let imagenExtension = path.extname(file.originalname);
-//       if (!imagenExtensiones.includes(imagenExtension)){
-//         throw new Error('La extension de la imagen no es permitida.')
-//       }
-//     }
-//     return true;})
-//     */
-   
-//   })
-// ]
-// const validacionLogin =[
-//   body('email').notEmpty().withMessage("introduce un mail valido").bail().isEmail().withMessage("debes completar el mail"),
-//   body('contrasena').notEmpty().withMessage("introducion contraseña valido").bail().isLength({min: 8}).withMessage("minimo de ocho caracteres"),
-// ]

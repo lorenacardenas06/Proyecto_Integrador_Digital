@@ -16,6 +16,11 @@
                   <div class="container">
                     <div class="encabezado">
                       <h3>Acceder</h3>
+                      <% if (existe) { %>
+                        <div class="fail">
+                          <p>El usuario no se encuentra registrado o la contraseña es erronea</p>
+                        </div>
+                      <% } %>
                     </div>
                   <!-- Email input -->
                     <div class="form-outline mb-6" id="datos_usuarioCreado">

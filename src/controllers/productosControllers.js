@@ -73,7 +73,6 @@ const controladorProductos = {
   //------------PROCESO CREAR PRODUCTO---------------
   store: (req, res) => {
     // const errores = validationResult(req);
-    console.log("body", req.body);
     const errors = validationResult(req);
     if (errors.isEmpty()) {
       db.Producto.findOne({ where: { nombre: req.body.nombre } }).then(
@@ -132,17 +131,13 @@ const controladorProductos = {
       marca_id_FK: req.body.marca,
       categoria_id_FK: req.body.categoria,
     };
-    let actualizarProducto = await db.Producto.update(nuevosDatos, {
-      where: { id: req.params.id },
-    });
+    let actualizarProducto = await db.Producto.update(nuevosDatos, {where: { id: req.params.id }});
     res.redirect("/");
   },
   //------------ELIMINAR PRODUCTO---------------
   eliminarProducto: (req, res) => {
-    db.Producto.destroy({ where: { id: req.params.id } }).then(function () {
-      return res.redirect("/");
-    });
-  },
+    db.Producto.destroy({ where: { id: req.params.id } }).then(function (){})
+  }, 
   /* Datos para API USUARIO */
   consultaProducto : async (req, res) => {
     db.Producto.findAll({include:[{association:'Marca'},{association:'Categoria'}] }).then(function(producto) {

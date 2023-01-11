@@ -1,19 +1,18 @@
 let boton = document.getElementById("agregarCarrito");
 let botonEliminar = document.getElementById("eliminarProducto");
-
 botonEliminar.addEventListener("click",function(){
     Swal.fire({
         title: '¿Esta seguro que desea eliminar el producto?',
         showDenyButton: true,
         showCancelButton: true,
         confirmButtonText: 'Guardar',
-        denyButtonText: `No guardar`,
+        denyButtonText: `Descartar`,
     }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
-        Swal.fire('El producto ha sido eliminado!', '', 'success')
+          Swal.fire('El producto ha sido eliminado!', '', 'success')
         } else if (result.isDenied) {
-        Swal.fire('Los cambios no han sido guardados', '', 'info')
+          Swal.fire('Los cambios no han sido guardados', '', 'info')
         }
     })
 })

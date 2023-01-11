@@ -12,11 +12,16 @@
         <div class="row">
           <div class="col">
             <div class = "box-form-user">
-              <form  action="/user/registro" id="formulario"  method="POST" enctype="multipart/form-data">
+              <form  action="/user/registro"  method="POST" enctype="multipart/form-data">
                 <div class="container-1">
                   <div class = "container-2">
                     <div class = "encabezado">
-                      <h3 class="products-title">Registro de usuario</h3>
+                      <h3 class="products-title">Crea una cuenta</h3>
+                      <% if (existe) { %>
+                        <div class="fail">
+                          <p>El email ingresado ya se encuentra registrado</p>
+                        </div>
+                      <% } %>
                     </div>
                     <div class="form-outline mb-4" id="datos_usuario">
                       <label for="nombre" class="form-label"><b>Nombre:</b></label><br>
@@ -73,7 +78,7 @@
                         <% } %>
                     </div> 
                     <div>
-                      <button onsubmit="miFunc()" type="submit" class="boton" style="padding-left: 2.5rem; padding-right: 2.5rem;">Enviar</button>
+                      <button type="submit" id="añadirUsuario" class="boton" style="padding-left: 2.5rem; padding-right: 2.5rem;">Enviar</button>
                       <p><a href="/user/login" class="link-dark">Accede, si ya tienes una cuenta creada</a></p>
                     </div>
                   </div>
@@ -83,7 +88,8 @@
           </div>
         </div>
       </div>
-    </main>   
+    </main>  
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
     <script src="/js/formularioregistro.js"></script>
     <%-include("../partials/footer")%>  
   </body>

@@ -45,6 +45,7 @@ main{
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.685);
 }
 
 .informacion-precio-item{
