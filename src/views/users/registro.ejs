@@ -19,7 +19,7 @@
                       <h3 class="products-title">Registro de usuario</h3>
                     </div>
                     <div class="form-outline mb-4" id="datos_usuario">
-                      <label for="nombre" class="form-label" >Nombre:</label><br>
+                      <label for="nombre" class="form-label"><b>Nombre:</b></label><br>
                       <!-- con required and minlenght podemos validar los caracteres minimos y que sea obligatorio -->
                       <input title="no puedes ingresar numeros y debe ser mayor a 2 caracteres" minlength="2" pattern="[^0-9]*" required type="name" id="nombre" name="nombre" class="form-input" placeholder= "Ingrese su nombre" value="<%= locals.datosUsuarioViejo && datosUsuarioViejo.nombre ? datosUsuarioViejo.nombre: ''%>"/>
                     </div>
@@ -29,7 +29,7 @@
                       </div>
                     <% } %>
                     <div class="form-outline mb-3" id="datos_usuario">
-                      <label for="apellido" class="form-label">Apellidos:</label><br>
+                      <label for="apellido" class="form-label"><b>Apellidos:</b></label><br>
                       <input minlength="2" required type="apellido" id="apellido" name="apellido" minlength="2" class="form-input" placeholder= "Ingrese sus apellidos" value="<%= locals.datosUsuarioViejo && datosUsuarioViejo.apellido ? datosUsuarioViejo.apellido: '' %>" />
                     </div>
                     <% if (locals.errores && errores.apellido){ %>
@@ -39,7 +39,7 @@
                     <% } %>
 
                     <div class="form-outline mb-4" id="datos_usuario">
-                      <label for="email" class="form-label" >Correo Electrónico:</label><br>
+                      <label for="email" class="form-label" ><b>Correo Electrónico:</b></label><br>
                       <input required type="email" id="email" name="email" class="form-input" placeholder= "Ingrese su correo electrónico" value="<%= locals.datosUsuarioViejo && datosUsuarioViejo.email ? datosUsuarioViejo.email: '' %>"/>
                     </div>
                     <% if (locals.errores && errores.email){ %>
@@ -49,7 +49,7 @@
                     <% } %>
                     <!-- para la contrasenia usamos el atributo pattern usando regex matchamos el pattern-->
                     <div class="form-outline mb-3" id="datos_usuario">
-                      <label for="contrasena" class="form-label">Contraseña</label><br>
+                      <label for="contrasena" class="form-label"><b>Contraseña:</b></label><br>
                       <input required type="password" id="contrasena" name="contrasena" class="form-input" placeholder="Ingrese una contraseña" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="La contraseña debe ser de al menos 8 caracteres y tener letras mayúsculas, minúsculas, un número y un carácter especial."/>
                     </div>
                     <% if (locals.errores && errores.contrasena){ %>
@@ -58,7 +58,7 @@
                       </div>
                     <% } %>
                     <div class="form-outline mb-3" id="datos_usuario">
-                    <label for="rol" class="form-label">Rol</label><br>
+                    <label for="rol" class="form-label"><b>Rol:</b></label><br>
                       <select name="rol" class="form-input" id="rol">
                         <option value="admin" <%= locals.datosUsuarioViejo && datosUsuarioViejo.rol ==="admin" ? 'selected': ''; %> >Administrador</option>
                         <option value="comun" <%= locals.datosUsuarioViejo && datosUsuarioViejo.rol ==="comun" ? 'selected': ''; %> >Comprador</option>
@@ -66,7 +66,7 @@
                     </div>
                     <!-- para validar los formatos de los archivos usamos el atributo accept esto de una vez no muestra ningun otro formato en el buscador de archivos-->
                     <div class="form-outline mb-3" aria-inval id="datos_usuario">
-                      <label for="imagen" class="form-label">Cargar imagen de perfil:</label><br>
+                      <label for="imagen" class="form-label"><b>Imagen:</b></label><br>
                       <input required type="file" name="imagen" id="imagen"class="form-input" accept="image/jpeg, image/jpg, image/png, image/gif" /></input>
                       <% if (locals.errores && errores.imagen) {  %>
                         <%= errores.imagen.msg %>

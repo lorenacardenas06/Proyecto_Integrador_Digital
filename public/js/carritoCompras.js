@@ -20,10 +20,12 @@ botonEliminar.addEventListener("click",function(){
 
 boton.addEventListener("click",function(){
     let imagen = document.getElementById("imagenProducto").src;
+    let nombre = document.getElementById("nombreProducto").innerHTML
     let precio = document.getElementById("precioProducto").innerHTML;
     let cantidad = document.getElementById("cantidadProducto").value;
     let productoNuevo = {
         imagen: imagen,
+        nombre: nombre,
         precio: precio,
         cantidad: cantidad
     }

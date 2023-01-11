@@ -5,39 +5,41 @@
   <title>Carrito de compras</title>
   <link rel="stylesheet" href="/css/carritoCompra.css"></link>
   <%-include("../partials/head")%>
+  <%-include("../partials/header")%>
 </head>
 
 <body class="body">
-  <%-include("../partials/header")%>
     <main>
         <div class="contenedor">
             <div class="encabezado">
-              <h2>Resumen del carrito</h2>
+              <h3>Resumen del carrito</h3>
             </div>
             <div class="informacion-compra">
                   <div class="contenedor-item">
-                      <h5>Producto</h5>
+                      <b>Producto</b>
                   </div>
                   <div class="contenedor-item">
-                      <h5>Precio</h5>
+                    <b>Nombre</b>
+                </div>
+                  <div class="contenedor-item">
+                      <b>Precio (COP)</b>
                   </div>
                   <div class="contenedor-item">
-                      <h5>Cantidad</h5>
+                      <b>Cantidad</b>
                   </div>
                   <div class="contenedor-item">
-                      <h5>Total</h5>
+                      <b>Total (COP)</b>
                   </div>
             </div>
             <div class="productos">
             </div>
             <div class = "total">
-              <h5>Total</h5>
+              <h5><b>Total (COP):</b></h5>
             </div>
-            <div class = "boton">
-              <a href="/carritoProducto"> <button class="boton" id="LimpiarCarrito">  Limpiar carrito  </button> </a>
-              <button class="boton" id="FinalizarCompra"> Finalizar compra</button>
+            <div class = "botones">
+              <a class="btn btn-dark" href="/carritoProducto" id="LimpiarCarrito">  Limpiar Carrito</a>
+              <button class="boton" id="FinalizarCompra"> Finalizar Compra</button>
             </div>
-            
           </div>
   </main>
   <script src="/js/mostrarCarrito.js"></script>

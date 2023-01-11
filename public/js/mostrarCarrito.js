@@ -17,12 +17,16 @@ for (let p of productos){
     imagenCarro.setAttribute("class", "imagenCarro");
     imagenCarro.src = p.imagen;
     div1.appendChild(imagenCarro);
+        
+    let nombreCarro = document.createElement("p");
+    nombreCarro.setAttribute("class", "nombreCarro");
+    nombreCarro.innerText = p.nombre;
+    div1.appendChild(nombreCarro);
     
     let precioCarro = document.createElement("p");
     precioCarro.setAttribute("class", "precioCarro");
     precioCarro.innerText = p.precio;
     div1.appendChild(precioCarro);
-    // console.log(typeof(precioCarro));
 
     let cantidadCarro = document.createElement("p")
     cantidadCarro.setAttribute("class", "cantidadCarro");

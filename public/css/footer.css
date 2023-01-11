@@ -6,6 +6,7 @@ footer{
     padding-right: 15px;
     padding-bottom: 2px;
     padding-left: 15px;
+    font-family: Roboto;
 }
 .iconsFooter{
     color: #ff6852;
@@ -15,4 +16,5 @@ footer{
 .copyright{
     text-align:left;
     font-size:12px;
+    font-family: Roboto;
 }

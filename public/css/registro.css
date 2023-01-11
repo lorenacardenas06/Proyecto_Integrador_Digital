@@ -3,7 +3,7 @@ main{
     margin: 0% 10% 0% 10%;
 }
 .encabezado h3{
-    font-weight: 600;
+    font-weight: 400;
     font-size: 34px;  
 }
 .container-2{
@@ -23,6 +23,7 @@ main{
     margin-top: 20px;
     margin-bottom: 20px;
     padding-bottom: 80px;
+    font-family: Roboto;
 }
 
 .form-input{
@@ -31,14 +32,11 @@ main{
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
-    width: 300px;
+    width: 400px;
     height: 40px;
     cursor: pointer;
 }
-.form-label{
-    font-weight: 600;
-    font-size: 20px;
-}
+
 .boton{
     border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -49,7 +47,7 @@ main{
     font-weight: 600;
     font-size: 25px;
     cursor: pointer;
-    width: 300px;
+    width: 400px;
     height: 40px;
 }
 .boton:hover{

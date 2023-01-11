@@ -16,8 +16,9 @@
         </div>
         <div class="detail-product">
           <div>
-            <label for="categoria" class="form-label">Categoria:</label><br>
+            <label for="categoria" class="form-label"><b>Categoria:</b></label><br>
             <select name="categoria" id="categoria" class="form-input">
+              <option value="categoria"> </option>
             <% for (let i of c){ %>
               <option value="<%= i.id%>"> <%= i.nombre%> </option>
             <% } %>
@@ -25,19 +26,20 @@
           </div>
         <!-- validaciones de creacion de productos en html usando atributos-->
           <div>
-            <label for="nombre" class="form-label">Nombre:</label><br>
+            <label for="nombre" class="form-label"><b>Nombre:</b></label><br>
             <input minlength="5" required type="text" id="nombre" name="nombre" placeholder= "Ingrese el nombre del producto" class="form-input">
           </div>
           <div>
-            <label for="marca" class="form-label">Marca:</label><br>
+            <label for="marca" class="form-label"><b>Marca:</b></label><br>
             <select name="marca" id="marca" class="form-input">
+              <option value="marca"> </option>
               <% for (let i of m){ %>
                 <option value="<%= i.id%>"> <%= i.nombre%> </option>
               <% } %>
             </select>
           </div>
           <div>
-            <label for="precio" class="form-label">Precio:</label><br>
+            <label for="precio" class="form-label"><b>Precio (COP):</b></label><br>
             <input required pattern="^[0-9]*$" title="Solo debe tener números" type="text" id="precio" name="precio" placeholder= "Ingrese el precio del producto" class="form-input">
           </div> 
           <div>
@@ -45,7 +47,7 @@
             <textarea required minlength="20" type="text" id="descripcion" name="descripcion" placeholder= "Ingrese una breve descripción del producto" class="form-input"></textarea>
           </div> 
           <div>
-            <label for="imagen" class="form-label">Imagen:</label><br>
+            <label for="imagen" class="form-label"><b>Imagen:</b></label><br>
             <input required accept="image/jpeg, image/jpg, image/png, image/gif" type="file" name="imagen" id="imagen" multiple/></input>
           </div> 
           <div>
@@ -56,7 +58,8 @@
     </div>
   </main>
   <%-include("../partials/footer")%>
-  <script src="/js/jsCrearP.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="/js/formulariocrearProducto.js"></script>
 </body>
 </html>
 

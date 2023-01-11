@@ -1,12 +1,17 @@
+body{
+    height: auto;
+    max-height: 110em;
+}
 main{
     background-color:white; 
     margin: 0% 10% 0% 10%;
 }
-
-.encabezado h3{
-    font-weight: 600;
-    font-size: 34px; 
-}
+.encabezado h3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 400;
+    font-size: 34px;  
+  }
 .imagenCarro{
     width: 50px;
     height: 50px
@@ -26,15 +31,19 @@ main{
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 50px;
-    height: auto !important;
+    font-family: Roboto;
 }
+.contenedor-item{
+    text-align: center;
+    font-size: 18px;
 
+}
 .informacion-compra{
     display: flex;
     justify-content: center;
     align-items: center;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
     padding: 10px;
 }
 .productos-item{
@@ -43,8 +52,9 @@ main{
     align-items: center;
     text-align: center;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
     padding: 10px;
+    font-size: 18px;
 }
 
 .total{
@@ -56,22 +66,35 @@ main{
     padding: 5px;
     padding-right: 20px;
     grid-template-columns: 70% 30%;
+    font-size: 18px;
+    font-weight: 400;
 
 }
+.botones{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin: 20px;
+}
 .boton{
+    text-decoration: none;
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
     background-color: white;
-    font-weight: 600;
+    font-weight: 300;
     font-size: 25px;
     cursor: pointer;
     width: 300px;
     height: 40px;
+    color:black;
 }
 .boton:hover{
     background-color: black;
     color: white;
+}
+.imagenCarro{
+    padding-left: 10px;
 }

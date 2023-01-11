@@ -2,7 +2,10 @@ body{
     height: auto;
     max-height: 110em;
 }
-
+main{
+    background-color:white; 
+    margin: 0% 10% 0% 10%;
+}
 .encabezado h3{
     padding: 20px;
     font-weight: 400;
@@ -21,6 +24,7 @@ body{
     margin-top: 20px;
     margin-bottom: 20px;
     padding-bottom: 80px;
+    font-family: Roboto;
 }
 
 .contenedor-producto{
